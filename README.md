@@ -89,9 +89,7 @@ cd bin
 
 ##### [About author]
 
-[[主页]](http://zlonqi.gitee.io/)
-
-
+<a href="https://zlonqi.gitee.io/">[click]<img src="./staticPage/pages/images/pic/wechart.png" alt="video"></a>
 
 ### Other
 
