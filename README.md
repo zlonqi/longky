@@ -77,21 +77,21 @@ cd bin
 ```yaml
 webServer:
  ...
-  poolThreads: 1	#业务线程池
-  loopThreads: 1	#IO线程池
-  maxConnections: 10170		#最大连接数
-  connIdleTime: 30	#连接允许的最大空闲时长
-  aliveTime: 300	#服务器存活时长，设为1000000则存活时间无效，只有当崩溃或SIGINT\SIGTERM时才停止
+  poolThreads: 1 #业务线程池
+  loopThreads: 1 #IO线程池
+  maxConnections: 10170 #最大连接数
+  connIdleTime: 30 #连接允许的最大空闲时长
+  aliveTime: 300 #服务器存活时长，设为1000000则存活时间无效，只有当崩溃或SIGINT\SIGTERM时才停止
 ...
 #AsyncLog Configuration
 log:
   level: debug
   path: /root/web/CLionProject/muduo/log/
-  maxSize:		#日志文件最大size
+  maxSize:	#日志文件最大size
     G: 0
     M: 200
     ...
-  rollTime:		#日志文件按时间点生成
+  rollTime:	#日志文件按时间点生成
     zoneTime: 8 #东8区
     hour: 13
    ...
@@ -99,14 +99,14 @@ log:
 mime:
   ...
 heartBeat:
-  switch: on	#心跳开关
+  switch: on#心跳开关
   ...
   frequency: 5 #线程集合中的线程轮流每隔5秒发送心跳给心跳监控器
 redis:
  ...
   vip:	#very important page，类似于布隆过滤器
     1: /root/web/CLionProject/muduo/staticPage/index.html
-  rate: 0.6			#压缩率
+  rate: 0.6	#压缩率
 zlibMap:
   592A11E79283991D4ED33D2086DF77AE: 1771 #文件md5值和对应的原文件大小
 ```
