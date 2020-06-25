@@ -1,0 +1,264 @@
+20200601 23:28:23.499246Z  5909[INFO]  Loading configuration file Successfully. - start_up.cpp:122
+20200601 23:28:23.500299Z  5909[INFO]  StaticServer listens on 0.0.0.0:1688 poolthreads 2 loopthreads0 - start_up.cpp:125
+20200601 23:28:23.500280Z  5910[DEBUG] EventLoop EventLoop created 0x7FC311148878 in thread 5910 - EventLoop.cpp:73
+20200601 23:28:23.500928Z  5909[DEBUG] EventLoop EventLoop created 0x7FFE457E0940 in thread 5909 - EventLoop.cpp:73
+20200601 23:28:23.501902Z  5909[INFO]  setReuseAddr - Acceptor.cpp:31
+20200601 23:28:23.501920Z  5909[INFO]  setReuse_port - Acceptor.cpp:33
+20200601 23:28:23.502792Z  5909[INFO]  StaticServer init in: 700006 19:35:01.502501 - staticServer.cpp:23
+20200601 23:28:23.508751Z  5911[DEBUG] Parser construct parser  - requestParser.cpp:29
+20200601 23:28:23.514157Z  5909[DEBUG] Connector creator[0x60B0000056E0] - Connector.cpp:25
+20200601 23:28:23.514562Z  5909[INFO]  TcpClient::TcpClient[HeartBeatBeatCHecker] - connector 0x60B0000056E0 - TcpClient.cpp:63
+20200601 23:28:23.514608Z  5909[INFO]  TcpClient::connect[HeartBeatBeatCHecker] - connecting to 192.168.16.128:8088 - TcpClient.cpp:101
+20200601 23:28:23.516982Z  5909[INFO]  Ignore SIGPIPE - start_up.cpp:155
+20200601 23:28:23.517062Z  5909[WARN]  fd = 13 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200601 23:28:23.517074Z  5909[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200601 23:28:23.517365Z  5909[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 500 milliseconds.  - Connector.cpp:210
+20200601 23:28:23.519595Z  5912[DEBUG] Parser construct parser  - requestParser.cpp:29
+20200601 23:28:24.018552Z  5909[WARN]  fd = 14 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200601 23:28:24.018595Z  5909[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200601 23:28:24.018706Z  5909[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 1000 milliseconds.  - Connector.cpp:210
+20200601 23:28:25.019807Z  5909[WARN]  fd = 14 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200601 23:28:25.019849Z  5909[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200601 23:28:25.019929Z  5909[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 2000 milliseconds.  - Connector.cpp:210
+20200601 23:28:27.025488Z  5909[WARN]  fd = 14 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200601 23:28:27.025549Z  5909[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200601 23:28:27.025919Z  5909[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 4000 milliseconds.  - Connector.cpp:210
+20200601 23:28:27.618581Z  5909[DEBUG] newConnection  - new connection [StaticServer-0.0.0.0:1688#1] from 192.168.16.1:21083 - TcpServer.cpp:75
+20200601 23:28:27.618882Z  5909[DEBUG] TcpConnection TcpConnection::creator[StaticServer-0.0.0.0:1688#1] at 0x61500000D000 fd=14 - TcpConnection.cpp:60
+20200601 23:28:27.619484Z  5909[INFO]  StaticServer - 192.168.16.1:21083 -> 192.168.16.128:1688 is UP - staticServer.cpp:47
+20200601 23:28:27.619739Z  5909[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
+20200601 23:28:27.623904Z  5911[INFO]  {192.168.16.1:21083'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/login.html - requestParser.cpp:93
+20200601 23:28:27.624869Z  5911[INFO]  redis connect [Fail] - requestParser.cpp:226
+20200601 23:28:27.633346Z  5909[DEBUG] newConnection  - new connection [StaticServer-0.0.0.0:1688#2] from 192.168.16.1:21084 - TcpServer.cpp:75
+20200601 23:28:27.633449Z  5909[DEBUG] TcpConnection TcpConnection::creator[StaticServer-0.0.0.0:1688#2] at 0x61500000CD80 fd=16 - TcpConnection.cpp:60
+20200601 23:28:27.633632Z  5909[INFO]  StaticServer - 192.168.16.1:21084 -> 192.168.16.128:1688 is UP - staticServer.cpp:47
+20200601 23:28:27.633738Z  5909[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
+20200601 23:28:27.637345Z  5909[DEBUG] writeComplete {192.168.16.1:21083'1591025307'5909StaticServer-0.0.0.0:1688#1}write complete - staticServer.cpp:102
+20200601 23:28:27.637544Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/login.html[200 ok] - staticServer.cpp:127
+20200601 23:28:27.708302Z  5912[INFO]  {192.168.16.1:21083'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/css/login.css - requestParser.cpp:93
+20200601 23:28:27.714832Z  5909[DEBUG] newConnection  - new connection [StaticServer-0.0.0.0:1688#3] from 192.168.16.1:21086 - TcpServer.cpp:75
+20200601 23:28:27.714897Z  5909[DEBUG] TcpConnection TcpConnection::creator[StaticServer-0.0.0.0:1688#3] at 0x61500000CB00 fd=17 - TcpConnection.cpp:60
+20200601 23:28:27.715141Z  5909[INFO]  StaticServer - 192.168.16.1:21086 -> 192.168.16.128:1688 is UP - staticServer.cpp:47
+20200601 23:28:27.715255Z  5909[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
+20200601 23:28:27.716406Z  5909[DEBUG] newConnection  - new connection [StaticServer-0.0.0.0:1688#4] from 192.168.16.1:21087 - TcpServer.cpp:75
+20200601 23:28:27.716476Z  5909[DEBUG] TcpConnection TcpConnection::creator[StaticServer-0.0.0.0:1688#4] at 0x61500000C880 fd=18 - TcpConnection.cpp:60
+20200601 23:28:27.716592Z  5909[INFO]  StaticServer - 192.168.16.1:21087 -> 192.168.16.128:1688 is UP - staticServer.cpp:47
+20200601 23:28:27.716645Z  5909[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
+20200601 23:28:27.716812Z  5909[DEBUG] writeComplete {192.168.16.1:21083'1591025307'5909StaticServer-0.0.0.0:1688#1}write complete - staticServer.cpp:102
+20200601 23:28:27.716889Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/css/login.css[200 ok] - staticServer.cpp:127
+20200601 23:28:27.716974Z  5909[DEBUG] newConnection  - new connection [StaticServer-0.0.0.0:1688#5] from 192.168.16.1:21088 - TcpServer.cpp:75
+20200601 23:28:27.717151Z  5909[DEBUG] TcpConnection TcpConnection::creator[StaticServer-0.0.0.0:1688#5] at 0x61500000C600 fd=15 - TcpConnection.cpp:60
+20200601 23:28:27.717280Z  5909[INFO]  StaticServer - 192.168.16.1:21088 -> 192.168.16.128:1688 is UP - staticServer.cpp:47
+20200601 23:28:27.717349Z  5909[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
+20200601 23:28:27.717791Z  5911[INFO]  {192.168.16.1:21084'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js - requestParser.cpp:93
+20200601 23:28:27.720688Z  5912[INFO]  {192.168.16.1:21086'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js - requestParser.cpp:93
+20200601 23:28:27.725774Z  5911[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_3.png - requestParser.cpp:93
+20200601 23:28:27.725970Z  5911[INFO]  redis connect [Fail] - requestParser.cpp:226
+20200601 23:28:27.729315Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:27.729502Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_3.png[200 ok] - staticServer.cpp:127
+20200601 23:28:27.730956Z  5911[INFO]  {192.168.16.1:21088'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png - requestParser.cpp:93
+20200601 23:28:27.733838Z  5909[DEBUG] writeComplete {192.168.16.1:21088'1591025307'5909StaticServer-0.0.0.0:1688#5}write complete - staticServer.cpp:102
+20200601 23:28:27.733963Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png[200 ok] - staticServer.cpp:127
+20200601 23:28:27.737372Z  5909[DEBUG] writeComplete {192.168.16.1:21086'1591025307'5909StaticServer-0.0.0.0:1688#3}write complete - staticServer.cpp:102
+20200601 23:28:27.737506Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js[200 ok] - staticServer.cpp:127
+20200601 23:28:27.737531Z  5909[DEBUG] writeComplete {192.168.16.1:21084'1591025307'5909StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
+20200601 23:28:27.737607Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js[200 ok] - staticServer.cpp:127
+20200601 23:28:27.859864Z  5911[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.png - requestParser.cpp:93
+20200601 23:28:27.865690Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:27.865857Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.png[200 ok] - staticServer.cpp:127
+20200601 23:28:27.870755Z  5912[INFO]  {192.168.16.1:21084'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/login3.png - requestParser.cpp:93
+20200601 23:28:27.875006Z  5911[INFO]  {192.168.16.1:21086'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png - requestParser.cpp:93
+20200601 23:28:27.878701Z  5909[DEBUG] writeComplete {192.168.16.1:21086'1591025307'5909StaticServer-0.0.0.0:1688#3}write complete - staticServer.cpp:102
+20200601 23:28:27.878850Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png[200 ok] - staticServer.cpp:127
+20200601 23:28:27.879159Z  5909[DEBUG] writeComplete {192.168.16.1:21084'1591025307'5909StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
+20200601 23:28:27.879391Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/login3.png[200 ok] - staticServer.cpp:127
+20200601 23:28:27.879413Z  5911[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/login_btn.png - requestParser.cpp:93
+20200601 23:28:27.882228Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:27.882388Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/login_btn.png[200 ok] - staticServer.cpp:127
+20200601 23:28:31.026468Z  5909[WARN]  fd = 19 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200601 23:28:31.026508Z  5909[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200601 23:28:31.026588Z  5909[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 8000 milliseconds.  - Connector.cpp:210
+20200601 23:28:31.617377Z  5912[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/index.html - requestParser.cpp:93
+20200601 23:28:31.617521Z  5912[INFO]  redis connect [Fail] - requestParser.cpp:226
+20200601 23:28:31.619395Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:31.619530Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/index.html[200 ok] - staticServer.cpp:127
+20200601 23:28:31.698453Z  5911[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_1.png - requestParser.cpp:93
+20200601 23:28:31.761691Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:31.761805Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_1.png[200 ok] - staticServer.cpp:127
+20200601 23:28:33.645805Z  5912[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/login.html - requestParser.cpp:93
+20200601 23:28:33.645974Z  5912[INFO]  redis connect [Fail] - requestParser.cpp:226
+20200601 23:28:33.647920Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:33.648088Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/login.html[200 ok] - staticServer.cpp:127
+20200601 23:28:33.717176Z  5911[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/css/login.css - requestParser.cpp:93
+20200601 23:28:33.717617Z  5912[INFO]  {192.168.16.1:21084'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js - requestParser.cpp:93
+20200601 23:28:33.721526Z  5912[INFO]  {192.168.16.1:21086'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js - requestParser.cpp:93
+20200601 23:28:33.724358Z  5911[INFO]  {192.168.16.1:21088'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_3.png - requestParser.cpp:93
+20200601 23:28:33.724605Z  5911[INFO]  redis connect [Fail] - requestParser.cpp:226
+20200601 23:28:33.725226Z  5912[INFO]  {192.168.16.1:21083'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png - requestParser.cpp:93
+20200601 23:28:33.732409Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:33.733290Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/css/login.css[200 ok] - staticServer.cpp:127
+20200601 23:28:33.738909Z  5909[DEBUG] writeComplete {192.168.16.1:21084'1591025307'5909StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
+20200601 23:28:33.739069Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js[200 ok] - staticServer.cpp:127
+20200601 23:28:33.739096Z  5909[DEBUG] writeComplete {192.168.16.1:21086'1591025307'5909StaticServer-0.0.0.0:1688#3}write complete - staticServer.cpp:102
+20200601 23:28:33.739877Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js[200 ok] - staticServer.cpp:127
+20200601 23:28:33.740296Z  5909[DEBUG] writeComplete {192.168.16.1:21083'1591025307'5909StaticServer-0.0.0.0:1688#1}write complete - staticServer.cpp:102
+20200601 23:28:33.740801Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png[200 ok] - staticServer.cpp:127
+20200601 23:28:33.744470Z  5909[DEBUG] writeComplete {192.168.16.1:21088'1591025307'5909StaticServer-0.0.0.0:1688#5}write complete - staticServer.cpp:102
+20200601 23:28:33.745010Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_3.png[200 ok] - staticServer.cpp:127
+20200601 23:28:33.895131Z  5912[INFO]  {192.168.16.1:21084'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.png - requestParser.cpp:93
+20200601 23:28:33.899102Z  5909[DEBUG] writeComplete {192.168.16.1:21084'1591025307'5909StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
+20200601 23:28:33.899242Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.png[200 ok] - staticServer.cpp:127
+20200601 23:28:33.904925Z  5911[INFO]  {192.168.16.1:21088'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/login3.png - requestParser.cpp:93
+20200601 23:28:33.908960Z  5912[INFO]  {192.168.16.1:21086'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png - requestParser.cpp:93
+20200601 23:28:33.910569Z  5911[INFO]  {192.168.16.1:21083'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/login_btn.png - requestParser.cpp:93
+20200601 23:28:33.912375Z  5909[DEBUG] writeComplete {192.168.16.1:21088'1591025307'5909StaticServer-0.0.0.0:1688#5}write complete - staticServer.cpp:102
+20200601 23:28:33.912504Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/login3.png[200 ok] - staticServer.cpp:127
+20200601 23:28:33.913103Z  5909[DEBUG] writeComplete {192.168.16.1:21086'1591025307'5909StaticServer-0.0.0.0:1688#3}write complete - staticServer.cpp:102
+20200601 23:28:33.913220Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png[200 ok] - staticServer.cpp:127
+20200601 23:28:33.913245Z  5909[DEBUG] writeComplete {192.168.16.1:21083'1591025307'5909StaticServer-0.0.0.0:1688#1}write complete - staticServer.cpp:102
+20200601 23:28:33.913328Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/login_btn.png[200 ok] - staticServer.cpp:127
+20200601 23:28:35.885520Z  5912[INFO]  {192.168.16.1:21084'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/register.html - requestParser.cpp:93
+20200601 23:28:35.885725Z  5912[INFO]  redis connect [Fail] - requestParser.cpp:226
+20200601 23:28:35.887609Z  5909[DEBUG] writeComplete {192.168.16.1:21084'1591025307'5909StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
+20200601 23:28:35.887756Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/register.html[200 ok] - staticServer.cpp:127
+20200601 23:28:35.961854Z  5911[INFO]  {192.168.16.1:21084'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/css/login.css - requestParser.cpp:93
+20200601 23:28:35.964523Z  5909[DEBUG] writeComplete {192.168.16.1:21084'1591025307'5909StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
+20200601 23:28:35.964667Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/css/login.css[200 ok] - staticServer.cpp:127
+20200601 23:28:35.964876Z  5912[INFO]  {192.168.16.1:21083'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js - requestParser.cpp:93
+20200601 23:28:35.968929Z  5909[DEBUG] newConnection  - new connection [StaticServer-0.0.0.0:1688#6] from 192.168.16.1:21100 - TcpServer.cpp:75
+20200601 23:28:35.969077Z  5909[DEBUG] TcpConnection TcpConnection::creator[StaticServer-0.0.0.0:1688#6] at 0x61500000C100 fd=20 - TcpConnection.cpp:60
+20200601 23:28:35.969246Z  5909[INFO]  StaticServer - 192.168.16.1:21100 -> 192.168.16.128:1688 is UP - staticServer.cpp:47
+20200601 23:28:35.969322Z  5909[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
+20200601 23:28:35.969661Z  5911[INFO]  {192.168.16.1:21088'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js - requestParser.cpp:93
+20200601 23:28:35.971485Z  5911[INFO]  {192.168.16.1:21086'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/js/userreg.js - requestParser.cpp:93
+20200601 23:28:35.973598Z  5911[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/js/LoginCheck.js - requestParser.cpp:93
+20200601 23:28:35.975683Z  5911[INFO]  {192.168.16.1:21100'1591025315'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_2.png - requestParser.cpp:93
+20200601 23:28:35.980476Z  5912[INFO]  {192.168.16.1:21084'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/pic/correct.png - requestParser.cpp:93
+20200601 23:28:35.983699Z  5909[DEBUG] writeComplete {192.168.16.1:21088'1591025307'5909StaticServer-0.0.0.0:1688#5}write complete - staticServer.cpp:102
+20200601 23:28:35.983832Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js[200 ok] - staticServer.cpp:127
+20200601 23:28:36.040418Z  5909[DEBUG] writeComplete {192.168.16.1:21086'1591025307'5909StaticServer-0.0.0.0:1688#3}write complete - staticServer.cpp:102
+20200601 23:28:36.040699Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/userreg.js[200 ok] - staticServer.cpp:127
+20200601 23:28:36.040738Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:36.040816Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/LoginCheck.js[200 ok] - staticServer.cpp:127
+20200601 23:28:36.132650Z  5909[DEBUG] writeComplete {192.168.16.1:21083'1591025307'5909StaticServer-0.0.0.0:1688#1}write complete - staticServer.cpp:102
+20200601 23:28:36.132799Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js[200 ok] - staticServer.cpp:127
+20200601 23:28:36.132815Z  5909[DEBUG] writeComplete {192.168.16.1:21084'1591025307'5909StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
+20200601 23:28:36.132861Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/pic/correct.png[200 ok] - staticServer.cpp:127
+20200601 23:28:36.137470Z  5912[INFO]  {192.168.16.1:21084'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/pic/eye.png - requestParser.cpp:93
+20200601 23:28:36.138060Z  5911[INFO]  {192.168.16.1:21083'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png - requestParser.cpp:93
+20200601 23:28:36.162825Z  5911[INFO]  {192.168.16.1:21086'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/register2.png - requestParser.cpp:93
+20200601 23:28:36.164639Z  5911[INFO]  {192.168.16.1:21088'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png - requestParser.cpp:93
+20200601 23:28:36.168469Z  5912[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.gif - requestParser.cpp:93
+20200601 23:28:36.241236Z  5909[DEBUG] writeComplete {192.168.16.1:21083'1591025307'5909StaticServer-0.0.0.0:1688#1}write complete - staticServer.cpp:102
+20200601 23:28:36.241585Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png[200 ok] - staticServer.cpp:127
+20200601 23:28:36.243599Z  5909[DEBUG] writeComplete {192.168.16.1:21100'1591025315'5909StaticServer-0.0.0.0:1688#6}write complete - staticServer.cpp:102
+20200601 23:28:36.280662Z  5909[DEBUG] writeComplete {192.168.16.1:21084'1591025307'5909StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
+20200601 23:28:36.280801Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/pic/eye.png[200 ok] - staticServer.cpp:127
+20200601 23:28:36.280827Z  5909[DEBUG] writeComplete {192.168.16.1:21086'1591025307'5909StaticServer-0.0.0.0:1688#3}write complete - staticServer.cpp:102
+20200601 23:28:36.281014Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/register2.png[200 ok] - staticServer.cpp:127
+20200601 23:28:36.281069Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:36.281190Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.gif[200 ok] - staticServer.cpp:127
+20200601 23:28:36.281272Z  5909[DEBUG] writeComplete {192.168.16.1:21088'1591025307'5909StaticServer-0.0.0.0:1688#5}write complete - staticServer.cpp:102
+20200601 23:28:36.281353Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png[200 ok] - staticServer.cpp:127
+20200601 23:28:36.281373Z  5909[DEBUG] writeComplete {192.168.16.1:21100'1591025315'5909StaticServer-0.0.0.0:1688#6}write complete - staticServer.cpp:102
+20200601 23:28:36.281446Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_2.png[200 ok] - staticServer.cpp:127
+20200601 23:28:38.477677Z  5912[INFO]  {192.168.16.1:21100'1591025315'5909}request: /root/web/CLionProject/muduo/staticPage/pages/login.html - requestParser.cpp:93
+20200601 23:28:38.477887Z  5912[INFO]  redis connect [Fail] - requestParser.cpp:226
+20200601 23:28:38.479746Z  5909[DEBUG] writeComplete {192.168.16.1:21100'1591025315'5909StaticServer-0.0.0.0:1688#6}write complete - staticServer.cpp:102
+20200601 23:28:38.479894Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/login.html[200 ok] - staticServer.cpp:127
+20200601 23:28:38.549069Z  5912[INFO]  {192.168.16.1:21100'1591025315'5909}request: /root/web/CLionProject/muduo/staticPage/pages/css/login.css - requestParser.cpp:93
+20200601 23:28:38.552240Z  5911[INFO]  {192.168.16.1:21088'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js - requestParser.cpp:93
+20200601 23:28:38.554399Z  5911[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js - requestParser.cpp:93
+20200601 23:28:38.563918Z  5912[INFO]  {192.168.16.1:21086'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_3.png - requestParser.cpp:93
+20200601 23:28:38.564042Z  5912[INFO]  redis connect [Fail] - requestParser.cpp:226
+20200601 23:28:38.565685Z  5911[INFO]  {192.168.16.1:21084'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png - requestParser.cpp:93
+20200601 23:28:38.606625Z  5909[DEBUG] writeComplete {192.168.16.1:21100'1591025315'5909StaticServer-0.0.0.0:1688#6}write complete - staticServer.cpp:102
+20200601 23:28:38.607973Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/css/login.css[200 ok] - staticServer.cpp:127
+20200601 23:28:38.625953Z  5909[DEBUG] writeComplete {192.168.16.1:21088'1591025307'5909StaticServer-0.0.0.0:1688#5}write complete - staticServer.cpp:102
+20200601 23:28:38.626108Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js[200 ok] - staticServer.cpp:127
+20200601 23:28:38.626134Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:38.626205Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js[200 ok] - staticServer.cpp:127
+20200601 23:28:38.626224Z  5909[DEBUG] writeComplete {192.168.16.1:21086'1591025307'5909StaticServer-0.0.0.0:1688#3}write complete - staticServer.cpp:102
+20200601 23:28:38.626288Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_3.png[200 ok] - staticServer.cpp:127
+20200601 23:28:38.626371Z  5909[DEBUG] writeComplete {192.168.16.1:21084'1591025307'5909StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
+20200601 23:28:38.626439Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png[200 ok] - staticServer.cpp:127
+20200601 23:28:38.657001Z  5912[INFO]  {192.168.16.1:21084'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.png - requestParser.cpp:93
+20200601 23:28:38.660286Z  5911[INFO]  {192.168.16.1:21086'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/login3.png - requestParser.cpp:93
+20200601 23:28:38.693743Z  5912[INFO]  {192.168.16.1:21087'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png - requestParser.cpp:93
+20200601 23:28:38.696786Z  5911[INFO]  {192.168.16.1:21088'1591025307'5909}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/login_btn.png - requestParser.cpp:93
+20200601 23:28:38.711617Z  5909[DEBUG] writeComplete {192.168.16.1:21084'1591025307'5909StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
+20200601 23:28:38.712209Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.png[200 ok] - staticServer.cpp:127
+20200601 23:28:38.713071Z  5909[DEBUG] writeComplete {192.168.16.1:21086'1591025307'5909StaticServer-0.0.0.0:1688#3}write complete - staticServer.cpp:102
+20200601 23:28:38.713172Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/login3.png[200 ok] - staticServer.cpp:127
+20200601 23:28:38.714848Z  5909[DEBUG] writeComplete {192.168.16.1:21087'1591025307'5909StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
+20200601 23:28:38.715079Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png[200 ok] - staticServer.cpp:127
+20200601 23:28:38.715602Z  5909[DEBUG] writeComplete {192.168.16.1:21088'1591025307'5909StaticServer-0.0.0.0:1688#5}write complete - staticServer.cpp:102
+20200601 23:28:38.715719Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/login_btn.png[200 ok] - staticServer.cpp:127
+20200601 23:28:39.028434Z  5909[WARN]  fd = 19 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200601 23:28:39.028474Z  5909[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200601 23:28:39.028658Z  5909[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 16000 milliseconds.  - Connector.cpp:210
+20200601 23:28:46.826872Z  5909[DEBUG] newConnection  - new connection [StaticServer-0.0.0.0:1688#7] from 127.0.0.1:54084 - TcpServer.cpp:75
+20200601 23:28:46.827205Z  5909[DEBUG] TcpConnection TcpConnection::creator[StaticServer-0.0.0.0:1688#7] at 0x61500000B980 fd=19 - TcpConnection.cpp:60
+20200601 23:28:46.827375Z  5909[INFO]  StaticServer - 127.0.0.1:54084 -> 127.0.0.1:1688 is UP - staticServer.cpp:47
+20200601 23:28:46.827457Z  5909[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
+20200601 23:28:46.827881Z  5912[INFO]  {127.0.0.1:54084'1591025326'5909}request: /root/web/CLionProject/muduo/staticPage/index.html - requestParser.cpp:93
+20200601 23:28:46.828149Z  5912[INFO]  redis connect [Fail] - requestParser.cpp:226
+20200601 23:28:46.829804Z  5909[DEBUG] writeComplete {127.0.0.1:54084'1591025326'5909StaticServer-0.0.0.0:1688#7}write complete - staticServer.cpp:102
+20200601 23:28:46.829917Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/index.html[200 ok] - staticServer.cpp:127
+20200601 23:28:46.831709Z  5909[INFO]  StaticServer - 127.0.0.1:54084 -> 127.0.0.1:1688 is DOWN - staticServer.cpp:47
+20200601 23:28:46.831764Z  5909[DEBUG] removeConnectionInLoop TcpServer::removeConnectionInLoop [StaticServer] - connection StaticServer-0.0.0.0:1688#7 - TcpServer.cpp:102
+20200601 23:28:46.831787Z  5909[DEBUG] removeConnectionInLoop 5 - TcpServer.cpp:104
+20200601 23:28:46.831874Z  5909[DEBUG] removeConnectionInLoop 0 - TcpServer.cpp:106
+20200601 23:28:46.832460Z  5909[DEBUG] handleClose connection over request from peer - TcpConnection.cpp:467
+20200601 23:28:55.029737Z  5909[WARN]  fd = 21 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200601 23:28:55.029779Z  5909[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200601 23:28:55.029880Z  5909[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 30000 milliseconds.  - Connector.cpp:210
+20200601 23:28:55.943323Z  5909[DEBUG] newConnection  - new connection [StaticServer-0.0.0.0:1688#8] from 127.0.0.1:54088 - TcpServer.cpp:75
+20200601 23:28:55.943400Z  5909[DEBUG] TcpConnection TcpConnection::creator[StaticServer-0.0.0.0:1688#8] at 0x61500000B480 fd=21 - TcpConnection.cpp:60
+20200601 23:28:55.943500Z  5909[INFO]  StaticServer - 127.0.0.1:54088 -> 127.0.0.1:1688 is UP - staticServer.cpp:47
+20200601 23:28:55.943552Z  5909[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
+20200601 23:28:55.943992Z  5912[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#7] at 0x61500000B980 fd=19 state=kDisconnected - TcpConnection.cpp:67
+20200601 23:28:55.944376Z  5912[INFO]  {127.0.0.1:54088'1591025335'5909}request: /root/web/CLionProject/muduo/staticPage/pages/login.html - requestParser.cpp:93
+20200601 23:28:55.944459Z  5912[INFO]  redis connect [Fail] - requestParser.cpp:226
+20200601 23:28:55.945706Z  5909[DEBUG] writeComplete {127.0.0.1:54088'1591025335'5909StaticServer-0.0.0.0:1688#8}write complete - staticServer.cpp:102
+20200601 23:28:55.945787Z  5909[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/login.html[200 ok] - staticServer.cpp:127
+20200601 23:28:55.946688Z  5909[INFO]  StaticServer - 127.0.0.1:54088 -> 127.0.0.1:1688 is DOWN - staticServer.cpp:47
+20200601 23:28:55.946716Z  5909[DEBUG] removeConnectionInLoop TcpServer::removeConnectionInLoop [StaticServer] - connection StaticServer-0.0.0.0:1688#8 - TcpServer.cpp:102
+20200601 23:28:55.946731Z  5909[DEBUG] removeConnectionInLoop 5 - TcpServer.cpp:104
+20200601 23:28:55.946756Z  5909[DEBUG] removeConnectionInLoop 0 - TcpServer.cpp:106
+20200601 23:28:55.946801Z  5909[DEBUG] handleClose connection over request from peer - TcpConnection.cpp:467
+20200601 23:29:05.533210Z  5909[DEBUG] ~Entry 192.168.16.1:21083 -> 192.168.16.128:1688 Idle Connection Down. - staticServer.h:57
+20200601 23:29:05.533365Z  5909[INFO]  StaticServer - 192.168.16.1:21083 -> 192.168.16.128:1688 is DOWN - staticServer.cpp:47
+20200601 23:29:05.533406Z  5909[DEBUG] removeConnectionInLoop TcpServer::removeConnectionInLoop [StaticServer] - connection StaticServer-0.0.0.0:1688#1 - TcpServer.cpp:102
+20200601 23:29:05.533423Z  5909[DEBUG] removeConnectionInLoop 4 - TcpServer.cpp:104
+20200601 23:29:05.533477Z  5909[DEBUG] removeConnectionInLoop 0 - TcpServer.cpp:106
+20200601 23:29:05.533970Z  5909[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#1] at 0x61500000D000 fd=14 state=kDisconnected - TcpConnection.cpp:67
+20200601 23:29:08.535259Z  5909[DEBUG] ~Entry 192.168.16.1:21084 -> 192.168.16.128:1688 Idle Connection Down. - staticServer.h:57
+20200601 23:29:08.535376Z  5909[DEBUG] ~Entry 192.168.16.1:21100 -> 192.168.16.128:1688 Idle Connection Down. - staticServer.h:57
+20200601 23:29:08.535406Z  5909[DEBUG] ~Entry 192.168.16.1:21087 -> 192.168.16.128:1688 Idle Connection Down. - staticServer.h:57
+20200601 23:29:08.535423Z  5909[DEBUG] ~Entry 192.168.16.1:21088 -> 192.168.16.128:1688 Idle Connection Down. - staticServer.h:57
+20200601 23:29:08.535461Z  5909[DEBUG] ~Entry 192.168.16.1:21086 -> 192.168.16.128:1688 Idle Connection Down. - staticServer.h:57
+20200601 23:29:08.535603Z  5909[INFO]  StaticServer - 192.168.16.1:21084 -> 192.168.16.128:1688 is DOWN - staticServer.cpp:47
+20200601 23:29:08.535627Z  5909[DEBUG] removeConnectionInLoop TcpServer::removeConnectionInLoop [StaticServer] - connection StaticServer-0.0.0.0:1688#2 - TcpServer.cpp:102
+20200601 23:29:08.535642Z  5909[DEBUG] removeConnectionInLoop 4 - TcpServer.cpp:104
+20200601 23:29:08.535668Z  5909[DEBUG] removeConnectionInLoop 0 - TcpServer.cpp:106
+20200601 23:29:08.535808Z  5909[INFO]  StaticServer - 192.168.16.1:21100 -> 192.168.16.128:1688 is DOWN - staticServer.cpp:47
+20200601 23:29:08.535833Z  5909[DEBUG] removeConnectionInLoop TcpServer::removeConnectionInLoop [StaticServer] - connection StaticServer-0.0.0.0:1688#6 - TcpServer.cpp:102
+20200601 23:29:08.535842Z  5909[DEBUG] removeConnectionInLoop 4 - TcpServer.cpp:104
+20200601 23:29:08.535860Z  5909[DEBUG] removeConnectionInLoop 0 - TcpServer.cpp:106
+20200601 23:29:08.535945Z  5909[INFO]  StaticServer - 192.168.16.1:21087 -> 192.168.16.128:1688 is DOWN - staticServer.cpp:47
+20200601 23:29:08.535958Z  5909[DEBUG] removeConnectionInLoop TcpServer::removeConnectionInLoop [StaticServer] - connection StaticServer-0.0.0.0:1688#4 - TcpServer.cpp:102
+20200601 23:29:08.535966Z  5909[DEBUG] removeConnectionInLoop 4 - TcpServer.cpp:104
+20200601 23:29:08.535981Z  5909[DEBUG] removeConnectionInLoop 0 - TcpServer.cpp:106
+20200601 23:29:08.536061Z  5909[INFO]  StaticServer - 192.168.16.1:21088 -> 192.168.16.128:1688 is DOWN - staticServer.cpp:47
+20200601 23:29:08.536073Z  5909[DEBUG] removeConnectionInLoop TcpServer::removeConnectionInLoop [StaticServer] - connection StaticServer-0.0.0.0:1688#5 - TcpServer.cpp:102
+20200601 23:29:08.536081Z  5909[DEBUG] removeConnectionInLoop 5 - TcpServer.cpp:104
+20200601 23:29:08.536095Z  5909[DEBUG] removeConnectionInLoop 0 - TcpServer.cpp:106
+20200601 23:29:08.536147Z  5909[INFO]  StaticServer - 192.168.16.1:21086 -> 192.168.16.128:1688 is DOWN - staticServer.cpp:47
+20200601 23:29:08.536159Z  5909[DEBUG] removeConnectionInLoop TcpServer::removeConnectionInLoop [StaticServer] - connection StaticServer-0.0.0.0:1688#3 - TcpServer.cpp:102
+20200601 23:29:08.536166Z  5909[DEBUG] removeConnectionInLoop 4 - TcpServer.cpp:104
+20200601 23:29:08.536180Z  5909[DEBUG] removeConnectionInLoop 0 - TcpServer.cpp:106
+20200601 23:29:08.537402Z  5909[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#2] at 0x61500000CD80 fd=16 state=kDisconnected - TcpConnection.cpp:67
+20200601 23:29:08.537503Z  5909[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#6] at 0x61500000C100 fd=20 state=kDisconnected - TcpConnection.cpp:67
+20200601 23:29:08.537544Z  5909[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#4] at 0x61500000C880 fd=18 state=kDisconnected - TcpConnection.cpp:67
+20200601 23:29:08.537574Z  5909[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#3] at 0x61500000CB00 fd=17 state=kDisconnected - TcpConnection.cpp:67

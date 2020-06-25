@@ -1,0 +1,63 @@
+webServer:
+  ip: localhost
+  port: 1688
+  poolThreads: 1
+  loopThreads: 1
+  nginxIP: 192.168.16.128
+  maxConnections: 10170
+  connIdleTime: 100
+  aliveTime: 600
+resource:
+  basePath: /root/web/CLionProject/muduo/staticPage
+  indexPath: /index.html
+log:
+  level: debug
+  path: /root/web/CLionProject/muduo/log/
+  maxSize:
+    G: 0
+    M: 200
+    K: 0
+    B: 0
+  rollTime:
+    zoneTime: 8
+    hour: 13
+    minute: 10
+    second: 0
+  IOFrequency: 3
+mime:
+  html: text/html
+  htm: text/htm
+  shtml: text/html
+  css: text/css
+  xml: text/xml
+  txt: text/plain
+  jpg: image/jpeg
+  jpeg: image/jpeg
+  gif: image/gif
+  png: image/png
+  ico: image/x-icon
+  bmp: image/x-ms-bmp
+  doc: application/mswor
+  pdf: application/pdf
+heartBeat:
+  switch: off
+  server:
+    ip: 192.168.16.128
+    port: 8088
+  frequency: 5
+redis:
+  server:
+    ip: 127.0.0.1
+    port: 6379
+  vip:
+    1: /root/web/CLionProject/muduo/staticPage/index.html
+    2: /root/web/CLionProject/muduo/staticPage/pages/login.html
+    3: /root/web/CLionProject/muduo/staticPage/pages/logIn.html
+    4: /root/web/CLionProject/muduo/staticPage/pages/register.html
+    5: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_3.png
+  rate: 0.6
+zlibMap:
+  592A11E79283991D4ED33D2086DF77AE: 1771
+  6FE2C767884E27182EC9662F008E993F: 3503
+  5CDF58A036F71BB60F3E8FA222803F5C: 1199
+  CCAF354F00439941F8E960A3FED586D4: 48619

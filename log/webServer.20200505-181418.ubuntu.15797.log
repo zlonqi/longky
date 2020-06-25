@@ -1,0 +1,81 @@
+20200505 18:14:18.705329Z 15797[INFO]  Loading configuration file Successfully. - start_up.cpp:116
+20200505 18:14:18.705476Z 15797[INFO]  StaticServer listens on 0.0.0.0:1688 poolthreads 4 loopthreads2 - start_up.cpp:119
+20200505 18:14:18.705766Z 15797[INFO]  setReuseAddr - Acceptor.cpp:31
+20200505 18:14:18.705776Z 15797[INFO]  setReuse_port - Acceptor.cpp:33
+20200505 18:14:18.705808Z 15797[INFO]  StaticServer init in: 700009 04:03:16.705796 - staticServer.cpp:23
+20200505 18:14:18.707271Z 15802[INFO]  construct parser  - requestParser.cpp:29
+20200505 18:14:18.709090Z 15803[INFO]  construct parser  - requestParser.cpp:29
+20200505 18:14:18.715184Z 15804[INFO]  construct parser  - requestParser.cpp:29
+20200505 18:14:18.718204Z 15805[INFO]  construct parser  - requestParser.cpp:29
+20200505 18:14:18.722021Z 15797[INFO]  TcpClient::TcpClient[HeartBeatBeatCHecker] - connector 0x2661180 - TcpClient.cpp:63
+20200505 18:14:18.722047Z 15797[INFO]  TcpClient::connect[HeartBeatBeatCHecker] - connecting to 192.168.16.128:8088 - TcpClient.cpp:101
+20200505 18:14:18.722054Z 15797[INFO]  tid=15797 - Connector.cpp:43
+20200505 18:14:18.722293Z 15797[INFO]  Ignore SIGPIPE - start_up.cpp:144
+20200505 18:14:18.722315Z 15797[WARN]  fd = 22 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200505 18:14:18.722320Z 15797[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200505 18:14:18.722398Z 15797[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 500 milliseconds.  - Connector.cpp:210
+20200505 18:14:19.222679Z 15797[INFO]  tid=15797 - Connector.cpp:43
+20200505 18:14:19.222898Z 15797[WARN]  fd = 22 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200505 18:14:19.222907Z 15797[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200505 18:14:19.222970Z 15797[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 1000 milliseconds.  - Connector.cpp:210
+20200505 18:14:20.223964Z 15797[INFO]  tid=15797 - Connector.cpp:43
+20200505 18:14:20.224223Z 15797[WARN]  fd = 22 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200505 18:14:20.224238Z 15797[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200505 18:14:20.224325Z 15797[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 2000 milliseconds.  - Connector.cpp:210
+20200505 18:14:22.224562Z 15797[INFO]  tid=15797 - Connector.cpp:43
+20200505 18:14:22.224759Z 15797[WARN]  fd = 22 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200505 18:14:22.224768Z 15797[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200505 18:14:22.224830Z 15797[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 4000 milliseconds.  - Connector.cpp:210
+20200505 18:14:26.226075Z 15797[INFO]  tid=15797 - Connector.cpp:43
+20200505 18:14:26.226270Z 15797[WARN]  fd = 22 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200505 18:14:26.226279Z 15797[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200505 18:14:26.226341Z 15797[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 8000 milliseconds.  - Connector.cpp:210
+20200505 18:14:34.226713Z 15797[INFO]  tid=15797 - Connector.cpp:43
+20200505 18:14:34.226912Z 15797[WARN]  fd = 22 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200505 18:14:34.226921Z 15797[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200505 18:14:34.226983Z 15797[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 16000 milliseconds.  - Connector.cpp:210
+20200505 18:14:50.227479Z 15797[INFO]  tid=15797 - Connector.cpp:43
+20200505 18:14:50.227673Z 15797[WARN]  fd = 22 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200505 18:14:50.227681Z 15797[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200505 18:14:50.227743Z 15797[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 30000 milliseconds.  - Connector.cpp:210
+20200505 18:15:20.228609Z 15797[INFO]  tid=15797 - Connector.cpp:43
+20200505 18:15:20.228804Z 15797[WARN]  fd = 22 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200505 18:15:20.228813Z 15797[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200505 18:15:20.228874Z 15797[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 30000 milliseconds.  - Connector.cpp:210
+20200505 18:15:22.502960Z 15797[INFO]  TcpServer::newConnection [StaticServer] - new connection [StaticServer-0.0.0.0:1688#1] from 192.168.16.1:15978 - TcpServer.cpp:75
+20200505 18:15:22.503204Z 15806[INFO]  StaticServer - 192.168.16.1:15978 -> 192.168.16.128:1688 is UP - staticServer.cpp:47
+20200505 18:15:22.503279Z 15806[INFO]  setTcpNoDelay - staticServer.cpp:59
+20200505 18:15:22.504576Z 15806[INFO]  requestId=192.168.16.1:15978'1588673722'15797;get the request at :  700006 20:06:45.504405 - staticServer.cpp:76
+20200505 18:15:22.504790Z 15803[INFO]  requestId=192.168.16.1:15978'1588673722'15797;request for: /root/web/CLionProject/muduo/staticPage/index.html - requestParser.cpp:92
+20200505 18:15:22.504974Z 15803[INFO]  redis connect [Fail] - requestParser.cpp:222
+20200505 18:15:22.565095Z 15803[INFO]  requestId=192.168.16.1:15978'1588673722'15797;return file: /root/web/CLionProject/muduo/staticPage/index.html - requestParser.cpp:270
+20200505 18:15:22.565835Z 15806[INFO]  requestId=192.168.16.1:15978'1588673722'15797StaticServer-0.0.0.0:1688#1 write complete - staticServer.cpp:102
+20200505 18:15:22.565960Z 15806[INFO]  response - done - staticServer.cpp:128
+20200505 18:15:22.713973Z 15806[INFO]  requestId=192.168.16.1:15978'1588673722'15797;get the request at :  700009 06:17:05.713825 - staticServer.cpp:76
+20200505 18:15:22.714154Z 15804[INFO]  requestId=192.168.16.1:15978'1588673722'15797;request for: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_1.png - requestParser.cpp:92
+20200505 18:15:22.751727Z 15804[INFO]  requestId=192.168.16.1:15978'1588673722'15797;return file: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_1.png - requestParser.cpp:270
+20200505 18:15:22.768589Z 15806[INFO]  requestId=192.168.16.1:15978'1588673722'15797StaticServer-0.0.0.0:1688#1 write complete - staticServer.cpp:102
+20200505 18:15:22.768662Z 15806[INFO]  response - done - staticServer.cpp:128
+20200505 18:15:22.915334Z 15806[INFO]  requestId=192.168.16.1:15978'1588673722'15797;get the request at :  700011 14:01:35.914495 - staticServer.cpp:76
+20200505 18:15:22.915579Z 15805[INFO]  requestId=192.168.16.1:15978'1588673722'15797;request for: /root/web/CLionProject/muduo/staticPage/favicon.ico - requestParser.cpp:92
+20200505 18:15:22.916686Z 15806[INFO]  requestId=192.168.16.1:15978'1588673722'15797StaticServer-0.0.0.0:1688#1 write complete - staticServer.cpp:102
+20200505 18:15:25.504951Z 15797[INFO]  TcpServer::newConnection [StaticServer] - new connection [StaticServer-0.0.0.0:1688#2] from 192.168.16.1:15977 - TcpServer.cpp:75
+20200505 18:15:25.505183Z 15807[INFO]  StaticServer - 192.168.16.1:15977 -> 192.168.16.128:1688 is UP - staticServer.cpp:47
+20200505 18:15:25.505229Z 15807[INFO]  setTcpNoDelay - staticServer.cpp:59
+20200505 18:15:50.230049Z 15797[INFO]  tid=15797 - Connector.cpp:43
+20200505 18:15:50.230355Z 15797[WARN]  fd = 24 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200505 18:15:50.230364Z 15797[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200505 18:15:50.230437Z 15797[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 30000 milliseconds.  - Connector.cpp:210
+20200505 18:16:20.231563Z 15797[INFO]  tid=15797 - Connector.cpp:43
+20200505 18:16:20.231761Z 15797[WARN]  fd = 24 Channel::handle_event() POLLHUP - Channel.cpp:88
+20200505 18:16:20.231769Z 15797[ERROR] Connector::handleError state=1 - Connector.cpp:194
+20200505 18:16:20.231832Z 15797[INFO]  Connector::retry - Retry connecting to 192.168.16.128:8088 in 30000 milliseconds.  - Connector.cpp:210
+20200505 18:16:22.818184Z 15797[INFO]  Idle Connection Down. - staticServer.h:57
+20200505 18:16:22.818268Z 15806[INFO]  0 - TcpConnection.cpp:204
+20200505 18:16:22.818858Z 15806[INFO]  shutdown - TcpConnection.cpp:210
+20200505 18:16:22.819972Z 15806[INFO]  StaticServer - 192.168.16.1:15978 -> 192.168.16.128:1688 is DOWN - staticServer.cpp:47
+20200505 18:16:22.820039Z 15806[INFO]  close TcpConnection - TcpConnection.cpp:449
+20200505 18:16:22.820156Z 15797[INFO]  TcpServer::removeConnectionInLoop [StaticServer] - connection StaticServer-0.0.0.0:1688#1 - TcpServer.cpp:104
+20200505 18:16:24.819546Z 15797[INFO]  Idle Connection Down. - staticServer.h:57
+20200505 18:16:24.819632Z 15807[INFO]  0 - TcpConnection.cpp:204
+20200505 18:16:24.820245Z 15807[INFO]  shutdown - TcpConnection.cpp:210
