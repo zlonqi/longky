@@ -20,7 +20,7 @@
 
 **Note**:libco仅作为可选的方案之一，Reactor和协程的融合也值得探讨
 
-<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/">video<img src="./staticPage/pages/images/pic/video2.png" alt="video"></a>
+<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/">[video]<img src="./staticPage/pages/images/pic/video2.png" alt="video"><img src="./staticPage/pages/images/pic/video1.png" alt="video"><img src="./staticPage/pages/images/pic/video3.png" alt="video"></a>
 
 ##### [业务]
 
