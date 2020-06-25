@@ -8,11 +8,11 @@ webServer:
   connIdleTime: 100
   aliveTime: 600
 resource:
-  basePath: /root/web/CLionProject/muduo/staticPage
+  basePath: /yourProjectPath/staticPage
   indexPath: /index.html
 log:
   level: debug
-  path: /root/web/CLionProject/muduo/log/
+  path: /yourProjectPath/log/
   maxSize:
     G: 0
     M: 200
@@ -50,11 +50,11 @@ redis:
     ip: 127.0.0.1
     port: 6379
   vip:
-    1: /root/web/CLionProject/muduo/staticPage/index.html
-    2: /root/web/CLionProject/muduo/staticPage/pages/login.html
-    3: /root/web/CLionProject/muduo/staticPage/pages/logIn.html
-    4: /root/web/CLionProject/muduo/staticPage/pages/register.html
-    5: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_3.png
+    1: /yourPath/staticPage/index.html
+    2: /yourPath/staticPage/pages/login.html
+    3: /yourPath/staticPage/pages/logIn.html
+    4: /yourPath/staticPage/pages/register.html
+    5: /yourPath/staticPage/pages/images/login/programer_wall_3.png
   rate: 0.6
 zlibMap:
   592A11E79283991D4ED33D2086DF77AE: 1771

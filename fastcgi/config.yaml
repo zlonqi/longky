@@ -11,13 +11,13 @@ webServer:
 
 #Static Resource Path
 resource:
-  basePath: /root/web/CLionProject/muduo/fastcgi
+  basePath: /yourPATH/fastcgi
   indexPath: /index.html
 
 #AsyncLog Configuration
 log:
   level: info
-  path: /root/web/CLionProject/muduo/log/
+  path: /yourPATH/log/
   maxSize:
     G: 0
     M: 200
