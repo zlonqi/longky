@@ -7,7 +7,7 @@
 ##### [核心]
 
 > **静态资源服务器、FastCGI服务器、心跳监控服务器**  
-> 网络IO **muduo**, 传输协议为 **http1.1/fastcgi**, 涉及 **nginx/redis/mysql**  
+> IO Model **Reactor+threadPool**, 传输协议为 **http1.1/fastcgi**, 涉及 **nginx/redis/mysql**  
 > 主机cpu/mem/IO监控使用**websocketd**、线程监控基于**心跳和日志**  
 
 
@@ -20,9 +20,7 @@
 
 **Note**:libco仅作为可选的方案之一，Reactor和协程的融合也值得探讨
 
-> [[video]](https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/)
-
-
+<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/">video<img src="./staticPage/pages/images/pic/video2.png" alt="video"></a>
 
 ##### [业务]
 
@@ -68,13 +66,13 @@ ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 
 ### MORE
 
-##### [NETLIB]
+##### [reference]
 
 > github.com/chenshuo/muduo  
 >
 > github.com/tencent-wechat/libco
 
-###### 我对muduo的修改: 
+###### [fixed on muduo]
 
 > 0、添加base/threadPool.h ,实现了线程单例HttpParser(内含redis长连接、md5和zip编解码器)  
 > 1、优化了日志滚动可选项：按大小滚动、按时间点滚动  
@@ -84,10 +82,8 @@ ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 
 ```bash
 cd bin
-./run  #staticWebServer :1688，websocketd :8000，monitor:8001
-
+./run  								#staticWebServer :1688,websocketd :8000,monitor:8001
 ./fstcgi ~/PATH/fastcgi/config.yaml           #fastcgiServer :16888
-
 ./HeartBeatChecker 							#heartBeatMonitor :8088
 ```
 
