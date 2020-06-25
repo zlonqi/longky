@@ -1,20 +1,8 @@
-### INTRODUCE
+### 简述
 
-> 高性能，高可靠，高可用，可维可测
-
-###### 统计
-
-```bash
- cloc -exlude_dir="base,net,log,lib" .#exclude base,net,log,lib
-```
-
-![cloc](./staticPage/pages/images/pic/count2.png)
-
-```bash
- cloc -exlude_dir="log,lib" .#include base,net
-```
-
-![cloc](./staticPage/pages/images/pic/count1.png)
+> linux c++多线程、高性能，高可靠，高可用，可维可测
+>
+> 
 
 ##### [核心]
 
@@ -24,7 +12,7 @@
 
 
 
-#### [架构图]
+##### [架构图]
 
 ![arch](./staticPage/pages/images/pic/arch1.png)  
 
@@ -36,11 +24,11 @@
 
 
 
-#### [业务]
+##### [业务]
 
 > 业务流程: 主页->注册(各种checker)->登陆->登陆成功(y/n)
 
-#### [压测]
+##### [压测]
 
 > 在单台多核主机上，IO线程size=2，业务线程池size=5，用wrk和apache ab分别压index.html(2kB)：
 > (不连接redis)
@@ -52,7 +40,7 @@ ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 
 > 压测结果***QPS > 36000 req/s，吞吐量 >40MB/s, 响应时长 3ms(90%)***
 
-#### [Detail]
+##### [Detail]
 
 > 1、redis connection是**线程单例的长连接，redis 连接崩溃不会波及自身，自行断线重连，具有强悍的可靠性、可用性**（心跳连接也一样，充分地进行了解耦，自行断线重连)  
 > 2、redis缓存的key是path+filename用md5编程固定长度的串，value是文件进行zip压缩后的内容，**md5和zip编解码器均为线程单例对象**  
@@ -61,6 +49,22 @@ ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 > 5、每个连接生成一个全局的**requestID**，打印日志时带上这个。日志在刚进入函数体时就打印  
 > 6、gcc/g++打开 **-fsanitize=address -g** 选项可以检测有误内存错误、shell打开生成**coredump**有利于多线程程序复现崩溃现场环境  
 > 7、IDE带有CPU性能分析工具，如**perf+火焰图**，对于找出性能瓶颈特别有效  
+
+##### [统计]
+
+```bash
+ cloc -exlude_dir="base,net,log,lib" .#exclude base,net,log,lib
+```
+
+![cloc](./staticPage/pages/images/pic/count1.png)
+
+```bash
+ cloc -exlude_dir="log,lib" .#include base,net
+```
+
+![cloc](./staticPage/pages/images/pic/count2.png)
+
+
 
 ### MORE
 
@@ -91,7 +95,9 @@ cd bin
 
 [[主页]](http://zlonqi.gitee.io/)
 
-##### [Other]
+
+
+### Other
 
 ###### ~/staticPage/config.yaml
 
@@ -135,11 +141,7 @@ zlibMap:
 ...
 #DataBase Configuration
 dataBase:
-  server: localhost
-  user: root
-  pswd: 666
-  dbName: RUNOOB
-  
+  ...
 heartBeat:
   ...
   frequency: 5
