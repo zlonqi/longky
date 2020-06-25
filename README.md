@@ -4,7 +4,7 @@
 >
 > 
 
-##### [核心]
+#### [核心]
 
 > **静态资源服务器、FastCGI服务器、心跳监控服务器**  
 > IO Model **Reactor+threadPool**, 传输协议为 **http1.1/fastcgi**, 涉及 **nginx/redis/mysql**  
@@ -12,7 +12,7 @@
 
 
 
-##### [架构图]
+#### [架构图]
 
 ![arch](./staticPage/pages/images/pic/arch1.png)  
 
@@ -22,11 +22,11 @@
 
 <a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/">[video]<img src="./staticPage/pages/images/pic/video2.png" alt="video"><img src="./staticPage/pages/images/pic/video1.png" alt="video"><img src="./staticPage/pages/images/pic/video3.png" alt="video"></a>
 
-##### [业务]
+#### [业务]
 
 > 业务流程: 主页->注册(各种checker)->登陆->登陆成功(y/n)
 
-##### [压测]
+#### [压测]
 
 > 在单台多核主机上，IO线程size=2，业务线程池size=5，用wrk和apache ab分别压index.html(2kB)：
 > (不连接redis)
@@ -38,7 +38,7 @@ ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 
 > 压测结果***QPS > 36000 req/s，吞吐量 >40MB/s, 响应时长 3ms(90%)***
 
-##### [Detail]
+#### [Detail]
 
 > 1、redis connection是**线程单例的长连接，redis 连接崩溃不会波及自身，自行断线重连，具有强悍的可靠性、可用性**（心跳连接也一样，充分地进行了解耦，自行断线重连)  
 > 2、redis缓存的key是path+filename用md5编程固定长度的串，value是文件进行zip压缩后的内容，**md5和zip编解码器均为线程单例对象**  
@@ -48,7 +48,7 @@ ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 > 6、gcc/g++打开 **-fsanitize=address -g** 选项可以检测有误内存错误、shell打开生成**coredump**有利于多线程程序复现崩溃现场环境  
 > 7、IDE带有CPU性能分析工具，如**perf+火焰图**，对于找出性能瓶颈特别有效  
 
-##### [统计]
+#### [统计]
 
 ```bash
  cloc -exlude_dir="base,net,log,lib" .#exclude base,net,log,lib
@@ -89,7 +89,7 @@ cd bin
 
 ##### [About author]
 
-<a href="https://zlonqi.gitee.io/">[click]<img src="./staticPage/pages/images/pic/wechart.png" alt="video"></a>
+<a href="https://zlonqi.gitee.io/"><img src="./staticPage/pages/images/pic/wechart.png" alt="video">***[click]***</a>
 
 ### Other
 
