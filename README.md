@@ -51,13 +51,13 @@ ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 #### [统计]
 
 ```bash
- cloc -exlude_dir="base,tcpSocket,log,lib" .#exclude dir : base,tcpSocket,log,lib
+ cloc -exclude_dir="base,tcpSocket,log,lib" .#exclude dir : base,tcpSocket,log,lib
 ```
 
 ![cloc](./webServer/pages/images/pic/count1.png)
 
 ```bash
- cloc -exlude_dir="log,lib" .#include dir base,tcpSocket
+ cloc -exclude_dir="log,lib" .#include dir base,tcpSocket
 ```
 
 ![cloc](./webServer/pages/images/pic/count2.png)
