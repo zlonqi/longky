@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(muduo)
+project(longky)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-pthread")
@@ -11,6 +11,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/thread
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
 set(base_SRCS
         thread/Condition.cpp
         thread/CountDownLatch.cpp
@@ -29,19 +30,7 @@ set(base_SRCS
         )
 
 #add_executable(base ${base_SRCS})
-add_library(muduo_base ${base_SRCS})
-target_link_libraries(muduo_base pthread rt)
+add_library(base ${base_SRCS})
+target_link_libraries(base pthread rt)
 
-#add_library(muduo_base_cpp11 ${base_SRCS})
-#target_link_libraries(muduo_base_cpp11 pthread rt)
-#set_target_properties(muduo_base_cpp11 PROPERTIES COMPILE_FLAGS "-std=c++0x")
-
-install(TARGETS muduo_base DESTINATION lib)
-#install(TARGETS muduo_base_cpp11 DESTINATION lib)
-
-file(GLOB HEADERS "*.h")
-install(FILES ${HEADERS} DESTINATION include/muduo/base)
-
-if(MUDUO_BUILD_EXAMPLES)
-    add_subdirectory(tests)
 endif()

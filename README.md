@@ -14,13 +14,13 @@
 
 #### [架构图]
 
-![arch](./staticPage/pages/images/pic/arch1.png)  
+![arch](./webServer/pages/images/pic/arch1.png)  
 
 
 
 **Note**:libco仅作为可选的方案之一，Reactor和协程的融合也值得探讨
 
-<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./staticPage/pages/images/pic/video2.png" alt="video"><img src="./staticPage/pages/images/pic/video1.png" alt="video"><img src="./staticPage/pages/images/pic/video3.png" alt="video">[video]</a>
+<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./staticPage/pages/images/pic/video1.png" alt="video"><img src="./staticPage/pages/images/pic/video3.png" alt="video">[video]</a>
 
 #### [业务]
 
@@ -51,16 +51,16 @@ ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 #### [统计]
 
 ```bash
- cloc -exlude_dir="base,net,log,lib" .#exclude base,net,log,lib
+ cloc -exlude_dir="base,tcpSocket,log,lib" .#exclude dir : base,tcpSocket,log,lib
 ```
 
-![cloc](./staticPage/pages/images/pic/count1.png)
+![cloc](./webServer/pages/images/pic/count1.png)
 
 ```bash
- cloc -exlude_dir="log,lib" .#include base,net
+ cloc -exlude_dir="log,lib" .#include dir base,tcpSocket
 ```
 
-![cloc](./staticPage/pages/images/pic/count2.png)
+![cloc](./webServer/pages/images/pic/count2.png)
 
 
 
@@ -83,17 +83,17 @@ ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 ```bash
 cd bin
 ./run  								#staticWebServer :1688,websocketd :8000,monitor:8001
-./fstcgi ~/PATH/fastcgi/config.yaml           #fastcgiServer :16888
+./cgiServer ~/PATH/fastcgi/config.yaml           #fastcgiServer :16888
 ./HeartBeatChecker 							#heartBeatMonitor :8088
 ```
 
 ##### [About author]
 
-<a href="https://zlonqi.gitee.io/"><img src="./staticPage/pages/images/pic/wechart.png" alt="video"></a>
+<a href="https://zlonqi.gitee.io/"><img src="./webServer/pages/images/pic/wechart.png" alt="video"></a>
 
 ### Other
 
-###### ~/staticPage/config.yaml
+###### ~/webServer/config.yaml
 
 ```yaml
 webServer:
@@ -123,13 +123,13 @@ heartBeat:
 redis:
  ...
   vip:	#very important page，类似于布隆过滤器
-    1: /myProjectPath/staticPage/index.html
+    1: /myProjectPath/webServer/index.html
   rate: 0.6	#压缩率
 zlibMap:
   592A11E79283991D4ED33D2086DF77AE: 1771 #文件md5值和对应的原文件大小
 ```
 
-###### ~/fastcgi/config.yaml
+###### ~/cgiServer/config.yaml
 
 ```yaml
 ...

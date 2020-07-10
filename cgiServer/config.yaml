@@ -1,0 +1,45 @@
+#CGIServer Configuration
+cgiServer:
+  ip: localhost
+  port: 16888
+  poolThreads: 1
+  loopThreads: 1
+
+#Static WebServer Nginx
+webServer:
+  nginxIP: 192.168.16.128
+
+#Static Resource Path
+resource:
+  basePath: /yourPATH/fastcgi
+  indexPath: /index.html
+
+#AsyncLog Configuration
+log:
+  level: info
+  path: /yourPATH/log/
+  maxSize:
+    G: 0
+    M: 200
+    K: 0
+    B: 0
+  rollTime:
+    zoneTime: 8
+    hour: 13
+    minute: 10
+    second: 0
+  IOFrequency: 3
+
+#DataBase Configuration
+dataBase:
+  server: localhost
+  user: root
+  pswd: 666
+  dbName: RUNOOB
+
+#heartBeat configuration
+heartBeat:
+  server:
+    ip: 192.168.16.128
+    port: 8088
+  frequency: 5
