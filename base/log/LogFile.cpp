@@ -90,8 +90,8 @@ void LogFile::append_unlocked(const char* logline, int len)
     {
         rollFile();
     }
-    loop_.runAfter(1,std::bind(&LogFile::quit,this));
-    loop_.loop();
+    //loop_.runAfter(1,std::bind(&LogFile::quit,this));
+    //loop_.loop();
    /* else
     {
         ++count_;

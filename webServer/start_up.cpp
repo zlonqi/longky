@@ -74,8 +74,8 @@ void stop(StaticServer* server,muduo::net::EventLoop* loop){
     if(g_client)
         delete g_client;//loop_->runAfter(1, std::bind(&detail::removeConnector, connector_));
     g_client = nullptr;
-    g_loop->runAfter(1.1,std::bind(&StaticServer::stop,server));
-    g_loop->runAfter(1.2,std::bind(&EventLoop::quit,loop));
+    //g_loop->runAfter(1.1,std::bind(&StaticServer::stop,server));
+    //g_loop->runAfter(1.2,std::bind(&EventLoop::quit,loop));
 }
 
 void process_exit(int signo){
