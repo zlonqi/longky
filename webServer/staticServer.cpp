@@ -13,6 +13,7 @@ StaticServer::StaticServer(EventLoop *loop,
                             int loopThreads,
                             int maxConnections,
                             double idleDownLineTime):
+                            loop_(loop),
                             server_(loop, listenAddr, "StaticServer", muduo::net::TcpServer::kReusePort),
                             poolThreads_(poolThreads),
                             loopThreads_(loopThreads),
@@ -22,8 +23,6 @@ StaticServer::StaticServer(EventLoop *loop,
 {
     LOG_DEBUG << "StaticServer init in:" << startTime_.toFormattedString();
     server_.setConnectionCallback(std::bind(&StaticServer::onConnection, this, _1));
-    loop->runEvery(1.0, std::bind(&StaticServer::onTimer, this));
-    connectionBuckets_.resize(idleExpiredTime_);
 }
 
 StaticServer::~StaticServer(){
@@ -34,13 +33,21 @@ void StaticServer::start(){
     threadPool_.start(poolThreads_);
     server_.setThreadNum(loopThreads_);
     server_.start();
+    shared_ptr<EventLoopThreadPool> loops =server_.threadPool();
+    for(int j=0;j<loopThreads_;++j){
+        BucketPtr buket(new WeakConnectionList);
+        buket->resize(idleExpiredTime_);
+        EventLoop* loop=loops->getNextLoop();
+        map_.insert(make_pair(loop,buket));
+    }
+    loop_->runEvery(1.0, std::bind(&StaticServer::onTimer, this));
 }
 
 void StaticServer::stop(){
-    threadPool_.stop();//Can cancel this,stack variab can auto destruct
+    threadPool_.stop();//Can cancel this,stack variab can auto destruct, where it will call ThreadPool::stop()
     shared_ptr<EventLoopThreadPool> loops = server_.threadPool();
     for(int i = 0; i < loopThreads_; ++i)
-        loops->getNextLoop()->quit();//cancel this,stack variab can auto destruct
+        loops->getNextLoop()->quit();//cancel this,stack variab can auto destruct EventLoopThreadPool, And auto destruct all EventLoopThread, where it will call EventLoop::quit()
 }
 
 void StaticServer::onConnection(const TcpConnectionPtr &conn) {
@@ -62,7 +69,7 @@ void StaticServer::onConnection(const TcpConnectionPtr &conn) {
               //      std::bind(&StaticServer::highWaterMark, this, _1, _2),5*1024*1024);
             //conn->isHighWaterClose_ = false;
             EntryPtr entry(new Entry(conn));
-            connectionBuckets_.back().insert(entry);
+            map_[conn->getLoop()]->back().insert(entry);
             WeakEntryPtr weakEntry(entry);
             conn->setContext(weakEntry);
         }
@@ -81,7 +88,7 @@ void StaticServer::onMessage(const TcpConnectionPtr &conn, Buffer *buf, Timestam
     EntryPtr entry(weakEntry.lock());
     if (entry)
     {
-        connectionBuckets_.back().insert(entry);
+        map_[conn->getLoop()]->back().insert(entry);
     }
 }
 
@@ -138,5 +145,7 @@ void StaticServer::onParser(const TcpConnectionPtr &conn, Buffer *buf) {
 
 void StaticServer::onTimer()
 {
-    connectionBuckets_.push_back(Bucket());
+    for(auto node:map_){
+        node.second->push_back(Bucket());
+    }
 }

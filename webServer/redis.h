@@ -22,10 +22,11 @@ namespace ccx{
         string redisReplyToString(const redisReply* reply);
         void exeSET(char* key, char* value,int valenth);
         string exeGET(char* key);
-        bool isRedisConnectWell_;
     private:
         void freeReply();
         bool isError();
+    public:
+        bool isRedisConnectWell_;
     private:
         string _ip;
         int _port;

@@ -51,7 +51,7 @@ public:
         ~Entry()
         {
             muduo::net::TcpConnectionPtr conn = weakConn_.lock();
-            if (conn)
+            if (conn&&conn->connected())
             {
                 conn->forceClose();
                 LOG_DEBUG <<conn->peerAddress().toIpPort() << " -> " << conn->localAddress().toIpPort() << " Idle Connection Down.";
@@ -64,6 +64,8 @@ public:
     typedef std::weak_ptr<Entry> WeakEntryPtr;
     typedef std::unordered_set<EntryPtr> Bucket;
     typedef boost::circular_buffer<Bucket> WeakConnectionList;
+    typedef std::shared_ptr<WeakConnectionList> BucketPtr;
+    std::unordered_map<EventLoop*,BucketPtr> map_;
 
     WeakConnectionList connectionBuckets_;
 private:
@@ -73,6 +75,7 @@ private:
     void writeComplete(const TcpConnectionPtr& conn);
     void onParser(const TcpConnectionPtr& conn, Buffer* buf);
 
+    EventLoop*      loop_;
     TcpServer       server_;
     AtomicInt32     numConnected_;
     int32_t         kmaxConnections_;

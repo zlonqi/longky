@@ -12,7 +12,8 @@ namespace ccx{
 
     Redis::Redis(string ip,int port):
     _ip(ip),
-    _port(port)
+    _port(port),
+     isRedisConnectWell_(false)
     {
     }
 
@@ -22,9 +23,13 @@ namespace ccx{
         if(_context && _context->err)
         {
             //cout << "connect redis error" << endl;
+            ::redisFree(_context);
+            _context = nullptr;
+            isRedisConnectWell_ = false;
             return false;
             //exit(EXIT_FAILURE);
         }
+         isRedisConnectWell_ = true;
         return true;
         //cout << "redis Connect success" << endl;
     }

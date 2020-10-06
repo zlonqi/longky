@@ -32,7 +32,8 @@ Parser::Parser(){
 }
 
 Parser::~Parser(){
-    redis_->disConnect();
+    if(redis_->isRedisConnectWell_)
+        redis_->disConnect();
     delete redis_;
     if(g_zlib != nullptr)
         delete g_zlib;
@@ -274,8 +275,10 @@ void Parser::response_request(const string& g_file, const string& mime) {
                 if(error){
                     LOG_INFO << "<" << conn_.lock()->getContextkv("requestId")<<"> [successfully] got data from redis [md5]" << md5;
                     body = string(g_unComPressContent.get(),g_unComPressContent.get()+size);
-                } else
-                    LOG_INFO << "<" << conn_.lock()->getContextkv("requestId")<< "> [Fail] got data from redis [md5]" << md5;
+                } else{
+                    LOG_INFO << "<" << conn_.lock()->getContextkv("requestId")<< "> [Fail] unCompress data from redis [md5]" << md5;
+                    redis_->isRedisConnectWell_ = false;
+                }
                 //printf("%s\n",g_unComPressContent);
                 if(error)
                     getFromRedis = true;
@@ -284,6 +287,10 @@ void Parser::response_request(const string& g_file, const string& mime) {
         }else{
 ReConn:     LOG_INFO << "redis connect [Fail]";
             redis_->isRedisConnectWell_ = false;
+            if(g_zlib){
+                delete g_zlib;
+                g_zlib = nullptr;
+            }
             curLoop_ = conn_.lock()->getLoop();
             curLoop_->runInLoop(std::bind(&Parser::runInLoop,this));
         }
@@ -305,10 +312,10 @@ ReConn:     LOG_INFO << "redis connect [Fail]";
             ::setbuffer(fp, iobuf, sizeof iobuf);
 
             char buf[kBufSize];
-            memset(&buf,0,kBufSize);
+            memset(&buf,0,sizeof kBufSize);
             size_t nread = 0;
 
-            nread = ::fread(buf, 1, sizeof buf, fp);
+            nread = ::fread(buf, 1, sizeof(buf), fp);
             if(nread <= 0 ){
                 goto Sdown;
             }else {
