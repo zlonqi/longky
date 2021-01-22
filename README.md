@@ -1,14 +1,14 @@
 ### 简述
 
-> linux c++多线程、高性能，高可靠，高可用，可维可测
+> linux c++ C10K+、多线程、高性能，高可靠，可维可测
 >
 > 
 
 #### [核心]
 
-> **静态资源服务器、FastCGI服务器、心跳监控服务器**  
+> **静态web服务器、FastCGI服务器、心跳监控服务器**  
 > IO Model **Reactor+threadPool**, 传输协议为 **http1.1/fastcgi**, 涉及 **nginx/redis/mysql**  
-> 主机cpu/mem/IO监控使用**websocketd**、线程监控基于**心跳和日志**  
+> **websocketd**、**线程心跳**、**异步日志**、**prometheus+alertmanager+grafana+dingtalk** 
 
 
 
@@ -18,7 +18,8 @@
 
 
 
-**Note**:libco仅作为可选的方案之一，Reactor和协程的融合也值得探讨
+**Note1**:libco仅作为可选的方案之一，Reactor和协程的融合也值得探讨
+**Note2**:本项目的重点不在数据库，而在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，所以就没有涉及到主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。
 
 <a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./webServer/pages/images/pic/video1.png" alt="video"><img src="./webServer/pages/images/pic/video3.png" alt="video">[video]</a>
 
