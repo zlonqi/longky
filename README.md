@@ -7,7 +7,7 @@
 #### [核心]
 
 > **静态web服务器、FastCGI服务器、心跳监控服务器**  
-> IO Model **Reactor+threadPool**, 传输协议为 **http1.1/fastcgi**, 涉及 **nginx/redis/mysql**  
+> **主从loop+线程池**, 传输协议为 **http1.1/fastcgi**, 涉及 **nginx/redis/mysql**  
 > **websocketd**、**线程心跳**、**异步日志**、**prometheus+alertmanager+grafana+dingtalk** 
 
 
@@ -18,7 +18,8 @@
 
 
 
-**Note1**:libco仅作为可选的方案之一，Reactor和协程的融合也值得探讨
+**Note1**:libco仅作为可选的方案之一，Reactor和协程的融合也值得探讨  
+
 **Note2**:本项目的重点不在数据库，而在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，所以就没有涉及到主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。
 
 <a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./webServer/pages/images/pic/video1.png" alt="video"><img src="./webServer/pages/images/pic/video3.png" alt="video">[video]</a>
