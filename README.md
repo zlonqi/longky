@@ -41,7 +41,7 @@
 #### [cloc]
 
 ```bash
- cloc -exclude_dir="base,tcpSocket,log,lib" .#exclude dir : base,tcpSocket,log,lib
+$cloc -exclude_dir="base,tcpSocket,log,lib" .#exclude dir : base,tcpSocket,log,lib
  -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
@@ -60,13 +60,25 @@ SUM:                            55            658            581           5054
 
 ```
 
-![cloc](./webServer/pages/images/pic/count1.png)
-
 ```bash
- cloc -exclude_dir="log,lib" .#include dir base,tcpSocket
-```
+ $cloc -exclude_dir="log,lib" .#include dir base,tcpSocket
+ -------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C++                             48            829            409           6202
+C/C++ Header                    56            798            517           3027
+JavaScript                      10            106            374           1166
+HTML                             5             18             13            223
+CSS                              2             21              5            176
+Markdown                         1             39              0            120
+CMake                            8             20              4            103
+YAML                             2              5              6             97
+Bourne Shell                     1              6              5             20
+-------------------------------------------------------------------------------
+SUM:                           133           1842           1333          11134
+-------------------------------------------------------------------------------
 
-![cloc](./webServer/pages/images/pic/count2.png)
+```
 
 #### [detail]
 
