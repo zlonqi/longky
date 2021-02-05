@@ -34,7 +34,7 @@ $ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 $./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 ```
 
-> ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***
+> ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***[video]<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"></a>
 
 #### [video]<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./webServer/pages/images/pic/video1.png" alt="video"><img src="./webServer/pages/images/pic/video3.png" alt="video"></a>
 
@@ -53,7 +53,7 @@ $./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 #### [cloc]
 
 ```bash
-$cloc -exclude_dir="base,tcpSocket,log,lib" .#exclude dir : base,tcpSocket,log,lib
+$cloc -exclude_dir="base,tcpSocket,log,lib" .
  -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
@@ -70,7 +70,7 @@ Bourne Shell                     1              6              5             20
 SUM:                            55            658            581           5054
 -------------------------------------------------------------------------------
 
- $cloc -exclude_dir="log,lib" .#include dir base,tcpSocket
+ $cloc -exclude_dir="log,lib" .
  -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
