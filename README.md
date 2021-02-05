@@ -34,9 +34,7 @@ $ab -k -c 100 -n 10000 http://127.0.0.1:1688/
 $./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 ```
 
-> ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***[video]<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"></a>
-
-#### [video]<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./webServer/pages/images/pic/video1.png" alt="video"><img src="./webServer/pages/images/pic/video3.png" alt="video"></a>
+> ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***
 
 
 #### [detail]
@@ -149,6 +147,8 @@ heartBeat:
 ...
 ```
 
+#### [video for it]<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./webServer/pages/images/pic/video1.png" alt="video"><img src="./webServer/pages/images/pic/video3.png" alt="video"></a>
+
 #### [reference]
 
 > github.com/chenshuo/muduo  
@@ -161,9 +161,10 @@ heartBeat:
 > 1、优化了日志滚动可选项：可配置按需滚动：按大小滚动、按时间点滚动  
 > 2、优化了服务端 TCP断开4次挥手，使得被动断开也会先清空应用层发送缓冲区再发送FIN包来结束4次挥手，踢掉空闲链接则直接发送RST强行立刻终止  
 
-#### [Contributor]
+### NEXT...
+#### C10M ：Share-nothing、lock-free、kernel bypass、zero-copy、asynchronous programming
+
+### Contributor
 
 <a href="https://zlonqi.gitee.io/"><img src="./webServer/pages/images/pic/wechart.png" alt="video"></a>
 
-### NEXT...
-#### C10M ：Share-nothing、lock-free、kernel bypass、zero-copy、asynchronous programming
