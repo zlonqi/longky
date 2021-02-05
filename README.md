@@ -30,8 +30,8 @@
 > (不连接redis)
 
 ```shell
-1、ab -k -c 100 -n 10000 http://127.0.0.1:1688/
-2、./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
+$ab -k -c 100 -n 10000 http://127.0.0.1:1688/
+$./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 ```
 
 > ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***
