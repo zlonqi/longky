@@ -140,4 +140,4 @@ heartBeat:
 <a href="https://zlonqi.gitee.io/"><img src="./webServer/pages/images/pic/wechart.png" alt="video"></a>
 
 ### NEXT...
-#### C10M ：Share-nothing、zero-copy、Asynchronous programming、kernel bypass
+#### C10M ：Share-nothing、lock-free、kernel bypass、zero-copy、asynchronous programming
