@@ -7,7 +7,7 @@
 #### [核心]
 
 > **静态web页面、CGI、心跳监控服务器**  
-> **epoll+主从loop+线程池**、**异步日志** 
+> **epoll+主从loop+线程池**、**异步日志**  
 > **http1.1 GET/POST/Pipeline**、**fastcgi**, 涉及 **nginx/redis/mysql**  
 > **线程心跳**、**websocketd**、**prometheus+alertmanager+grafana+dingtalk**  
 
@@ -123,19 +123,19 @@ heartBeat:
 ...
 ```
 
-##### [reference]
+#### [reference]
 
 > github.com/chenshuo/muduo  
 >
 > github.com/tencent-wechat/libco
 
-###### [fixed on muduo]
+##### [fixed on muduo]
 
 > 0、添加base/threadPool.h ,实现了线程单例HttpParser(内含redis长连接、md5和zip编解码器)  
 > 1、优化了日志滚动可选项：可配置按需滚动：按大小滚动、按时间点滚动  
 > 2、优化了服务端 TCP断开4次挥手，使得被动断开也会先清空应用层发送缓冲区再发送FIN包来结束4次挥手，踢掉空闲链接则直接发送RST强行立刻终止  
 
-##### [Contributor]
+#### [Contributor]
 
 <a href="https://zlonqi.gitee.io/"><img src="./webServer/pages/images/pic/wechart.png" alt="video"></a>
 
