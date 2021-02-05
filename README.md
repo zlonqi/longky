@@ -7,10 +7,9 @@
 #### [核心]
 
 > **静态web页面、CGI、心跳监控服务器**  
-> **epoll+主从loop+线程池**、**异步日志**
+> **epoll+主从loop+线程池**、**异步日志** 
 > **http1.1 GET/POST/Pipeline**、**fastcgi**, 涉及 **nginx/redis/mysql**  
-> **线程心跳**、**websocketd**、**prometheus+alertmanager+grafana+dingtalk** 
-
+> **线程心跳**、**websocketd**、**prometheus+alertmanager+grafana+dingtalk**  
 
 
 #### [架构图]
@@ -19,7 +18,7 @@
 
 
 
-**Note**:本项目的重点不在数据库，而在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，所以就没有涉及到主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。
+**PS**:本项目的重点不在数据库，而在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，所以就没有涉及到主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。
 
 #### [业务]
 
@@ -35,7 +34,7 @@
 2、./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 ```
 
-> 压测结果***QPS > 36000 req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***
+> ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***
 
 #### [video]<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./webServer/pages/images/pic/video1.png" alt="video"><img src="./webServer/pages/images/pic/video3.png" alt="video"></a>
 
@@ -53,7 +52,7 @@
 
 ![cloc](./webServer/pages/images/pic/count2.png)
 
-#### [Detail]
+#### [detail]
 
 > 1、redis 是**线程单例的长连接，该连接和心跳一样，都能自行断线重连，自动切换，可靠可用**  
 > 2、若文件需要放redis中，path+filename用md5进行哈希作为key，文件内容进行zip压缩作为value，**md5和zip编解码器均为线程单例**  
