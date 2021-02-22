@@ -37,7 +37,11 @@ $./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 > ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***
 
 
-#### [detail]
+#### [卡点难点]
+
+<a href="https://zlonqi.gitee.io/2021/02/22/note/">项目中遇到的难点</a>
+
+#### [打磨点]
 ```text
 1、redis 是线程单例的长连接，该连接和心跳一样，都能自行断线重连，自动切换，可靠可用
 2、若文件需要放redis中，path+filename用md5进行哈希作为key，文件内容进行zip压缩作为value，md5和zip编解码器均为线程单例
@@ -48,7 +52,7 @@ $./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 7、CPU性能分析工具--perf+火焰图，找出性能瓶颈
 8、linux内核参数调优应适需求进行
 ```
-#### [cloc]
+#### [项目统计]
 
 ```bash
 $cloc -exclude_dir="base,tcpSocket,log,lib" .
