@@ -1,7 +1,7 @@
 #ifndef MUDUO_FASTCGI_PARSEREQUEST_H
 #define MUDUO_FASTCGI_PARSEREQUEST_H
 
-#include "../tcpSocket/TcpConnection.h"
+#include "netLayer/tcp/TcpConnection.h"
 #include "type.h"
 
 #include <stdio.h>
@@ -15,8 +15,8 @@
 #include <sys/wait.h>
 #include <stdlib.h>
 
-using namespace muduo;
-using namespace muduo::net;
+using namespace tank;
+using namespace tank::net;
 
 //string g_resource_base_path;
 
@@ -35,6 +35,6 @@ private:
     TcpConnectionPtr conn_;
     ParamMap params_;
     string postData_;
-    muduo::net::Buffer response_;
+    tank::net::Buffer response_;
 };
 #endif

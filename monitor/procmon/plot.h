@@ -1,5 +1,5 @@
-#include "../../base/noncopyable.h"
-#include "../../base/Types.h"
+#include "base/noncopyable.h"
+#include "base/Types.h"
 #include <vector>
 #include <stdlib.h> // ssize_t
 #include <gd.h>

@@ -1,11 +1,11 @@
 #include "plot.h"
-#include "../../base/log/FileUtil.h"
-#include "../../base/log/Logging.h"
-#include "../../base/thread/ProcessInfo.h"
-#include "../../net/EventLoop.h"
-#include "../../net/http/HttpRequest.h"
-#include "../../net/http/HttpResponse.h"
-#include "../../net/http/HttpServer.h"
+#include "base/log/FileUtil.h"
+#include "base/log/Logging.h"
+#include "base/thread/ProcessInfo.h"
+#include "netLayer/event/eventloop/EventLoop.h"
+#include "netLayer/http/HttpRequest.h"
+#include "netLayer/http/HttpResponse.h"
+#include "netLayer/http/HttpServer.h"
 
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/circular_buffer.hpp>

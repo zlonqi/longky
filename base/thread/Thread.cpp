@@ -15,28 +15,28 @@
 #include <sys/types.h>
 #include <linux/unistd.h>
 
-namespace muduo{
+namespace tank{
     namespace detail{
         pid_t gettid(){
             return static_cast<pid_t >(::syscall(SYS_gettid));
         }
         void afterFork(){
-            muduo::CurrentThread::t_cacheTid=0;
-            muduo::CurrentThread::t_threadName="main";
+            tank::CurrentThread::t_cacheTid=0;
+            tank::CurrentThread::t_threadName="main";
             CurrentThread::tid();
         }
 
         class ThreadNameInitializer{
         public:
             ThreadNameInitializer(){
-                muduo::CurrentThread::t_threadName="main";
+                tank::CurrentThread::t_threadName="main";
                 CurrentThread::tid();
                 pthread_atfork(nullptr,nullptr,&afterFork);
             }
         };
         ThreadNameInitializer init;
         struct  ThreadData{
-            typedef muduo::Thread::ThreadFunc ThreadFunc;
+            typedef tank::Thread::ThreadFunc ThreadFunc;
             ThreadFunc func_;
             string name_;
             pid_t * tid_;
@@ -46,29 +46,29 @@ namespace muduo{
                 :func_(std::move(func)),name_(name),tid_(tid),latch_(latch){
             }
             void runInThread(){
-                *tid_=muduo::CurrentThread::tid();
+                *tid_=tank::CurrentThread::tid();
                 tid_= nullptr;
                 latch_->countDown();
                 latch_=nullptr;
 
-                muduo::CurrentThread::t_threadName=name_.empty()? "muduoThread":name_.c_str();
-                ::prctl(PR_SET_NAME,muduo::CurrentThread::t_threadName);
+                tank::CurrentThread::t_threadName= name_.empty() ? "muduoThread" : name_.c_str();
+                ::prctl(PR_SET_NAME, tank::CurrentThread::t_threadName);
                 try{
                     func_();
-                    muduo::CurrentThread::t_threadName="finished";
+                    tank::CurrentThread::t_threadName="finished";
                 }catch (const Exception& ex){
-                    muduo::CurrentThread::t_threadName="crashed";
+                    tank::CurrentThread::t_threadName="crashed";
                     fprintf(stderr,"exception caught in Thread %s\n",name_.c_str());
                     fprintf(stderr,"reason:%s\n",ex.what());
                     fprintf(stderr,"stack trace:%s\n",ex.stackTrace());
                     abort();
                 }catch (const std::exception& ex){
-                    muduo::CurrentThread::t_threadName="crashed";
+                    tank::CurrentThread::t_threadName="crashed";
                     fprintf(stderr,"exception caught in Thread %s\n",name_.c_str());
                     fprintf(stderr,"reason:%s\n",ex.what());
                     abort();
                 }catch (...){
-                    muduo::CurrentThread::t_threadName="crashed";
+                    tank::CurrentThread::t_threadName="crashed";
                     fprintf(stderr,"unknown exception caught in Thread %s\n",name_.c_str());
                     throw ;
                 }
@@ -134,4 +134,4 @@ namespace muduo{
         joined_=true;
         return pthread_join(pthreadId_, nullptr);//pthreadId must not be replaced by pthread_self()
     }
-}//end namespace muduo
+}//end namespace tank

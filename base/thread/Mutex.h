@@ -6,7 +6,7 @@
 #define MUDUO_MUTEX_H
 
 #include "CurrentThread.h"
-#include "noncopyable.h"
+#include "base/noncopyable.h"
 #include <assert.h>
 #include <pthread.h>
 
@@ -103,7 +103,7 @@ __END_DECLS
 
 #endif // CHECK_PTHREAD_RETURN_VALUE
 
-namespace muduo{
+namespace tank{
     class CAPABILITY("mutex") MutexLock:noncopyable{
     public:
         MutexLock():holder_(0){
@@ -189,7 +189,7 @@ namespace muduo{
 
         MutexLock& mutex_;
     };
-}//end namespace muduo
+}//end namespace tank
 
 // Prevent misuse like:
 // MutexLockGuard(mutex_);

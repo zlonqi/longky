@@ -156,11 +156,11 @@ heartBeat:
 
 #### [reference]
 
-> github.com/chenshuo/muduo  
+> github.com/chenshuo/tank  
 >
 > github.com/tencent-wechat/libco
 
-##### [fixed on muduo]
+##### [fixed on tank]
 
 > 0、添加base/threadPool.h ,实现了线程单例HttpParser(内含redis长连接、md5和zip编解码器)  
 > 1、优化了日志滚动可选项：可配置按需滚动：按大小滚动、按时间点滚动  

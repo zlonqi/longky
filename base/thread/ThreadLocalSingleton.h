@@ -9,7 +9,7 @@
 #include <assert.h>
 #include <pthread.h>
 
-namespace muduo
+namespace tank
 {
 
     template<typename T>
@@ -76,5 +76,5 @@ namespace muduo
     template<typename T>
     typename ThreadLocalSingleton<T>::Deleter ThreadLocalSingleton<T>::deleter_;
 
-}  // namespace muduo
+}  // namespace tank
 #endif //MUDUO_THREADLOCALSINGLETON_H

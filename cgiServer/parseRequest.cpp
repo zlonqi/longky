@@ -1,5 +1,5 @@
 #include "parseRequest.h"
-#include "../base/log/Logging.h"
+#include "base/log/Logging.h"
 #include "type.h"
 #include "fastcgi.h"
 #include "configLoad.h"
@@ -25,7 +25,7 @@ void* Parser::accept_request() {
     string method=params_["REQUEST_METHOD"];
     string path = params_["DOCUMENT_URI"];
     path = g_resource_base_path + path;
-    //path = "/root/web/CLionProject/muduo/fastcgi" + path;
+    //path = "/root/web/CLionProject/tank/fastcgi" + path;
     LOG_INFO << "path:"<<path;
     if (method != "GET" && method != "POST")
     {

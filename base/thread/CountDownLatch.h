@@ -7,7 +7,7 @@
 
 #include "Condition.h"
 
-namespace muduo{
+namespace tank{
     class CountDownLatch:noncopyable{
     public:
         explicit CountDownLatch(int count);
@@ -19,5 +19,5 @@ namespace muduo{
         Condition condition_ GUARDED_BY((mutex_));
         int count_ GUARDED_BY(mutex_);
     };
-}//end namespace muduo
+}//end namespace tank
 #endif //MUDUO_COUNTDOWNLATCH_H

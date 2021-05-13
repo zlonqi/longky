@@ -8,11 +8,11 @@
 #include <memory>
 #include <time.h>
 
-namespace muduo
+namespace tank
 {
 
 // TimeZone for 1970~2030
-    class TimeZone : public muduo::copyable
+    class TimeZone : public tank::copyable
     {
     public:
         explicit TimeZone(const char* zonefile);
@@ -45,5 +45,5 @@ namespace muduo
         std::shared_ptr<Data> data_;
     };
 
-}  // namespace muduo
+}  // namespace tank
 #endif //MUDUO_TIMEZONE_H

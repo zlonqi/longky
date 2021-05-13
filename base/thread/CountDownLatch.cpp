@@ -3,7 +3,7 @@
 //
 #include "CountDownLatch.h"
 
-using namespace muduo;
+using namespace tank;
 
 CountDownLatch::CountDownLatch(int count):mutex_(),condition_(mutex_),count_(count) {
 }

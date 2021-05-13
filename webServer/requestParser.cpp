@@ -1,7 +1,7 @@
 #include "requestParser.h"
 #include "configLoad.h"
-#include "../tcpSocket/Channel.h"
-#include "../base/log/Logging.h"
+#include "netLayer/event/Channel.h"
+#include "base/log/Logging.h"
 
 #include <sys/stat.h>
 #include <unistd.h>

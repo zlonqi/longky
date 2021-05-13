@@ -4,7 +4,7 @@
 #include "Exception.h"
 #include "CurrentThread.h"
 
-namespace muduo{
+namespace tank{
     Exception::Exception(std::string what)
         :message_(std::move(what))
         ,stack_(CurrentThread::stackTrace(false)) {

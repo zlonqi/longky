@@ -14,7 +14,7 @@
 #include <memory>
 #include <pthread.h>
 
-namespace muduo{
+namespace tank{
     class Thread:noncopyable{
     public:
         typedef std::function<void ()> ThreadFunc;

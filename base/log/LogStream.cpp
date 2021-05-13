@@ -17,8 +17,8 @@
 #include <inttypes.h>
 
 
-using namespace muduo;
-using namespace muduo::detail;
+using namespace tank;
+using namespace tank::detail;
 
 // TODO: better itoa.
 #if defined(__clang__)
@@ -27,7 +27,7 @@ using namespace muduo::detail;
 #pragma GCC diagnostic ignored "-Wtype-limits"
 #endif
 
-namespace muduo
+namespace tank
 {
     namespace detail
     {
@@ -199,7 +199,7 @@ namespace muduo
         return buf;
     }
 
-}  // namespace muduo
+}  // namespace tank
 
 template<int SIZE>
 const char* FixedBuffer<SIZE>::debugString()

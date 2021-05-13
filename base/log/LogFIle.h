@@ -6,14 +6,14 @@
 #define MUDUO_LOGFILE_H
 
 
-#include "../Mutex.h"
-#include "../Types.h"
-#include "../../net/EventLoop.h"
+#include "base/thread/Mutex.h"
+#include "base/Types.h"
+#include "netLayer/event/eventloop/EventLoop.h"
 
 #include <memory>
 
-using namespace muduo::net;
-namespace muduo
+using namespace tank::net;
+namespace tank
 {
     namespace FileUtil
     {
@@ -63,5 +63,5 @@ namespace muduo
         const static int kRollPerSeconds_ = 60*60*24;
     };
 
-}  // namespace muduo
+}  // namespace tank
 #endif //MUDUO_LOGFILE_H

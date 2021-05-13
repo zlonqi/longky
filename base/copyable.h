@@ -5,7 +5,7 @@
 #ifndef MUDUO_COPYABLE_H
 #define MUDUO_COPYABLE_H
 
-namespace muduo{
+namespace tank{
     class copyable{
     protected:
         copyable()= default;

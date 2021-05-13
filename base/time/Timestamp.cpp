@@ -11,7 +11,7 @@
 #endif
 
 #include <inttypes.h>
-using namespace muduo;
+using namespace tank;
 string Timestamp::toString() const {
     char buf[32]={0};
     int64_t seconds=microSecondsSinceEpoch_/kMicroSecondsPerSecond;

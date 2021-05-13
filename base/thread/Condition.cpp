@@ -7,7 +7,7 @@
 #include <errno.h>
 
 // returns true if time out, false otherwise.
-bool muduo::Condition::waitForSeconds(double seconds)
+bool tank::Condition::waitForSeconds(double seconds)
 {
     struct timespec abstime;
     // FIXME: use CLOCK_MONOTONIC or CLOCK_MONOTONIC_RAW to prevent time rewind.

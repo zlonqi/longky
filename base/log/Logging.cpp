@@ -13,7 +13,7 @@
 
 #include <sstream>
 
-namespace muduo
+namespace tank
 {
 
 /*
@@ -116,9 +116,9 @@ class LoggerImpl
     Logger::FlushFunc g_flush = defaultFlush;
     TimeZone g_logTimeZone;
 
-}  // namespace muduo
+}  // namespace tank
 
-using namespace muduo;
+using namespace tank;
 
 Logger::Impl::Impl(LogLevel level, int savedErrno, const SourceFile& file, int line)
         : time_(Timestamp::now()),
@@ -158,7 +158,7 @@ void Logger::Impl::formatTime()
 
         int len = snprintf(t_time, sizeof(t_time), "%4d%02d%02d %02d:%02d:%02d",
                            tm_time.tm_year + 1900, tm_time.tm_mon + 1, tm_time.tm_mday,
-                           (tm_time.tm_hour + muduo::timeZone_), tm_time.tm_min, tm_time.tm_sec);
+                           (tm_time.tm_hour + tank::timeZone_), tm_time.tm_min, tm_time.tm_sec);
         assert(len == 17); (void)len;
     }
 

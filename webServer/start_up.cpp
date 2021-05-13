@@ -1,20 +1,20 @@
 #include "staticServer.h"
 #include "configLoad.h"
-#include "../base/log/AyncLogging.h"
-#include "../base/log/Logging.h"
-#include "../tcpSocket/EventLoopThreadPool.h"
-#include "../tcpSocket/TcpClient.h"
+#include "base/log/AyncLogging.h"
+#include "base/log/Logging.h"
+#include "netLayer/event/eventloop/EventLoopThreadPool.h"
+#include "netLayer/tcp/c/client/TcpClient.h"
 
 #include <boost/algorithm/string.hpp>
 #include <string>
 #include <sys/stat.h>
 #include <cstdio>
 #include <csignal>
-using namespace muduo;
-using namespace muduo::net;
+using namespace tank;
+using namespace tank::net;
 
 string g_conf_path;
-muduo::AsyncLogging* g_asyncLog = nullptr;
+tank::AsyncLogging* g_asyncLog = nullptr;
 std::weak_ptr<TcpConnection> g_conn;
 string g_heartBeat_identification;
 TcpClient* g_client = nullptr;
@@ -69,7 +69,7 @@ void onConnection(const TcpConnectionPtr& conn){
     }
 }
 
-void stop(StaticServer* server,muduo::net::EventLoop* loop){
+void stop(StaticServer* server, tank::net::EventLoop* loop){
     closeHeartBeat = true;
     if(g_client)
         delete g_client;//loop_->runAfter(1, std::bind(&detail::removeConnector, connector_));
@@ -87,7 +87,7 @@ int main(int argc, char* argv[])
 {
     if(argc < 2 ){
         printf("usuage: -configuration_path\n");
-        printf("like: /root/web/CLionProject/muduo/staticPage/config.yaml\n");
+        printf("like: /root/web/CLionProject/tank/staticPage/config.yaml\n");
         return 0;
     }
     g_conf_path = argv[1];
@@ -96,20 +96,20 @@ int main(int argc, char* argv[])
         printf("configuration error, syntax or path");
         return 0;
     }
-    muduo::timeZone_ = g_log_rollZoneTime;
+    tank::timeZone_ = g_log_rollZoneTime;
     boost::algorithm::to_lower(g_log_level);
     if(g_log_level == "trace")
-        muduo::Logger::setLogLevel(muduo::Logger::TRACE);
+        tank::Logger::setLogLevel(tank::Logger::TRACE);
     else if(g_log_level == "debug")
-        muduo::Logger::setLogLevel(muduo::Logger::DEBUG);
+        tank::Logger::setLogLevel(tank::Logger::DEBUG);
     else if(g_log_level == "info")
-        muduo::Logger::setLogLevel(muduo::Logger::INFO);
+        tank::Logger::setLogLevel(tank::Logger::INFO);
     else if(g_log_level == "warn")
-        muduo::Logger::setLogLevel(muduo::Logger::WARN);
+        tank::Logger::setLogLevel(tank::Logger::WARN);
     else if(g_log_level == "error")
-        muduo::Logger::setLogLevel(muduo::Logger::ERROR);
+        tank::Logger::setLogLevel(tank::Logger::ERROR);
     else if(g_log_level == "fatal")
-        muduo::Logger::setLogLevel(muduo::Logger::FATAL);
+        tank::Logger::setLogLevel(tank::Logger::FATAL);
     else{
         printf("log_level error\n");
         return 0;
@@ -123,23 +123,23 @@ int main(int argc, char* argv[])
         --i;
     }
     std::reverse(logBaseName.begin(),logBaseName.end());
-    muduo::AsyncLogging log(g_log_path+logBaseName,
-                            g_log_maxSize,
-                            g_log_rollDaySeconds,
-                            g_log_rollZoneTime,
-                            g_log_IOFrequency
+    tank::AsyncLogging log(g_log_path + logBaseName,
+                           g_log_maxSize,
+                           g_log_rollDaySeconds,
+                           g_log_rollZoneTime,
+                           g_log_IOFrequency
                             );
 
     log.start();
     g_asyncLog = &log;
-    muduo::Logger::setOutput(asyncOutput);
+    tank::Logger::setOutput(asyncOutput);
 
     LOG_INFO << "Loading configuration file Successfully.";
     InetAddress addr(static_cast<uint16_t>(g_webServer_port));
 
     LOG_INFO << "StaticServer listens on " << addr.toIpPort() << " poolthreads " << g_webServer_poolThreads<<" loopthreads"<<g_webServer_loopThreads;
 
-    muduo::net::EventLoop loop;
+    tank::net::EventLoop loop;
     StaticServer server(&loop, addr, g_webServer_poolThreads, g_webServer_loopThreads,g_maxConnections,g_conn_expire);
     server.start();
     g_server=&server;

@@ -1,16 +1,16 @@
 cmake_minimum_required(VERSION 3.9.1)
-project(longky)
+project(lonky)
 #
 set(CMAKE_CXX_STANDARD 11)
-#set(CMAKE_CXX_FLAGS "-pthread -fsanitize=address -g")
-set(CMAKE_CXX_FLAGS "-pthread")
+#set(CMAKE_CXX_FLAGS "-pthread -fsanitize=address -g -O0 -std=c++11 ${CMAKE_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "-pthread -g -O0")
 SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/lib)
 
+include_directories(${PROJECT_SOURCE_DIR})
 add_subdirectory(base)
-add_subdirectory(tcpSocket)
-add_subdirectory(./monitor/procmon)
+add_subdirectory(netLayer)
 add_subdirectory(cgiServer)
 add_subdirectory(webServer)
+add_subdirectory(netLayer/http)
 add_subdirectory(monitor)
-

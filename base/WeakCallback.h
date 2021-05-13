@@ -8,7 +8,7 @@
 #include <functional>
 #include <memory>
 
-namespace muduo
+namespace tank
 {
 
 // A barely usable WeakCallback
@@ -59,5 +59,5 @@ namespace muduo
         return WeakCallback<CLASS, ARGS...>(object, function);
     }
 
-}  // namespace muduo
+}  // namespace tank
 #endif //MUDUO_WEAKCALLBACK_H

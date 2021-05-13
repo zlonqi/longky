@@ -4,11 +4,11 @@
 
 #ifndef MUDUO_FILEUTIL_H
 #define MUDUO_FILEUTIL_H
-#include "noncopyable.h"
-#include "StringPiece.h"
+#include "base/noncopyable.h"
+#include "base/StringPiece.h"
 #include <sys/types.h>  // for off_t
 
-namespace muduo
+namespace tank
 {
     namespace FileUtil
     {
@@ -79,5 +79,5 @@ namespace muduo
         };
 
     }  // namespace FileUtil
-}  // namespace muduo
+}  // namespace tank
 #endif //MUDUO_FILEUTIL_H

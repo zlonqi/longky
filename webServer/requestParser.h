@@ -1,12 +1,12 @@
-#include "../tcpSocket/Buffer.h"
-#include "../tcpSocket/TcpConnection.h"
-#include "../base/log/Logging.h"
+#include "netLayer/Buffer.h"
+#include "netLayer/tcp/TcpConnection.h"
+#include "base/log/Logging.h"
 #include "redis.h"
 #include "ZLibString.h"
 #include <unordered_map>
 #include <vector>
-using namespace muduo;
-using namespace muduo::net;
+using namespace tank;
+using namespace tank::net;
 
 class Parser{
 public:

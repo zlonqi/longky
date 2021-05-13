@@ -8,15 +8,15 @@
 
 //#include "BlockingQueue.h"
 //#include "BoundedBlockingQueue.h"
-#include "../thread/CountDownLatch.h"
-#include "../thread/Thread.h"
-#include "../Mutex.h"
+#include "base/thread/CountDownLatch.h"
+#include "base/thread/Thread.h"
+#include "base/thread/Mutex.h"
 #include "LogStream.h"
 
 #include <atomic>
 #include <vector>
 
-namespace muduo
+namespace tank
 {
 
     class AsyncLogging : noncopyable
@@ -58,7 +58,7 @@ namespace muduo
 
         void threadFunc();
 
-        typedef muduo::detail::FixedBuffer<muduo::detail::kLargeBuffer> Buffer;
+        typedef tank::detail::FixedBuffer<tank::detail::kLargeBuffer> Buffer;
         typedef std::vector<std::unique_ptr<Buffer>> BufferVector;
         typedef BufferVector::value_type BufferPtr;
 
@@ -69,14 +69,14 @@ namespace muduo
         std::atomic<bool> running_;
         const string basename_;
         const off_t rollSize_;
-        muduo::Thread thread_;
-        muduo::CountDownLatch latch_;
-        muduo::MutexLock mutex_;
-        muduo::Condition cond_ GUARDED_BY(mutex_);
+        tank::Thread thread_;
+        tank::CountDownLatch latch_;
+        tank::MutexLock mutex_;
+        tank::Condition cond_ GUARDED_BY(mutex_);
         BufferPtr currentBuffer_ GUARDED_BY(mutex_);
         BufferPtr nextBuffer_ GUARDED_BY(mutex_);
         BufferVector buffers_ GUARDED_BY(mutex_);
     };
 
-}  // namespace muduo
+}  // namespace tank
 #endif //MUDUO_AYNCLOGGING_H

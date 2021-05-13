@@ -1,21 +1,23 @@
 #include "fastcgi.h"
 #include "parseRequest.h"
-#include "../base/log/Logging.h"
-#include "../base/thread/ThreadPool.h"
-#include "../tcpSocket/EventLoop.h"
-#include "../tcpSocket/TcpServer.h"
+#include "base/log/Logging.h"
+#include "base/thread/threadPool.h"
+#include "base/thread/ThreadPool.h"
+#include "netLayer/event/eventloop/EventLoop.h"
+#include "base/thread/ThreadPool.h"
+#include "netLayer/tcp/s/server/TcpServer.h"
 #include "type.h"
 #include "configLoad.h"
-#include "../base/log/AyncLogging.h"
-#include "../tcpSocket/TcpClient.h"
-#include "../tcpSocket/EventLoopThreadPool.h"
+#include "base/log/AyncLogging.h"
+#include "netLayer/tcp/c/client/TcpClient.h"
+#include "netLayer/event/eventloop/EventLoopThreadPool.h"
 
 #include <yaml-cpp/yaml.h>
 #include <cstdio>
 #include <boost/algorithm/string.hpp>
 
-using namespace muduo;
-using namespace muduo::net;
+using namespace tank;
+using namespace tank::net;
 using namespace std;
 
 string g_nginx_ip;
@@ -52,7 +54,7 @@ class CgiServer
 public:
 
 	CgiServer(EventLoop * loop, const InetAddress & listenAddr, int poolThreads, int loopThreads = 0)
-		: server_(loop, listenAddr, "CGIServer", muduo::net::TcpServer::kReusePort),
+		: server_(loop, listenAddr, "CGIServer", tank::net::TcpServer::kReusePort),
 		  poolThreads_(poolThreads),
 		  loopThreads_(loopThreads),
 		  startTime_(Timestamp::now())
@@ -155,7 +157,7 @@ bool init(string& conf_path){
     return no_error;
 }
 string g_conf_path;
-muduo::AsyncLogging* g_asyncLog = nullptr;
+tank::AsyncLogging* g_asyncLog = nullptr;
 TcpConnectionPtr g_conn = nullptr;
 string g_heartBeat_identification;
 TcpClient* g_client = nullptr;
@@ -201,7 +203,7 @@ int main(int argc, char* argv[])
 {
     if(argc < 2 ){
         printf("usuage: -configuration_path\n");
-        printf("like: /root/web/CLionProject/muduo/fastcgi/config.yaml\n");
+        printf("like: /root/web/CLionProject/tank/fastcgi/config.yaml\n");
         return 0;
     }
     g_conf_path = argv[1];
@@ -211,20 +213,20 @@ int main(int argc, char* argv[])
         return 0;
     }
 
-    muduo::timeZone_ = g_log_rollZoneTime;
+    tank::timeZone_ = g_log_rollZoneTime;
     boost::algorithm::to_lower(g_log_level);
     if(g_log_level == "info")
-        muduo::Logger::setLogLevel(muduo::Logger::INFO);
+        tank::Logger::setLogLevel(tank::Logger::INFO);
     else if(g_log_level == "warn")
-        muduo::Logger::setLogLevel(muduo::Logger::WARN);
+        tank::Logger::setLogLevel(tank::Logger::WARN);
     else if(g_log_level == "debug")
-        muduo::Logger::setLogLevel(muduo::Logger::DEBUG);
+        tank::Logger::setLogLevel(tank::Logger::DEBUG);
     else if(g_log_level == "error")
-        muduo::Logger::setLogLevel(muduo::Logger::ERROR);
+        tank::Logger::setLogLevel(tank::Logger::ERROR);
     else if(g_log_level == "fatal")
-        muduo::Logger::setLogLevel(muduo::Logger::FATAL);
+        tank::Logger::setLogLevel(tank::Logger::FATAL);
     else if(g_log_level == "trace")
-        muduo::Logger::setLogLevel(muduo::Logger::TRACE);
+        tank::Logger::setLogLevel(tank::Logger::TRACE);
     else{
         printf("log_level error\n");
         return 0;
@@ -238,21 +240,21 @@ int main(int argc, char* argv[])
         --i;
     }
     std::reverse(logBaseName.begin(),logBaseName.end());
-    muduo::AsyncLogging log(g_log_path+logBaseName,
-                            g_log_maxSize,
-                            g_log_rollDaySeconds,
-                            g_log_rollZoneTime,
-                            g_log_IOFrequency);
+    tank::AsyncLogging log(g_log_path + logBaseName,
+                           g_log_maxSize,
+                           g_log_rollDaySeconds,
+                           g_log_rollZoneTime,
+                           g_log_IOFrequency);
 
     log.start();
     g_asyncLog = &log;
-    muduo::Logger::setOutput(asyncOutput);
+    tank::Logger::setOutput(asyncOutput);
 
     LOG_INFO << "Loading configuration file Successfully.";
     InetAddress addr(static_cast<uint16_t>(g_cgi_port));
     LOG_INFO << "FastCGI listens on " << addr.toIpPort() << " poolthreads " << g_cgi_poolThreads<<" loopthreads"<<g_cgi_loopThreads;
 
-    muduo::net::EventLoop loop;
+    tank::net::EventLoop loop;
     CgiServer server(&loop, addr, g_cgi_poolThreads, g_cgi_loopThreads);
     server.start();
 

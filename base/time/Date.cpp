@@ -4,7 +4,7 @@
 #include "Date.h"
 #include <stdio.h>  // snprintf
 
-namespace muduo
+namespace tank
 {
     namespace detail
     {
@@ -40,10 +40,10 @@ namespace muduo
         }
     }  // namespace detail
     const int Date::kJulianDayOf1970_01_01 = detail::getJulianDayNumber(1970, 1, 1);
-}  // namespace muduo
+}  // namespace tank
 
-using namespace muduo;
-using namespace muduo::detail;
+using namespace tank;
+using namespace tank::detail;
 
 Date::Date(int y, int m, int d)
         : julianDayNumber_(getJulianDayNumber(y, m, d))

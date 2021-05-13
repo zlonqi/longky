@@ -1,11 +1,11 @@
-#include "../base/log/Logging.h"
-#include "../tcpSocket/TcpServer.h"
-#include "../tcpSocket/EventLoop.h"
+#include "base/log/Logging.h"
+#include "netLayer/tcp/s/server/TcpServer.h"
+#include "netLayer/event/eventloop/EventLoop.h"
 
 #include <unordered_map>
 #include <vector>
-using namespace muduo;
-using namespace muduo::net;
+using namespace tank;
+using namespace tank::net;
 std::unordered_map<string,string> map;
 std::vector<TcpConnectionPtr> vec;
 std::unordered_map<TcpConnectionPtr,string> identityMap;
@@ -46,13 +46,13 @@ void displayStatus(){
 int main(){
     EventLoop loop;
     InetAddress addr(static_cast<uint16_t >(8088));
-    TcpServer server(&loop,addr,"HeartBeatChecker",muduo::net::TcpServer::kReusePort);
+    TcpServer server(&loop, addr, "HeartBeatChecker", tank::net::TcpServer::kReusePort);
     server.setConnectionCallback(std::bind(onConnection,_1));
     server.setMessageCallback(std::bind(onMessage,_1,_2,_3));
     server.start();
 
     loop.runEvery(5,displayStatus);
-    muduo::Logger::setLogLevel(muduo::Logger::INFO);
+    tank::Logger::setLogLevel(tank::Logger::INFO);
     loop.loop();
     return 0;
 }

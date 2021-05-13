@@ -4,13 +4,13 @@
 
 #ifndef MUDUO_LOGSTREAM_H
 #define MUDUO_LOGSTREAM_H
-#include "../noncopyable.h"
-#include "../StringPiece.h"
-#include "../Types.h"
+#include "base/noncopyable.h"
+#include "base/StringPiece.h"
+#include "base/Types.h"
 #include <assert.h>
 #include <string.h> // memcpy
 
-namespace muduo
+namespace tank
 {
 
     namespace detail
@@ -196,5 +196,5 @@ namespace muduo
 // Requires n >= 0
     string formatIEC(int64_t n);
 
-}  // namespace muduo
+}  // namespace tank
 #endif //MUDUO_LOGSTREAM_H

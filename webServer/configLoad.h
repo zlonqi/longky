@@ -1,9 +1,10 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
-#include "Hiredis.h"
-#include "redisConnector.h"
-#include "../net/EventLoop.h"
+
+//#include "Hiredis.h"
+//#include "redisConnector.h"
+#include "netLayer/event/eventloop/EventLoop.h"
 using namespace std;
 
 extern string g_nginx_ip;

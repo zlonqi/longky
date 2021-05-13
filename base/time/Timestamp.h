@@ -5,13 +5,13 @@
 #ifndef MUDUO_TIMESTAMP_H
 #define MUDUO_TIMESTAMP_H
 
-#include "copyable.h"
-#include "Types.h"
+#include "base/copyable.h"
+#include "base/Types.h"
 
 #include <boost/operators.hpp>
 
-namespace  muduo{
-    class Timestamp:public muduo::copyable,
+namespace  tank{
+    class Timestamp:public tank::copyable,
                     public boost::equality_comparable<Timestamp>,
                     public boost::less_than_comparable<Timestamp>{
     public:
@@ -62,6 +62,6 @@ namespace  muduo{
         int64_t delta= static_cast<int64_t >(seconds*Timestamp::kMicroSecondsPerSecond+timestamp.microSecondsSinceEpoch());
         return Timestamp(delta);
 
-    }//end namespace muduo
+    }//end namespace tank
 }
 #endif //MUDUO_TIMESTAMP_H

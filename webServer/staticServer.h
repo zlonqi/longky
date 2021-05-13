@@ -1,22 +1,22 @@
 #ifndef MUDUO_STATICPAGE_STATICSERVER_H
 #define MUDUO_STATICPAGE_STATICSERVER_H
 
-#include "../base/Atomic.h"
-#include "../base/log/Logging.h"
-#include "../base/thread/Thread.h"
-#include "../base/thread/threadPool.h"
-#include "../tcpSocket/EventLoop.h"
-#include "../tcpSocket/TcpServer.h"
-#include "../tcpSocket/InetAddress.h"
-#include "../tcpSocket/TcpConnection.h"
+#include "base/Atomic.h"
+#include "base/log/Logging.h"
+#include "base/thread/Thread.h"
+#include "base/thread/threadPool.h"
+#include "netLayer/event/eventloop/EventLoop.h"
+#include "netLayer/tcp/s/server/TcpServer.h"
+#include "netLayer/socket/InetAddress.h"
+#include "netLayer/tcp/TcpConnection.h"
 #include "requestParser.h"
 
 #include <unordered_set>
 #include <boost/circular_buffer.hpp>
 #include <utility>
 // RFC 862
-using namespace muduo;
-using namespace muduo::net;
+using namespace tank;
+using namespace tank::net;
 
 class StaticServer{
 public:
@@ -39,9 +39,9 @@ public:
 
     void onTimer();
 
-    typedef std::weak_ptr<muduo::net::TcpConnection> WeakTcpConnectionPtr;
+    typedef std::weak_ptr<tank::net::TcpConnection> WeakTcpConnectionPtr;
 
-    struct Entry : public muduo::copyable
+    struct Entry : public tank::copyable
     {
         explicit Entry(const WeakTcpConnectionPtr&  weakConn)
                 : weakConn_(weakConn)
@@ -50,7 +50,7 @@ public:
 
         ~Entry()
         {
-            muduo::net::TcpConnectionPtr conn = weakConn_.lock();
+            tank::net::TcpConnectionPtr conn = weakConn_.lock();
             if (conn&&conn->connected())
             {
                 conn->forceClose();

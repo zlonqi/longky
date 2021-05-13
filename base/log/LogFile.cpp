@@ -3,8 +3,8 @@
 //
 #include "LogFIle.h"
 #include "FileUtil.h"
-#include "../time/ProcessInfo.h"
-#include "../../net/EventLoop.h"
+#include "base/thread/ProcessInfo.h"
+#include "netLayer/event/eventloop/EventLoop.h"
 
 #include <stdio.h>
 #include <time.h>
@@ -12,7 +12,7 @@
 #include <iostream>
 
 using namespace std;
-using namespace muduo;
+using namespace tank;
 LogFile::LogFile(const string& basename,
                  off_t rollSize,
                  int rollTime,

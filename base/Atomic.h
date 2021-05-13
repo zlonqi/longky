@@ -8,7 +8,7 @@
 #include "noncopyable.h"
 #include <stdint.h>
 
-namespace muduo{
+namespace tank{
     namespace detail{
         template <typename T>
         class AtomicIntegerT:noncopyable{
@@ -49,7 +49,7 @@ namespace muduo{
     }//end namespace detail
     typedef detail::AtomicIntegerT<int32_t > AtomicInt32;
     typedef detail::AtomicIntegerT<int64_t > AtomicInt64;
-}//end namespace muduo
+}//end namespace tank
 
 
 #endif //MUDUO_ATOMIC_H

@@ -2,7 +2,7 @@
 
 port1=8001 #process monitor port
 port2=8000 #machine monitor port
-exeDir=/root/web/CLionProject/muduo/bin
+exeDir=/root/web/CLionProject/tank/bin
 websocketdDir=${exeDir}
 ###############################################
 netstat -anlp|grep webServer|head -n 1|awk '{print $7}'|awk -F '/' '{print $1}'|xargs kill -9

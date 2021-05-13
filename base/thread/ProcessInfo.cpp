@@ -16,7 +16,7 @@
 #include <sys/resource.h>
 #include <sys/times.h>
 
-namespace muduo
+namespace tank
 {
     namespace detail
     {
@@ -53,10 +53,10 @@ namespace muduo
         int g_clockTicks = static_cast<int>(::sysconf(_SC_CLK_TCK));
         int g_pageSize = static_cast<int>(::sysconf(_SC_PAGE_SIZE));
     }  // namespace detail
-}  // namespace muduo
+}  // namespace tank
 
-using namespace muduo;
-using namespace muduo::detail;
+using namespace tank;
+using namespace tank::detail;
 
 pid_t ProcessInfo::pid()
 {

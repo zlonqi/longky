@@ -10,7 +10,7 @@
 
 struct tm;
 
-namespace muduo
+namespace tank
 {
 
 ///
@@ -19,7 +19,7 @@ namespace muduo
 /// This class is immutable.
 /// It's recommended to pass it by value, since it's passed in register on x64.
 ///
-    class Date : public muduo::copyable
+    class Date : public tank::copyable
         // public boost::less_than_comparable<Date>,
         // public boost::equality_comparable<Date>
     {
@@ -113,5 +113,5 @@ namespace muduo
         return x.julianDayNumber() == y.julianDayNumber();
     }
 
-}  // namespace muduo
+}  // namespace tank
 #endif //MUDUO_DATE_H

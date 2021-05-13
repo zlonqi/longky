@@ -1,9 +1,9 @@
 #include "staticServer.h"
-#include "../tcpSocket/EventLoopThreadPool.h"
-#include "../base/log/Logging.h"
-#include "../tcpSocket/EventLoop.h"
-#include "../tcpSocket/TcpServer.h"
-#include "../tcpSocket/Channel.h"
+#include "netLayer/event/eventloop/EventLoopThreadPool.h"
+#include "base/log/Logging.h"
+#include "netLayer/event/eventloop/EventLoop.h"
+#include "netLayer/tcp/s/server/TcpServer.h"
+#include "netLayer/event/Channel.h"
 #include "configLoad.h"
 #include <string>
 
@@ -14,7 +14,7 @@ StaticServer::StaticServer(EventLoop *loop,
                             int maxConnections,
                             double idleDownLineTime):
                             loop_(loop),
-                            server_(loop, listenAddr, "StaticServer", muduo::net::TcpServer::kReusePort),
+                            server_(loop, listenAddr, "StaticServer", tank::net::TcpServer::kReusePort),
                             poolThreads_(poolThreads),
                             loopThreads_(loopThreads),
                             kmaxConnections_(maxConnections),
@@ -137,8 +137,8 @@ void StaticServer::writeComplete(const TcpConnectionPtr &conn) {
 }
 
 void StaticServer::onParser(const TcpConnectionPtr &conn, Buffer *buf) {
-    muduo::ThreadLocalSingleton<Parser>::instance().setConn(conn,buf);
-    muduo::ThreadLocalSingleton<Parser>::instance().access_request();
+    tank::ThreadLocalSingleton<Parser>::instance().setConn(conn, buf);
+    tank::ThreadLocalSingleton<Parser>::instance().access_request();
     //Parser parser(conn,buf);
     //parser.access_request();
 }

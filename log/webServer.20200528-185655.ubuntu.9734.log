@@ -122,7 +122,7 @@
 20200528 18:56:57.540554Z  9743[TRACE] printActiveChannels {22: IN }  - EventLoop.cpp:272
 20200528 18:56:57.540578Z  9743[TRACE] handleEventWithGuard 22: IN  - Channel.cpp:83
 20200528 18:56:57.540908Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
-20200528 18:56:57.541153Z  9739[INFO]  {192.168.16.1:32294'1590663417'9734}request: /root/web/CLionProject/muduo/staticPage/pages/login.html - requestParser.cpp:93
+20200528 18:56:57.541153Z  9739[INFO]  {192.168.16.1:32294'1590663417'9734}request: /root/web/CLionProject/tank/staticPage/pages/login.html - requestParser.cpp:93
 20200528 18:56:57.541354Z  9739[INFO]  redis connect [Fail] - requestParser.cpp:226
 20200528 18:56:57.596916Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.596966Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
@@ -132,13 +132,13 @@
 20200528 18:56:57.597654Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:56:57.597667Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:56:57.597728Z  9743[DEBUG] writeComplete {192.168.16.1:32294'1590663417'9734StaticServer-0.0.0.0:1688#1}write complete - staticServer.cpp:102
-20200528 18:56:57.597826Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/login.html[200 ok] - staticServer.cpp:127
+20200528 18:56:57.597826Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/login.html[200 ok] - staticServer.cpp:127
 20200528 18:56:57.597841Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:56:57.661723Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.661800Z  9743[TRACE] printActiveChannels {22: IN }  - EventLoop.cpp:272
 20200528 18:56:57.661823Z  9743[TRACE] handleEventWithGuard 22: IN  - Channel.cpp:83
 20200528 18:56:57.661988Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
-20200528 18:56:57.662248Z  9740[INFO]  {192.168.16.1:32294'1590663417'9734}request: /root/web/CLionProject/muduo/staticPage/pages/css/login.css - requestParser.cpp:93
+20200528 18:56:57.662248Z  9740[INFO]  {192.168.16.1:32294'1590663417'9734}request: /root/web/CLionProject/tank/staticPage/pages/css/login.css - requestParser.cpp:93
 20200528 18:56:57.663440Z  9734[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.663507Z  9734[TRACE] printActiveChannels {10: IN }  - EventLoop.cpp:272
 20200528 18:56:57.663520Z  9734[TRACE] handleEventWithGuard 10: IN  - Channel.cpp:83
@@ -201,11 +201,11 @@
 20200528 18:56:57.667429Z  9744[TRACE] printActiveChannels {24: IN }  - EventLoop.cpp:272
 20200528 18:56:57.667440Z  9744[TRACE] handleEventWithGuard 24: IN  - Channel.cpp:83
 20200528 18:56:57.667477Z  9744[TRACE] poll fd total count 4 - EpollPoller.cpp:52
-20200528 18:56:57.667529Z  9739[INFO]  {192.168.16.1:32299'1590663417'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_3.png - requestParser.cpp:93
-20200528 18:56:57.667530Z  9742[INFO]  {192.168.16.1:32300'1590663417'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png - requestParser.cpp:93
+20200528 18:56:57.667529Z  9739[INFO]  {192.168.16.1:32299'1590663417'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/programer_wall_3.png - requestParser.cpp:93
+20200528 18:56:57.667530Z  9742[INFO]  {192.168.16.1:32300'1590663417'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/lock.png - requestParser.cpp:93
 20200528 18:56:57.667631Z  9739[INFO]  redis connect [Fail] - requestParser.cpp:226
-20200528 18:56:57.668929Z  9741[INFO]  {192.168.16.1:32301'1590663417'9734}request: /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js - requestParser.cpp:93
-20200528 18:56:57.673105Z  9739[INFO]  {192.168.16.1:32297'1590663417'9734}request: /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js - requestParser.cpp:93
+20200528 18:56:57.668929Z  9741[INFO]  {192.168.16.1:32301'1590663417'9734}request: /root/web/CLionProject/tank/staticPage/pages/js/DD_belatedPNG.js - requestParser.cpp:93
+20200528 18:56:57.673105Z  9739[INFO]  {192.168.16.1:32297'1590663417'9734}request: /root/web/CLionProject/tank/staticPage/pages/js/jquery-1.12.2.min.js - requestParser.cpp:93
 20200528 18:56:57.674296Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.674361Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:56:57.674378Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
@@ -214,7 +214,7 @@
 20200528 18:56:57.682539Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:56:57.682554Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:56:57.682815Z  9743[DEBUG] writeComplete {192.168.16.1:32299'1590663417'9734StaticServer-0.0.0.0:1688#3}write complete - staticServer.cpp:102
-20200528 18:56:57.682906Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_3.png[200 ok] - staticServer.cpp:127
+20200528 18:56:57.682906Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/programer_wall_3.png[200 ok] - staticServer.cpp:127
 20200528 18:56:57.682926Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:56:57.689737Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.689807Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
@@ -224,7 +224,7 @@
 20200528 18:56:57.691210Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:56:57.691224Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:56:57.691255Z  9743[DEBUG] writeComplete {192.168.16.1:32294'1590663417'9734StaticServer-0.0.0.0:1688#1}write complete - staticServer.cpp:102
-20200528 18:56:57.691312Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/css/login.css[200 ok] - staticServer.cpp:127
+20200528 18:56:57.691312Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/css/login.css[200 ok] - staticServer.cpp:127
 20200528 18:56:57.691326Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:56:57.693961Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.694014Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
@@ -237,41 +237,41 @@
 20200528 18:56:57.709290Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:56:57.709304Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:56:57.709338Z  9743[DEBUG] writeComplete {192.168.16.1:32301'1590663417'9734StaticServer-0.0.0.0:1688#5}write complete - staticServer.cpp:102
-20200528 18:56:57.709400Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js[200 ok] - staticServer.cpp:127
+20200528 18:56:57.709400Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/js/DD_belatedPNG.js[200 ok] - staticServer.cpp:127
 20200528 18:56:57.709413Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:56:57.727363Z  9744[TRACE] poll fd total count 4 - EpollPoller.cpp:52
 20200528 18:56:57.727399Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.727442Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:56:57.727456Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:56:57.728741Z  9744[DEBUG] writeComplete {192.168.16.1:32297'1590663417'9734StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
-20200528 18:56:57.728878Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js[200 ok] - staticServer.cpp:127
+20200528 18:56:57.728878Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/js/jquery-1.12.2.min.js[200 ok] - staticServer.cpp:127
 20200528 18:56:57.728903Z  9744[TRACE] poll fd total count 4 - EpollPoller.cpp:52
 20200528 18:56:57.728924Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.728968Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:56:57.728985Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:56:57.729685Z  9744[DEBUG] writeComplete {192.168.16.1:32300'1590663417'9734StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
-20200528 18:56:57.729858Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png[200 ok] - staticServer.cpp:127
+20200528 18:56:57.729858Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/lock.png[200 ok] - staticServer.cpp:127
 20200528 18:56:57.729894Z  9744[TRACE] poll fd total count 4 - EpollPoller.cpp:52
 20200528 18:56:57.797374Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.797449Z  9744[TRACE] printActiveChannels {26: IN }  - EventLoop.cpp:272
 20200528 18:56:57.797470Z  9744[TRACE] handleEventWithGuard 26: IN  - Channel.cpp:83
 20200528 18:56:57.797724Z  9744[TRACE] poll fd total count 4 - EpollPoller.cpp:52
-20200528 18:56:57.797849Z  9740[INFO]  {192.168.16.1:32300'1590663417'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.png - requestParser.cpp:93
+20200528 18:56:57.797849Z  9740[INFO]  {192.168.16.1:32300'1590663417'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/bg.png - requestParser.cpp:93
 20200528 18:56:57.798769Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.798847Z  9744[TRACE] printActiveChannels {24: IN }  - EventLoop.cpp:272
 20200528 18:56:57.798869Z  9744[TRACE] handleEventWithGuard 24: IN  - Channel.cpp:83
 20200528 18:56:57.799042Z  9744[TRACE] poll fd total count 4 - EpollPoller.cpp:52
-20200528 18:56:57.799475Z  9739[INFO]  {192.168.16.1:32297'1590663417'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/login3.png - requestParser.cpp:93
+20200528 18:56:57.799475Z  9739[INFO]  {192.168.16.1:32297'1590663417'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/login3.png - requestParser.cpp:93
 20200528 18:56:57.801432Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.801509Z  9743[TRACE] printActiveChannels {27: IN }  - EventLoop.cpp:272
 20200528 18:56:57.801530Z  9743[TRACE] handleEventWithGuard 27: IN  - Channel.cpp:83
 20200528 18:56:57.801700Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
-20200528 18:56:57.801832Z  9742[INFO]  {192.168.16.1:32301'1590663417'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png - requestParser.cpp:93
+20200528 18:56:57.801832Z  9742[INFO]  {192.168.16.1:32301'1590663417'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/text_field.png - requestParser.cpp:93
 20200528 18:56:57.802756Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.802850Z  9743[TRACE] printActiveChannels {22: IN }  - EventLoop.cpp:272
 20200528 18:56:57.802870Z  9743[TRACE] handleEventWithGuard 22: IN  - Channel.cpp:83
 20200528 18:56:57.802982Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
-20200528 18:56:57.803069Z  9741[INFO]  {192.168.16.1:32294'1590663417'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/login_btn.png - requestParser.cpp:93
+20200528 18:56:57.803069Z  9741[INFO]  {192.168.16.1:32294'1590663417'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/login_btn.png - requestParser.cpp:93
 20200528 18:56:57.826080Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.826132Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:56:57.826146Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
@@ -283,20 +283,20 @@
 20200528 18:56:57.826735Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:56:57.826741Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:56:57.826756Z  9744[DEBUG] writeComplete {192.168.16.1:32300'1590663417'9734StaticServer-0.0.0.0:1688#4}write complete - staticServer.cpp:102
-20200528 18:56:57.826793Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.png[200 ok] - staticServer.cpp:127
+20200528 18:56:57.826793Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/bg.png[200 ok] - staticServer.cpp:127
 20200528 18:56:57.826800Z  9744[TRACE] poll fd total count 4 - EpollPoller.cpp:52
 20200528 18:56:57.834137Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:56:57.834229Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.834275Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:56:57.834287Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:56:57.836020Z  9743[DEBUG] writeComplete {192.168.16.1:32294'1590663417'9734StaticServer-0.0.0.0:1688#1}write complete - staticServer.cpp:102
-20200528 18:56:57.836098Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/login_btn.png[200 ok] - staticServer.cpp:127
+20200528 18:56:57.836098Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/login_btn.png[200 ok] - staticServer.cpp:127
 20200528 18:56:57.836117Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:56:57.836135Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.836395Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:56:57.836419Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:56:57.836453Z  9743[DEBUG] writeComplete {192.168.16.1:32301'1590663417'9734StaticServer-0.0.0.0:1688#5}write complete - staticServer.cpp:102
-20200528 18:56:57.836584Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png[200 ok] - staticServer.cpp:127
+20200528 18:56:57.836584Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/text_field.png[200 ok] - staticServer.cpp:127
 20200528 18:56:57.836621Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:56:57.869349Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:57.869418Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
@@ -306,7 +306,7 @@
 20200528 18:56:57.870426Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:56:57.870440Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:56:57.870471Z  9744[DEBUG] writeComplete {192.168.16.1:32297'1590663417'9734StaticServer-0.0.0.0:1688#2}write complete - staticServer.cpp:102
-20200528 18:56:57.870531Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/login3.png[200 ok] - staticServer.cpp:127
+20200528 18:56:57.870531Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/login3.png[200 ok] - staticServer.cpp:127
 20200528 18:56:57.870544Z  9744[TRACE] poll fd total count 4 - EpollPoller.cpp:52
 20200528 18:56:58.287426Z  9734[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:56:58.287491Z  9734[TRACE] printActiveChannels {7: IN }  - EventLoop.cpp:272
@@ -1078,7 +1078,7 @@
 20200528 18:58:07.870727Z  9744[TRACE] handleEventWithGuard 22: IN  - Channel.cpp:83
 20200528 18:58:07.870885Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:58:07.870945Z  9742[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#5] at 0x9E9C50 fd=27 state=kDisconnected - TcpConnection.cpp:66
-20200528 18:58:07.871061Z  9742[INFO]  {192.168.16.1:34345'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/register.html - requestParser.cpp:93
+20200528 18:58:07.871061Z  9742[INFO]  {192.168.16.1:34345'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/register.html - requestParser.cpp:93
 20200528 18:58:07.871222Z  9742[INFO]  redis connect [Fail] - requestParser.cpp:226
 20200528 18:58:07.898339Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:07.898424Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
@@ -1088,7 +1088,7 @@
 20200528 18:58:07.900256Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:58:07.900269Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:58:07.900300Z  9744[DEBUG] writeComplete {192.168.16.1:34345'1590663487'9734StaticServer-0.0.0.0:1688#6}write complete - staticServer.cpp:102
-20200528 18:58:07.900405Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/register.html[200 ok] - staticServer.cpp:127
+20200528 18:58:07.900405Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/register.html[200 ok] - staticServer.cpp:127
 20200528 18:58:07.900426Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:58:07.957976Z  9734[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:07.958046Z  9734[TRACE] printActiveChannels {10: IN }  - EventLoop.cpp:272
@@ -1109,7 +1109,7 @@
 20200528 18:58:07.959445Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:58:07.958911Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:58:07.958963Z  9739[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#2] at 0x9D9A40 fd=24 state=kDisconnected - TcpConnection.cpp:66
-20200528 18:58:07.959876Z  9739[INFO]  {192.168.16.1:34345'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/css/login.css - requestParser.cpp:93
+20200528 18:58:07.959876Z  9739[INFO]  {192.168.16.1:34345'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/css/login.css - requestParser.cpp:93
 20200528 18:58:07.961762Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:07.961825Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:58:07.962356Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
@@ -1118,7 +1118,7 @@
 20200528 18:58:07.962669Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:58:07.962741Z  9741[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#1] at 0x9EAE70 fd=22 state=kDisconnected - TcpConnection.cpp:66
 20200528 18:58:07.962763Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
-20200528 18:58:07.962814Z  9741[INFO]  {192.168.16.1:34347'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js - requestParser.cpp:93
+20200528 18:58:07.962814Z  9741[INFO]  {192.168.16.1:34347'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/js/jquery-1.12.2.min.js - requestParser.cpp:93
 20200528 18:58:07.965039Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:07.965146Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:58:07.965166Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
@@ -1127,7 +1127,7 @@
 20200528 18:58:07.965438Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:58:07.965449Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:58:07.965474Z  9743[DEBUG] writeComplete {192.168.16.1:34347'1590663487'9734StaticServer-0.0.0.0:1688#7}write complete - staticServer.cpp:102
-20200528 18:58:07.965540Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/jquery-1.12.2.min.js[200 ok] - staticServer.cpp:127
+20200528 18:58:07.965540Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/js/jquery-1.12.2.min.js[200 ok] - staticServer.cpp:127
 20200528 18:58:07.965555Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:58:07.981242Z  9734[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:07.981317Z  9734[TRACE] printActiveChannels {10: IN }  - EventLoop.cpp:272
@@ -1172,8 +1172,8 @@
 20200528 18:58:07.983758Z  9743[TRACE] handleEventWithGuard 28: IN  - Channel.cpp:83
 20200528 18:58:07.983810Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:07.983861Z  9740[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#4] at 0x9E9020 fd=26 state=kDisconnected - TcpConnection.cpp:66
-20200528 18:58:07.983928Z  9740[INFO]  {192.168.16.1:34352'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/js/userreg.js - requestParser.cpp:93
-20200528 18:58:07.985562Z  9742[INFO]  {192.168.16.1:34354'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_2.png - requestParser.cpp:93
+20200528 18:58:07.983928Z  9740[INFO]  {192.168.16.1:34352'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/js/userreg.js - requestParser.cpp:93
+20200528 18:58:07.985562Z  9742[INFO]  {192.168.16.1:34354'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/programer_wall_2.png - requestParser.cpp:93
 20200528 18:58:07.989240Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:58:07.989281Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:07.989326Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
@@ -1187,7 +1187,7 @@
 20200528 18:58:07.989599Z  9744[INFO]  StaticServer - 192.168.16.1:34353 -> 192.168.16.128:1688 is UP - staticServer.cpp:47
 20200528 18:58:07.989632Z  9744[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
 20200528 18:58:07.989664Z  9744[DEBUG] writeComplete {192.168.16.1:34345'1590663487'9734StaticServer-0.0.0.0:1688#6}write complete - staticServer.cpp:102
-20200528 18:58:07.989726Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/css/login.css[200 ok] - staticServer.cpp:127
+20200528 18:58:07.989726Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/css/login.css[200 ok] - staticServer.cpp:127
 20200528 18:58:07.989741Z  9744[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:07.989757Z  9744[TRACE] poll 2 events happened - EpollPoller.cpp:61
 20200528 18:58:07.989784Z  9744[TRACE] printActiveChannels {25: IN }  - EventLoop.cpp:272
@@ -1195,8 +1195,8 @@
 20200528 18:58:07.989809Z  9744[TRACE] handleEventWithGuard 25: IN  - Channel.cpp:83
 20200528 18:58:07.990415Z  9744[TRACE] handleEventWithGuard 27: IN  - Channel.cpp:83
 20200528 18:58:07.990503Z  9744[TRACE] poll fd total count 5 - EpollPoller.cpp:52
-20200528 18:58:07.990585Z  9741[INFO]  {192.168.16.1:34351'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js - requestParser.cpp:93
-20200528 18:58:07.991629Z  9741[INFO]  {192.168.16.1:34353'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/js/LoginCheck.js - requestParser.cpp:93
+20200528 18:58:07.990585Z  9741[INFO]  {192.168.16.1:34351'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/js/DD_belatedPNG.js - requestParser.cpp:93
+20200528 18:58:07.991629Z  9741[INFO]  {192.168.16.1:34353'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/js/LoginCheck.js - requestParser.cpp:93
 20200528 18:58:07.993460Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:07.993628Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:58:07.993644Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
@@ -1205,19 +1205,19 @@
 20200528 18:58:07.997019Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:58:07.997033Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:58:07.997752Z  9744[DEBUG] writeComplete {192.168.16.1:34351'1590663487'9734StaticServer-0.0.0.0:1688#8}write complete - staticServer.cpp:102
-20200528 18:58:07.997835Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/DD_belatedPNG.js[200 ok] - staticServer.cpp:127
+20200528 18:58:07.997835Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/js/DD_belatedPNG.js[200 ok] - staticServer.cpp:127
 20200528 18:58:07.997854Z  9744[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:07.997872Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:07.997907Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:58:07.997920Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:58:07.998184Z  9744[DEBUG] writeComplete {192.168.16.1:34353'1590663487'9734StaticServer-0.0.0.0:1688#10}write complete - staticServer.cpp:102
-20200528 18:58:07.998247Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/LoginCheck.js[200 ok] - staticServer.cpp:127
+20200528 18:58:07.998247Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/js/LoginCheck.js[200 ok] - staticServer.cpp:127
 20200528 18:58:07.998261Z  9744[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:08.008915Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.009087Z  9744[TRACE] printActiveChannels {22: IN }  - EventLoop.cpp:272
 20200528 18:58:08.009189Z  9744[TRACE] handleEventWithGuard 22: IN  - Channel.cpp:83
 20200528 18:58:08.009361Z  9744[TRACE] poll fd total count 5 - EpollPoller.cpp:52
-20200528 18:58:08.009486Z  9739[INFO]  {192.168.16.1:34345'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/pic/correct.png - requestParser.cpp:93
+20200528 18:58:08.009486Z  9739[INFO]  {192.168.16.1:34345'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/pic/correct.png - requestParser.cpp:93
 20200528 18:58:08.010943Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.011008Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:58:08.011025Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
@@ -1226,7 +1226,7 @@
 20200528 18:58:08.012489Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:58:08.012504Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:58:08.012537Z  9743[DEBUG] writeComplete {192.168.16.1:34352'1590663487'9734StaticServer-0.0.0.0:1688#9}write complete - staticServer.cpp:102
-20200528 18:58:08.012604Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/js/userreg.js[200 ok] - staticServer.cpp:127
+20200528 18:58:08.012604Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/js/userreg.js[200 ok] - staticServer.cpp:127
 20200528 18:58:08.012619Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:08.048014Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.048085Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
@@ -1250,7 +1250,7 @@
 20200528 18:58:08.095947Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:58:08.095975Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:58:08.096066Z  9744[DEBUG] writeComplete {192.168.16.1:34345'1590663487'9734StaticServer-0.0.0.0:1688#6}write complete - staticServer.cpp:102
-20200528 18:58:08.096184Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/pic/correct.png[200 ok] - staticServer.cpp:127
+20200528 18:58:08.096184Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/pic/correct.png[200 ok] - staticServer.cpp:127
 20200528 18:58:08.096207Z  9744[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:08.111881Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.112019Z  9744[TRACE] printActiveChannels {22: IN }  - EventLoop.cpp:272
@@ -1259,9 +1259,9 @@
 20200528 18:58:08.112410Z  9743[TRACE] printActiveChannels {23: IN }  - EventLoop.cpp:272
 20200528 18:58:08.112426Z  9743[TRACE] handleEventWithGuard 23: IN  - Channel.cpp:83
 20200528 18:58:08.112522Z  9744[TRACE] poll fd total count 5 - EpollPoller.cpp:52
-20200528 18:58:08.112591Z  9741[INFO]  {192.168.16.1:34345'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/pic/eye.png - requestParser.cpp:93
+20200528 18:58:08.112591Z  9741[INFO]  {192.168.16.1:34345'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/pic/eye.png - requestParser.cpp:93
 20200528 18:58:08.113803Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
-20200528 18:58:08.113888Z  9740[INFO]  {192.168.16.1:34347'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png - requestParser.cpp:93
+20200528 18:58:08.113888Z  9740[INFO]  {192.168.16.1:34347'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/lock.png - requestParser.cpp:93
 20200528 18:58:08.114669Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.114703Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:58:08.114711Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
@@ -1270,23 +1270,23 @@
 20200528 18:58:08.115317Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:58:08.115329Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:58:08.115359Z  9743[DEBUG] writeComplete {192.168.16.1:34347'1590663487'9734StaticServer-0.0.0.0:1688#7}write complete - staticServer.cpp:102
-20200528 18:58:08.115416Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/lock.png[200 ok] - staticServer.cpp:127
+20200528 18:58:08.115416Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/lock.png[200 ok] - staticServer.cpp:127
 20200528 18:58:08.115430Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:08.121183Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.121257Z  9743[TRACE] printActiveChannels {26: IN }  - EventLoop.cpp:272
 20200528 18:58:08.121277Z  9743[TRACE] handleEventWithGuard 26: IN  - Channel.cpp:83
 20200528 18:58:08.121392Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
-20200528 18:58:08.121481Z  9742[INFO]  {192.168.16.1:34352'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.gif - requestParser.cpp:93
+20200528 18:58:08.121481Z  9742[INFO]  {192.168.16.1:34352'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/bg.gif - requestParser.cpp:93
 20200528 18:58:08.124649Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.124850Z  9744[TRACE] printActiveChannels {27: IN }  - EventLoop.cpp:272
 20200528 18:58:08.124876Z  9744[TRACE] handleEventWithGuard 27: IN  - Channel.cpp:83
 20200528 18:58:08.125046Z  9744[TRACE] poll fd total count 5 - EpollPoller.cpp:52
-20200528 18:58:08.125222Z  9739[INFO]  {192.168.16.1:34353'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/register2.png - requestParser.cpp:93
+20200528 18:58:08.125222Z  9739[INFO]  {192.168.16.1:34353'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/register2.png - requestParser.cpp:93
 20200528 18:58:08.125882Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.125936Z  9743[TRACE] printActiveChannels {23: IN }  - EventLoop.cpp:272
 20200528 18:58:08.125947Z  9743[TRACE] handleEventWithGuard 23: IN  - Channel.cpp:83
 20200528 18:58:08.126033Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
-20200528 18:58:08.126096Z  9740[INFO]  {192.168.16.1:34347'1590663487'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png - requestParser.cpp:93
+20200528 18:58:08.126096Z  9740[INFO]  {192.168.16.1:34347'1590663487'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/text_field.png - requestParser.cpp:93
 20200528 18:58:08.127135Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.127189Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:58:08.127202Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
@@ -1295,7 +1295,7 @@
 20200528 18:58:08.127913Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:58:08.127926Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:58:08.127957Z  9743[DEBUG] writeComplete {192.168.16.1:34347'1590663487'9734StaticServer-0.0.0.0:1688#7}write complete - staticServer.cpp:102
-20200528 18:58:08.128018Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/text_field.png[200 ok] - staticServer.cpp:127
+20200528 18:58:08.128018Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/text_field.png[200 ok] - staticServer.cpp:127
 20200528 18:58:08.128032Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:08.186006Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.186098Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
@@ -1305,7 +1305,7 @@
 20200528 18:58:08.187726Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:58:08.187741Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:58:08.187778Z  9744[DEBUG] writeComplete {192.168.16.1:34345'1590663487'9734StaticServer-0.0.0.0:1688#6}write complete - staticServer.cpp:102
-20200528 18:58:08.187887Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/pic/eye.png[200 ok] - staticServer.cpp:127
+20200528 18:58:08.187887Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/pic/eye.png[200 ok] - staticServer.cpp:127
 20200528 18:58:08.187903Z  9744[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:08.205044Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.205389Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
@@ -1315,7 +1315,7 @@
 20200528 18:58:08.211492Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:58:08.211533Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:58:08.211591Z  9743[DEBUG] writeComplete {192.168.16.1:34352'1590663487'9734StaticServer-0.0.0.0:1688#9}write complete - staticServer.cpp:102
-20200528 18:58:08.212910Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/bg.gif[200 ok] - staticServer.cpp:127
+20200528 18:58:08.212910Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/bg.gif[200 ok] - staticServer.cpp:127
 20200528 18:58:08.212940Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:08.224298Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.224361Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
@@ -1325,7 +1325,7 @@
 20200528 18:58:08.224544Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:58:08.224555Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:58:08.224579Z  9744[DEBUG] writeComplete {192.168.16.1:34353'1590663487'9734StaticServer-0.0.0.0:1688#10}write complete - staticServer.cpp:102
-20200528 18:58:08.224636Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/register2.png[200 ok] - staticServer.cpp:127
+20200528 18:58:08.224636Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/register2.png[200 ok] - staticServer.cpp:127
 20200528 18:58:08.224649Z  9744[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:08.233823Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:08.234181Z  9743[TRACE] printActiveChannels {28: OUT }  - EventLoop.cpp:272
@@ -1375,7 +1375,7 @@
 20200528 18:58:08.778538Z  9743[TRACE] updateChannel fd = 28 events = 3 index = 1 - EpollPoller.cpp:106
 20200528 18:58:08.778685Z  9743[TRACE] update epoll_ctl op = MOD fd = 28 event = { 28: IN PRI  } - EpollPoller.cpp:174
 20200528 18:58:08.778747Z  9743[DEBUG] writeComplete {192.168.16.1:34354'1590663487'9734StaticServer-0.0.0.0:1688#11}write complete - staticServer.cpp:102
-20200528 18:58:08.778812Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_2.png[200 ok] - staticServer.cpp:127
+20200528 18:58:08.778812Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/programer_wall_2.png[200 ok] - staticServer.cpp:127
 20200528 18:58:08.778826Z  9743[TRACE] poll fd total count 5 - EpollPoller.cpp:52
 20200528 18:58:09.354258Z  9734[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:58:09.354325Z  9734[TRACE] printActiveChannels {7: IN }  - EventLoop.cpp:272
@@ -1962,7 +1962,7 @@
 20200528 18:59:03.873785Z  9744[TRACE] handleEventWithGuard 22: IN  - Channel.cpp:83
 20200528 18:59:03.874059Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:59:03.874147Z  9742[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#9] at 0x9EB280 fd=26 state=kDisconnected - TcpConnection.cpp:66
-20200528 18:59:03.874349Z  9742[INFO]  {192.168.16.1:36429'1590663543'9734}request: /root/web/CLionProject/muduo/staticPage/index.html - requestParser.cpp:93
+20200528 18:59:03.874349Z  9742[INFO]  {192.168.16.1:36429'1590663543'9734}request: /root/web/CLionProject/tank/staticPage/index.html - requestParser.cpp:93
 20200528 18:59:03.874593Z  9742[INFO]  redis connect [Fail] - requestParser.cpp:226
 20200528 18:59:03.932868Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:59:03.932934Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
@@ -1972,14 +1972,14 @@
 20200528 18:59:03.933532Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:59:03.933544Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:59:03.933573Z  9744[DEBUG] writeComplete {192.168.16.1:36429'1590663543'9734StaticServer-0.0.0.0:1688#12}write complete - staticServer.cpp:102
-20200528 18:59:03.933636Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/index.html[200 ok] - staticServer.cpp:127
+20200528 18:59:03.933636Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/index.html[200 ok] - staticServer.cpp:127
 20200528 18:59:03.933650Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:59:04.057625Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:59:04.057704Z  9744[TRACE] printActiveChannels {22: IN }  - EventLoop.cpp:272
 20200528 18:59:04.057725Z  9744[TRACE] handleEventWithGuard 22: IN  - Channel.cpp:83
 20200528 18:59:04.057824Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:59:04.057873Z  9739[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#10] at 0x9D9A40 fd=27 state=kDisconnected - TcpConnection.cpp:66
-20200528 18:59:04.057946Z  9739[INFO]  {192.168.16.1:36429'1590663543'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_1.png - requestParser.cpp:93
+20200528 18:59:04.057946Z  9739[INFO]  {192.168.16.1:36429'1590663543'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/programer_wall_1.png - requestParser.cpp:93
 20200528 18:59:04.096339Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:59:04.096399Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:59:04.096553Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
@@ -1988,7 +1988,7 @@
 20200528 18:59:04.106652Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 18:59:04.106673Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 18:59:04.106717Z  9744[DEBUG] writeComplete {192.168.16.1:36429'1590663543'9734StaticServer-0.0.0.0:1688#12}write complete - staticServer.cpp:102
-20200528 18:59:04.106781Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_1.png[200 ok] - staticServer.cpp:127
+20200528 18:59:04.106781Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/programer_wall_1.png[200 ok] - staticServer.cpp:127
 20200528 18:59:04.106797Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:59:04.412794Z  9734[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:59:04.412875Z  9734[TRACE] printActiveChannels {7: IN }  - EventLoop.cpp:272
@@ -2253,7 +2253,7 @@
 20200528 18:59:30.461302Z  9743[TRACE] printActiveChannels {23: IN }  - EventLoop.cpp:272
 20200528 18:59:30.461310Z  9743[TRACE] handleEventWithGuard 23: IN  - Channel.cpp:83
 20200528 18:59:30.461412Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
-20200528 18:59:30.461557Z  9739[INFO]  {127.0.0.1:42690'1590663570'9734}request: /root/web/CLionProject/muduo/staticPage/index.html - requestParser.cpp:93
+20200528 18:59:30.461557Z  9739[INFO]  {127.0.0.1:42690'1590663570'9734}request: /root/web/CLionProject/tank/staticPage/index.html - requestParser.cpp:93
 20200528 18:59:30.461627Z  9739[INFO]  redis connect [Fail] - requestParser.cpp:226
 20200528 18:59:30.462462Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:59:30.462507Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
@@ -2263,7 +2263,7 @@
 20200528 18:59:30.462753Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 18:59:30.462760Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 18:59:30.462778Z  9743[DEBUG] writeComplete {127.0.0.1:42690'1590663570'9734StaticServer-0.0.0.0:1688#13}write complete - staticServer.cpp:102
-20200528 18:59:30.462823Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/index.html[200 ok] - staticServer.cpp:127
+20200528 18:59:30.462823Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/index.html[200 ok] - staticServer.cpp:127
 20200528 18:59:30.462831Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:59:30.463978Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:59:30.464016Z  9743[TRACE] printActiveChannels {23: IN }  - EventLoop.cpp:272
@@ -4319,7 +4319,7 @@
 20200528 19:03:14.764799Z  9744[TRACE] handleEventWithGuard 22: IN  - Channel.cpp:83
 20200528 19:03:14.764952Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 19:03:14.765012Z  9742[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#12] at 0x9E9BA0 fd=22 state=kDisconnected - TcpConnection.cpp:66
-20200528 19:03:14.765211Z  9742[INFO]  {192.168.16.1:46563'1590663794'9734}request: /root/web/CLionProject/muduo/staticPage/index.html - requestParser.cpp:93
+20200528 19:03:14.765211Z  9742[INFO]  {192.168.16.1:46563'1590663794'9734}request: /root/web/CLionProject/tank/staticPage/index.html - requestParser.cpp:93
 20200528 19:03:14.765406Z  9742[INFO]  redis connect [Fail] - requestParser.cpp:226
 20200528 19:03:14.766386Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 19:03:14.766440Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
@@ -4329,14 +4329,14 @@
 20200528 19:03:14.766957Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 19:03:14.766971Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 19:03:14.766998Z  9744[DEBUG] writeComplete {192.168.16.1:46563'1590663794'9734StaticServer-0.0.0.0:1688#14}write complete - staticServer.cpp:102
-20200528 19:03:14.767060Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/index.html[200 ok] - staticServer.cpp:127
+20200528 19:03:14.767060Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/index.html[200 ok] - staticServer.cpp:127
 20200528 19:03:14.767073Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 19:03:14.913075Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 19:03:14.913150Z  9744[TRACE] printActiveChannels {22: IN }  - EventLoop.cpp:272
 20200528 19:03:14.913169Z  9744[TRACE] handleEventWithGuard 22: IN  - Channel.cpp:83
 20200528 19:03:14.913338Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 19:03:14.913405Z  9739[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#13] at 0x9EB280 fd=23 state=kDisconnected - TcpConnection.cpp:66
-20200528 19:03:14.913535Z  9739[INFO]  {192.168.16.1:46563'1590663794'9734}request: /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_1.png - requestParser.cpp:93
+20200528 19:03:14.913535Z  9739[INFO]  {192.168.16.1:46563'1590663794'9734}request: /root/web/CLionProject/tank/staticPage/pages/images/login/programer_wall_1.png - requestParser.cpp:93
 20200528 19:03:14.915169Z  9744[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 19:03:14.915293Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 19:03:14.915327Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
@@ -4345,7 +4345,7 @@
 20200528 19:03:14.922460Z  9744[TRACE] printActiveChannels {21: IN }  - EventLoop.cpp:272
 20200528 19:03:14.922476Z  9744[TRACE] handleEventWithGuard 21: IN  - Channel.cpp:83
 20200528 19:03:14.922509Z  9744[DEBUG] writeComplete {192.168.16.1:46563'1590663794'9734StaticServer-0.0.0.0:1688#14}write complete - staticServer.cpp:102
-20200528 19:03:14.922569Z  9744[INFO]  return - /root/web/CLionProject/muduo/staticPage/pages/images/login/programer_wall_1.png[200 ok] - staticServer.cpp:127
+20200528 19:03:14.922569Z  9744[INFO]  return - /root/web/CLionProject/tank/staticPage/pages/images/login/programer_wall_1.png[200 ok] - staticServer.cpp:127
 20200528 19:03:14.922583Z  9744[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 19:03:15.326125Z  9734[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 19:03:15.326269Z  9734[TRACE] printActiveChannels {7: IN }  - EventLoop.cpp:272
@@ -4535,7 +4535,7 @@
 20200528 19:03:31.902315Z  9743[TRACE] printActiveChannels {23: IN }  - EventLoop.cpp:272
 20200528 19:03:31.902322Z  9743[TRACE] handleEventWithGuard 23: IN  - Channel.cpp:83
 20200528 19:03:31.902424Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
-20200528 19:03:31.902543Z  9742[INFO]  {127.0.0.1:42708'1590663811'9734}request: /root/web/CLionProject/muduo/staticPage/index.html - requestParser.cpp:93
+20200528 19:03:31.902543Z  9742[INFO]  {127.0.0.1:42708'1590663811'9734}request: /root/web/CLionProject/tank/staticPage/index.html - requestParser.cpp:93
 20200528 19:03:31.902629Z  9742[INFO]  redis connect [Fail] - requestParser.cpp:226
 20200528 19:03:31.903797Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 19:03:31.903864Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
@@ -4545,7 +4545,7 @@
 20200528 19:03:31.904262Z  9743[TRACE] printActiveChannels {18: IN }  - EventLoop.cpp:272
 20200528 19:03:31.904277Z  9743[TRACE] handleEventWithGuard 18: IN  - Channel.cpp:83
 20200528 19:03:31.904310Z  9743[DEBUG] writeComplete {127.0.0.1:42708'1590663811'9734StaticServer-0.0.0.0:1688#15}write complete - staticServer.cpp:102
-20200528 19:03:31.904580Z  9743[INFO]  return - /root/web/CLionProject/muduo/staticPage/index.html[200 ok] - staticServer.cpp:127
+20200528 19:03:31.904580Z  9743[INFO]  return - /root/web/CLionProject/tank/staticPage/index.html[200 ok] - staticServer.cpp:127
 20200528 19:03:31.904601Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 19:03:31.904620Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 19:03:31.904644Z  9743[TRACE] printActiveChannels {23: IN }  - EventLoop.cpp:272

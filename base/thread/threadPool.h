@@ -15,7 +15,7 @@
 #include <deque>
 #include <vector>
 
-namespace muduo{
+namespace tank{
     template <typename T>
     class ThreadPl:noncopyable{
     public:
@@ -45,7 +45,7 @@ namespace muduo{
             for(int i=0;i<numThreads;++i){
                 char id[32];
                 snprintf(id, sizeof(id),"%d",i+1);
-                threads_.emplace_back(new muduo::Thread(
+                threads_.emplace_back(new tank::Thread(
                         std::bind(&ThreadPl::runInThread,this),name_+id
                 ));
                 threads_[i]->start();
@@ -90,7 +90,7 @@ namespace muduo{
         mutable MutexLock mutex_;
         Condition notEmpty_ GUARDED_BY(mutex_);
         Condition notFull_ GUARDED_BY(mutex_);
-        std::vector<std::unique_ptr<muduo::Thread>> threads_;
+        std::vector<std::unique_ptr<tank::Thread>> threads_;
         std::deque<Task> queue_ GUARDED_BY(mutex_);
         Task threadInitCallback_;
         size_t maxQueueSize_;
@@ -102,7 +102,7 @@ namespace muduo{
                 if(threadInitCallback_){
                     threadInitCallback_();
                 }
-                muduo::ThreadLocalSingleton<T>::instance();
+                tank::ThreadLocalSingleton<T>::instance();
                 while (isRunning_){
                     Task task(take());
                     if(task){

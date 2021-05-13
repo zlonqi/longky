@@ -17,7 +17,7 @@
 #include <stdint.h>
 #include <stdio.h>
 
-namespace muduo
+namespace tank
 {
     namespace detail
     {
@@ -81,9 +81,9 @@ namespace muduo
 
     }  // namespace detail
     const int kSecondsPerDay = 24*60*60;
-}  // namespace muduo
+}  // namespace tank
 
-using namespace muduo;
+using namespace tank;
 using namespace std;
 
 struct TimeZone::Data
@@ -94,7 +94,7 @@ struct TimeZone::Data
     string abbreviation;
 };
 
-namespace muduo
+namespace tank
 {
     namespace detail
     {
@@ -253,7 +253,7 @@ namespace muduo
         }
 
     }  // namespace detail
-}  // namespace muduo
+}  // namespace tank
 
 
 TimeZone::TimeZone(const char* zonefile)

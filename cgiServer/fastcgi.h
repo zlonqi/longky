@@ -1,23 +1,23 @@
 #ifndef MUDUO_FASTCGI_FASTCGI_H
 #define MUDUO_FASTCGI_FASTCGI_H
 
-#include "../tcpSocket/TcpConnection.h"
-#include "../base/thread/Mutex.h"
+#include "netLayer/tcp/TcpConnection.h"
+#include "base/thread/Mutex.h"
 #include "type.h"
 #include <map>
 
-using muduo::string;
+using tank::string;
 
 // one FastCgiCodec per TcpConnection
 // both lighttpd and nginx do not implement multiplexing,
 // so there is no concurrent requests of one connection.
-class FastCgiCodec : muduo::noncopyable
+class FastCgiCodec : tank::noncopyable
 {
  public:
   //typedef std::map<string, string> ParamMap;
-  typedef std::function<void (const muduo::net::TcpConnectionPtr& conn,
-                                ParamMap&,
-                                muduo::net::Buffer*)> Callback;
+  typedef std::function<void (const tank::net::TcpConnectionPtr& conn,
+                              ParamMap&,
+                              tank::net::Buffer*)> Callback;
 
   explicit FastCgiCodec(const Callback& cb)
     : cb_(cb),
@@ -26,9 +26,9 @@ class FastCgiCodec : muduo::noncopyable
   {
   }
 
-  void onMessage(const muduo::net::TcpConnectionPtr& conn,
-                 muduo::net::Buffer* buf,
-                 muduo::Timestamp receiveTime)
+  void onMessage(const tank::net::TcpConnectionPtr& conn,
+                 tank::net::Buffer* buf,
+                 tank::Timestamp receiveTime)
   {
     parseRequest(buf);
     if (gotRequest_)
@@ -45,25 +45,25 @@ class FastCgiCodec : muduo::noncopyable
     }
   }
 
-  static void respond(std::string &out, muduo::net::Buffer* response);
+  static void respond(std::string &out, tank::net::Buffer* response);
 
  private:
   struct RecordHeader;
-  bool parseRequest(muduo::net::Buffer* buf);
-  bool onBeginRequest(const RecordHeader& header, const muduo::net::Buffer* buf);
+  bool parseRequest(tank::net::Buffer* buf);
+  bool onBeginRequest(const RecordHeader& header, const tank::net::Buffer* buf);
   void onStdin(const char* content, uint16_t length);
   bool onParams(const char* content, uint16_t length);
   bool parseAllParams();
   uint32_t readLen();
 
-  static void endStdout(muduo::net::Buffer* buf);
-  static void endRequest(muduo::net::Buffer* buf);
+  static void endStdout(tank::net::Buffer* buf);
+  static void endRequest(tank::net::Buffer* buf);
 
   Callback cb_;
   bool gotRequest_;
   bool keepConn_;
-  muduo::net::Buffer stdin_;
-  muduo::net::Buffer paramsStream_;
+  tank::net::Buffer stdin_;
+  tank::net::Buffer paramsStream_;
   ParamMap params_;
 
   const static unsigned kRecordHeader;

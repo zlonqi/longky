@@ -9,7 +9,7 @@
 
 #include <pthread.h>
 
-namespace muduo{
+namespace tank{
     class Condition:noncopyable{
     public:
         explicit Condition(MutexLock& mutex):mutex_(mutex){
@@ -33,5 +33,5 @@ namespace muduo{
         MutexLock& mutex_;
         pthread_cond_t pcond_;
     };//end class Condition
-}//end namespace muduo
+}//end namespace tank
 #endif //MUDUO_CONDITION_H

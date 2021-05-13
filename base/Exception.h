@@ -8,7 +8,7 @@
 #include "Types.h"
 #include <exception>
 
-namespace  muduo{
+namespace  tank{
 class Exception:public std::exception{
 public:
     Exception(string what);

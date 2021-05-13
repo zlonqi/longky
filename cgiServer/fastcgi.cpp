@@ -1,7 +1,7 @@
 #include<iostream>
 #include<sstream>
 #include "fastcgi.h"
-#include "../base/log/Logging.h"
+#include "base/log/Logging.h"
 
 #define FCGI_MAX_LENGTH 0xffff
 
@@ -44,7 +44,7 @@ enum FcgiConstant
     kFcgiKeepConn = 1,
 };
 
-using namespace muduo::net;
+using namespace tank::net;
 
 bool FastCgiCodec::onParams(const char* content, uint16_t length)
 {
@@ -123,7 +123,7 @@ uint32_t FastCgiCodec::readLen()
     }
 }
 
-using muduo::net::Buffer;
+using tank::net::Buffer;
 
 void FastCgiCodec::endStdout(Buffer* buf)
 {

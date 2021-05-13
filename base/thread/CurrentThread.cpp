@@ -7,7 +7,7 @@
 #include <execinfo.h>
 #include <stdio.h>
 
-namespace muduo{
+namespace tank{
     namespace CurrentThread{
         __thread int t_cacheTid=0;
         __thread char t_tidString[32];
@@ -69,4 +69,4 @@ namespace muduo{
             return stack;
         }
     }//end namespace CurrentTread
-}//end namespace muduo
+}//end namespace tank

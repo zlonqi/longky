@@ -6,8 +6,8 @@
 #define MUDUO_LOGGING_H
 
 #include "LogStream.h"
-#include "../time/Timestamp.h"
-namespace muduo
+#include "base/time/Timestamp.h"
+namespace tank
 {
 
     class TimeZone;
@@ -120,17 +120,17 @@ namespace muduo
 //   else
 //     logWarnStream << "Bad news";
 //
-#define LOG_TRACE if (muduo::Logger::logLevel() <= muduo::Logger::TRACE) \
-  muduo::Logger(__FILE__, __LINE__, muduo::Logger::TRACE, __func__).stream()
-#define LOG_DEBUG if (muduo::Logger::logLevel() <= muduo::Logger::DEBUG) \
-  muduo::Logger(__FILE__, __LINE__, muduo::Logger::DEBUG, __func__).stream()
-#define LOG_INFO if (muduo::Logger::logLevel() <= muduo::Logger::INFO) \
-  muduo::Logger(__FILE__, __LINE__).stream()
-#define LOG_WARN muduo::Logger(__FILE__, __LINE__, muduo::Logger::WARN).stream()
-#define LOG_ERROR muduo::Logger(__FILE__, __LINE__, muduo::Logger::ERROR).stream()
-#define LOG_FATAL muduo::Logger(__FILE__, __LINE__, muduo::Logger::FATAL).stream()
-#define LOG_SYSERR muduo::Logger(__FILE__, __LINE__, false).stream()
-#define LOG_SYSFATAL muduo::Logger(__FILE__, __LINE__, true).stream()
+#define LOG_TRACE if (tank::Logger::logLevel() <= tank::Logger::TRACE) \
+  tank::Logger(__FILE__, __LINE__, tank::Logger::TRACE, __func__).stream()
+#define LOG_DEBUG if (tank::Logger::logLevel() <= tank::Logger::DEBUG) \
+  tank::Logger(__FILE__, __LINE__, tank::Logger::DEBUG, __func__).stream()
+#define LOG_INFO if (tank::Logger::logLevel() <= tank::Logger::INFO) \
+  tank::Logger(__FILE__, __LINE__).stream()
+#define LOG_WARN tank::Logger(__FILE__, __LINE__, tank::Logger::WARN).stream()
+#define LOG_ERROR tank::Logger(__FILE__, __LINE__, tank::Logger::ERROR).stream()
+#define LOG_FATAL tank::Logger(__FILE__, __LINE__, tank::Logger::FATAL).stream()
+#define LOG_SYSERR tank::Logger(__FILE__, __LINE__, false).stream()
+#define LOG_SYSFATAL tank::Logger(__FILE__, __LINE__, true).stream()
 
     const char* strerror_tl(int savedErrno);
 
@@ -140,7 +140,7 @@ namespace muduo
 // initializer lists.
 
 #define CHECK_NOTNULL(val) \
-  ::muduo::CheckNotNull(__FILE__, __LINE__, "'" #val "' Must be non NULL", (val))
+  ::tank::CheckNotNull(__FILE__, __LINE__, "'" #val "' Must be non NULL", (val))
 
 // A small helper for CHECK_NOTNULL().
     template <typename T>
@@ -153,5 +153,5 @@ namespace muduo
         return ptr;
     }
 
-}  // namespace muduo
+}  // namespace tank
 #endif //MUDUO_LOGGING_H

@@ -5,7 +5,7 @@
 #ifndef MUDUO_NONCOPYABLE_H
 #define MUDUO_NONCOPYABLE_H
 
-namespace muduo{
+namespace tank{
     class noncopyable{
     public:
         noncopyable(const noncopyable&)= delete;

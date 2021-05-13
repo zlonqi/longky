@@ -6,7 +6,7 @@
 #define MUDUO_CURRENTTHREAD_H
 
 #include "../Types.h"
-namespace muduo{
+namespace tank{
     namespace CurrentThread{
         extern __thread int t_cacheTid;
         extern __thread char t_tidString[32];
@@ -32,5 +32,5 @@ namespace muduo{
         void sleepUsec(int64_t usec);//for testing
         string stackTrace(bool demangle);
     }//end of CurrentThread
-}//end of muduo
+}//end of tank
 #endif //MUDUO_CURRENTTHREAD_H
