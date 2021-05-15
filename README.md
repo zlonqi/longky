@@ -1,24 +1,18 @@
 ### 简述
-
-> C10K+、多线程、高性能，高可靠，可维可测
->
-> 
+ 
+<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./webServer/pages/images/pic/video1.png" alt="video"><img src="./webServer/pages/images/pic/video3.png" alt="video"></a>
 
 #### [核心]
 
-> **静态web页面、CGI、心跳监控服务器**  
-> **epoll+主从loop+线程池**、**异步日志**  
-> **http1.1 GET/POST/Pipeline**、**fastcgi**, 涉及 **nginx/redis/mysql**  
-> **线程心跳**、**websocketd**、**prometheus+alertmanager+grafana+dingtalk**  
-
+> **web、CGI**、**nginx/redis/mysql**  
+> **http1.1 GET/POST/Pipeline**、**fastcgi**  
+> **thread-heartbeat**、**websocketd**、**prometheus+alertmanager+grafana+dingtalk** 联合监控  
 
 #### [架构]
 
 ![arch](./webServer/pages/images/pic/arch1.png)  
 
-
-
-**PS**:本项目的重点不在数据库，而在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，所以就没有涉及到主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。
+**PS**:本项目的重点在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，所以就没有涉及到主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。
 
 #### [业务]
 
@@ -35,15 +29,11 @@ $./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 ```
 
 > ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***
-<a href="https://www.yuque.com/longky/gw0h0i/ulipsg">详细结果<a>
+<a href="https://www.yuque.com/longky/gw0h0i/ulipsg">***详细结果*** <a>
 
-
-#### [卡点难点]
-
-<a href="https://zlonqi.gitee.io/2021/02/22/note/">项目中遇到的难点</a>
-
-#### [打磨点]
-```text
+#### [细节]
+```
+0、epoll+reactor构成IO模块，threadpool负责业务处理和计算
 1、redis 是线程单例的长连接，该连接和心跳一样，都能自行断线重连，自动切换，可靠可用
 2、若文件需要放redis中，path+filename用md5进行哈希作为key，文件内容进行zip压缩作为value，md5和zip编解码器均为线程单例
 3、文件采用分块发送策略，保证了所需的发送缓冲区和文件大小无关，极大节约内存资源
@@ -53,26 +43,12 @@ $./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 7、CPU性能分析工具--perf+火焰图，找出性能瓶颈
 8、linux内核参数调优应适需求进行
 ```
-#### [项目统计]
+####[难点] 
 
-```bash
-$cloc -exclude_dir="base,tcpSocket,log,lib" .
- -------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-C++                             17            356            151           2744
-JavaScript                      10            106            374           1166
-C/C++ Header                    12             99             25            481
-HTML                             5             18             13            223
-CSS                              2             21              5            176
-Markdown                         1             38              0            105
-YAML                             2              5              6             97
-CMake                            5              9              2             42
-Bourne Shell                     1              6              5             20
--------------------------------------------------------------------------------
-SUM:                            55            658            581           5054
--------------------------------------------------------------------------------
+<a href="https://zlonqi.gitee.io/2021/02/22/note/">***项目中遇到的难点***</a>
+##### [代码统计]
 
+```
  $cloc -exclude_dir="log,lib" .
  -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
@@ -89,12 +65,11 @@ Bourne Shell                     1              6              5             20
 -------------------------------------------------------------------------------
 SUM:                           133           1842           1333          11134
 -------------------------------------------------------------------------------
-
 ```
 
-### MORE
+### 更多
 
-##### [usuage]
+##### [用法]
 
 ```bash
 cd bin
@@ -103,7 +78,7 @@ cd bin
 ./HeartBeatChecker 							#heartBeatMonitor :8088
 ```
 
-#### [configuration]
+##### [配置]
 ###### ~/webServer/config.yaml
 
 ```yaml
@@ -139,35 +114,16 @@ zlibMap:
   592A11E79283991D4ED33D2086DF77AE: 1771 #文件md5值和对应的原文件大小
 ```
 
-###### ~/cgiServer/config.yaml
 
-```yaml
-...
-#DataBase Configuration
-dataBase:
-  ...
-heartBeat:
-  ...
-  frequency: 5
-...
-```
+##### [Related work]
 
-#### [video for it]<a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./webServer/pages/images/pic/video1.png" alt="video"><img src="./webServer/pages/images/pic/video3.png" alt="video"></a>
-
-#### [reference]
-
-> github.com/chenshuo/tank  
+> github.com/chenshuo/muduo
 >
 > github.com/tencent-wechat/libco
 
-##### [fixed on tank]
 
-> 0、添加base/threadPool.h ,实现了线程单例HttpParser(内含redis长连接、md5和zip编解码器)  
-> 1、优化了日志滚动可选项：可配置按需滚动：按大小滚动、按时间点滚动  
-> 2、优化了服务端 TCP断开4次挥手，使得被动断开也会先清空应用层发送缓冲区再发送FIN包来结束4次挥手，踢掉空闲链接则直接发送RST强行立刻终止  
-
-### NEXT...
-#### C10M ：Share-nothing、lock-free、kernel bypass、zero-copy、asynchronous programming
+### 接下来
+#### 探索C10M问题 ：Share-nothing、lock-free、kernel bypass、zero-copy、asynchronous programming
 
 ### Contributor
 
