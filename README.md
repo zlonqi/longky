@@ -12,7 +12,7 @@
 
 ![arch](./webServer/pages/images/pic/arch1.png)  
 
-**PS**:本项目的重点在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，所以就没有涉及到主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。
+> **PS**:重点在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，所以就没有涉及到主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。<a href="https://www.yuque.com/longky/btxa2q/rus66z">***【系统设计理解】*** <a>
 
 #### [业务]
 
@@ -39,9 +39,8 @@ cd bin
 ```
 
 ##### [配置]
-###### ~/webServer/config.yaml
-<a href="https://www.yuque.com/longky/gw0h0i/xeglug">***配置详解***</a>
-
+###### ~/bin/config.yaml <a href="https://www.yuque.com/longky/gw0h0i/xeglug">***配置详解***</a>
+###### ~/cgiServer/config.yaml
 ##### [说明]
 ```
 0、epoll+reactor构成IO模块，threadpool负责业务处理和计算
@@ -72,7 +71,5 @@ cd bin
 ### 接下来
 #### 探索C10M问题 ：Share-nothing、lock-free、kernel bypass、zero-copy、asynchronous programming
 
-### Contributor
-
-<a href="https://zlonqi.gitee.io/"><img src="./webServer/pages/images/pic/wechart.png" alt="video"></a>
+##### <a href="https://zlonqi.gitee.io">***关于我***</a>
 
