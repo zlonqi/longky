@@ -3,9 +3,9 @@
 <a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./webServer/pages/images/pic/video1.png" alt="video"><img src="./webServer/pages/images/pic/video3.png" alt="video"></a>
 
 #### [关键词]
-
-> **web、CGI**、**nginx/redis/mysql**  
-> **http1.1 GET/POST/Pipeline**、**fastcgi**  
+> Excellent performance and concurrency  
+> **web、CGI**、**nginx/redis/mysql**、singleton long connection  
+> **http1.1 GET/POST/Pipeline**、**fastcgi**、sigleton encoder&decoder  
 > **thread-heartbeat**、**websocketd**、**prometheus+alertmanager+grafana+dingtalk** 联合监控  
 
 #### [架构]
@@ -19,16 +19,9 @@
 > 流程: 主页->空间->登陆->注册(各种checker)->登陆->登陆成功(y/n)
 
 #### [压测]
-<a href="https://www.yuque.com/longky/gw0h0i/ulipsg">***详细结果*** <a>
-> 在单台多核主机上，IO线程size=2，业务线程池size=5，用wrk和apache ab分别压index.html(2kB)：
-> (不连接redis)
 
-```shell
-$ab -k -c 100 -n 10000 http://127.0.0.1:1688/
-$./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
-```
 
-> ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***
+ ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***<a href="https://www.yuque.com/longky/gw0h0i/ulipsg">***【压测报告】*** <a>
 
 #### [难点] 
 
@@ -40,47 +33,16 @@ $./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 
 ```bash
 cd bin
-./run  								#staticWebServer :1688,websocketd :8000,monitor:8001
-./cgiServer ~/PATH/fastcgi/config.yaml           #fastcgiServer :16888
-./HeartBeatChecker 							#heartBeatMonitor :8088
+./run
+./cgiServer ~/PATH/fastcgi/config.yaml 
+./HeartBeatChecker
 ```
 
 ##### [配置]
 ###### ~/webServer/config.yaml
+<a href="https://www.yuque.com/longky/gw0h0i/xeglug">***配置详解***</a>
 
-```yaml
-webServer:
- ...
-  poolThreads: 1 #业务线程池
-  loopThreads: 1 #IO线程池
-  maxConnections: 10170 #最大连接数
-  connIdleTime: 30 #连接最大空闲时长
-  aliveTime: 300 #服务器TTL，测试用
-...
-log:
-  ...
-  maxSize:	#按size
-    G: 0
-    M: 200
-    ...
-  rollTime:	#按时间
-    zoneTime: 8 #东8区
-    hour: 13
-   ...
-  IOFrequency: 3
-heartBeat:
-  switch: on #心跳开关
-  ...
-  frequency: 5 #线程轮流发送心跳时间间隔
-redis:
- ...
-  vip:	#very important page，类似于布隆过滤器
-    1: /myProjectPath/webServer/index.html
-  rate: 0.6	#压缩率
-zlibMap:
-  592A11E79283991D4ED33D2086DF77AE: 1771 #文件md5值和对应的原文件大小
-```
-##### [细节]
+##### [说明]
 ```
 0、epoll+reactor构成IO模块，threadpool负责业务处理和计算
 1、redis 是线程单例的长连接，该连接和心跳一样，都能自行断线重连，自动切换，可靠可用
@@ -95,33 +57,15 @@ zlibMap:
 
 ##### [代码统计]
 
-```
- $cloc -exclude_dir="log,lib" .
- -------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-C++                             48            829            409           6202
-C/C++ Header                    56            798            517           3027
-JavaScript                      10            106            374           1166
-HTML                             5             18             13            223
-CSS                              2             21              5            176
-Markdown                         1             39              0            120
-CMake                            8             20              4            103
-YAML                             2              5              6             97
-Bourne Shell                     1              6              5             20
--------------------------------------------------------------------------------
-SUM:                           133           1842           1333          11134
--------------------------------------------------------------------------------
-```
-
+<a href="https://www.yuque.com/longky/gw0h0i/gzx302">***cloc***</a>
 
 ##### [Related work]
 
 > github.com/chenshuo/muduo  
 > github.com/tencent-wechat/libco  
-> https://github.com/LMAX-Exchange/disruptor  
-> https://github.com/mtcp-stack/mtcp  
-> https://github.com/DPDK/dpdk  
+> github.com/LMAX-Exchange/disruptor  
+> github.com/mtcp-stack/mtcp  
+> github.com/DPDK/dpdk  
 > http://seastar.io  
 
 
