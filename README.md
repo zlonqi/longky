@@ -1,8 +1,8 @@
-### 简述
+### 介绍
  
 <a href="https://zlonqi.gitee.io/2020/02/11/lonky-pretty-server/"><img src="./webServer/pages/images/pic/video2.png" alt="video"><img src="./webServer/pages/images/pic/video1.png" alt="video"><img src="./webServer/pages/images/pic/video3.png" alt="video"></a>
 
-#### [核心]
+#### [关键词]
 
 > **web、CGI**、**nginx/redis/mysql**  
 > **http1.1 GET/POST/Pipeline**、**fastcgi**  
@@ -19,7 +19,7 @@
 > 流程: 主页->空间->登陆->注册(各种checker)->登陆->登陆成功(y/n)
 
 #### [压测]
-
+<a href="https://www.yuque.com/longky/gw0h0i/ulipsg">***详细结果*** <a>
 > 在单台多核主机上，IO线程size=2，业务线程池size=5，用wrk和apache ab分别压index.html(2kB)：
 > (不连接redis)
 
@@ -29,43 +29,10 @@ $./wrk -t3 -c100 -d10s -H "Connection: keepalive" "http://localhost:1688/"
 ```
 
 > ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***
-<a href="https://www.yuque.com/longky/gw0h0i/ulipsg">***详细结果*** <a>
 
-#### [细节]
-```
-0、epoll+reactor构成IO模块，threadpool负责业务处理和计算
-1、redis 是线程单例的长连接，该连接和心跳一样，都能自行断线重连，自动切换，可靠可用
-2、若文件需要放redis中，path+filename用md5进行哈希作为key，文件内容进行zip压缩作为value，md5和zip编解码器均为线程单例
-3、文件采用分块发送策略，保证了所需的发送缓冲区和文件大小无关，极大节约内存资源
-4、忽略SIGPIPE，对SIGINT\SIGTERM设置回调函数，保证整个服务器能够安全有序地终止和析构
-5、为每个连接生成全局唯一的requestID，于进入函数体伊始打印log时附上此requestID，有利于日志分析和程序排错
-6、gcc/g++开启 -fsanitize=address -g 选项以检测内存问题、shell打开生成coredump有利于多线程程序复现崩溃现场环境
-7、CPU性能分析工具--perf+火焰图，找出性能瓶颈
-8、linux内核参数调优应适需求进行
-```
-####[难点] 
+#### [难点] 
 
 <a href="https://zlonqi.gitee.io/2021/02/22/note/">***项目中遇到的难点***</a>
-##### [代码统计]
-
-```
- $cloc -exclude_dir="log,lib" .
- -------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-C++                             48            829            409           6202
-C/C++ Header                    56            798            517           3027
-JavaScript                      10            106            374           1166
-HTML                             5             18             13            223
-CSS                              2             21              5            176
-Markdown                         1             39              0            120
-CMake                            8             20              4            103
-YAML                             2              5              6             97
-Bourne Shell                     1              6              5             20
--------------------------------------------------------------------------------
-SUM:                           133           1842           1333          11134
--------------------------------------------------------------------------------
-```
 
 ### 更多
 
@@ -113,13 +80,49 @@ redis:
 zlibMap:
   592A11E79283991D4ED33D2086DF77AE: 1771 #文件md5值和对应的原文件大小
 ```
+##### [细节]
+```
+0、epoll+reactor构成IO模块，threadpool负责业务处理和计算
+1、redis 是线程单例的长连接，该连接和心跳一样，都能自行断线重连，自动切换，可靠可用
+2、若文件需要放redis中，path+filename用md5进行哈希作为key，文件内容进行zip压缩作为value，md5和zip编解码器均为线程单例
+3、文件采用分块发送策略，保证了所需的发送缓冲区和文件大小无关，极大节约内存资源
+4、忽略SIGPIPE，对SIGINT\SIGTERM设置回调函数，保证整个服务器能够安全有序地终止和析构
+5、为每个连接生成全局唯一的requestID，于进入函数体伊始打印log时附上此requestID，有利于日志分析和程序排错
+6、gcc/g++开启 -fsanitize=address -g 选项以检测内存问题、shell打开生成coredump有利于多线程程序复现崩溃现场环境
+7、CPU性能分析工具--perf+火焰图，找出性能瓶颈
+8、linux内核参数调优应适需求进行
+```
+
+##### [代码统计]
+
+```
+ $cloc -exclude_dir="log,lib" .
+ -------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C++                             48            829            409           6202
+C/C++ Header                    56            798            517           3027
+JavaScript                      10            106            374           1166
+HTML                             5             18             13            223
+CSS                              2             21              5            176
+Markdown                         1             39              0            120
+CMake                            8             20              4            103
+YAML                             2              5              6             97
+Bourne Shell                     1              6              5             20
+-------------------------------------------------------------------------------
+SUM:                           133           1842           1333          11134
+-------------------------------------------------------------------------------
+```
 
 
 ##### [Related work]
 
-> github.com/chenshuo/muduo
->
-> github.com/tencent-wechat/libco
+> github.com/chenshuo/muduo  
+> github.com/tencent-wechat/libco  
+> https://github.com/LMAX-Exchange/disruptor  
+> https://github.com/mtcp-stack/mtcp  
+> https://github.com/DPDK/dpdk  
+> http://seastar.io  
 
 
 ### 接下来
