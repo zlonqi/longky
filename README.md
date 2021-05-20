@@ -72,7 +72,7 @@ cd bin
 
 
 ### 接下来
-CPU affinity、平滑更新、接口拨测、弹性线程池、改进请求处理的优先级调度算法
+###### CPU affinity、平滑更新、接口拨测、弹性线程池、改进请求处理的优先级调度算法
 ###### 探索C10M方案 ：Share-nothing、lock-free、cache affinity、kernel bypass、zero-copy、asynchronous programming
 
 > 感谢每一位开源贡献家的杰出作品，本项目将在校招结束后全量开源和长期维护，欢迎加入
