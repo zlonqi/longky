@@ -12,7 +12,7 @@
 
 ![arch](./webServer/pages/images/pic/arch1.png)  
 
-> **PS**:重点在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，所以就没有涉及到主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。<a href="https://www.yuque.com/longky/btxa2q/rus66z">***【系统设计理解】*** <a>
+> **PS**:重点在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，就没有考虑主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。<a href="https://www.yuque.com/longky/btxa2q/rus66z">***【系统设计理解】*** <a>
 
 #### [业务]
 
@@ -59,17 +59,22 @@ cd bin
 <a href="https://www.yuque.com/longky/gw0h0i/gzx302">***cloc***</a>
 
 ##### [Related work]
-
+> github.com/redis  
+> github.com/nginx   
 > github.com/chenshuo/muduo  
 > github.com/tencent-wechat/libco  
+> github.com/joewalnes/websocketd  
 > github.com/LMAX-Exchange/disruptor  
-> github.com/mtcp-stack/mtcp  
+> github.com/EZLippi/Tinyhttpd  
+> github.com/F-Stack/f-stack  
 > github.com/DPDK/dpdk  
 > http://seastar.io  
 
 
 ### 接下来
-#### 探索C10M问题 ：Share-nothing、lock-free、kernel bypass、zero-copy、asynchronous programming
+CPU affinity、平滑更新、接口拨测、弹性线程池、改进请求处理的优先级调度算法
+###### 探索C10M方案 ：Share-nothing、lock-free、cache affinity、kernel bypass、zero-copy、asynchronous programming
 
+> 感谢每一位开源贡献家的杰出作品
 ##### <a href="https://zlonqi.gitee.io">***关于我***</a>
 
