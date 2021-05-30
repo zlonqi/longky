@@ -2,8 +2,8 @@
 // Created by root on 2019/11/5.
 //
 
-#ifndef MUDUO_NONCOPYABLE_H
-#define MUDUO_NONCOPYABLE_H
+#ifndef NONCOPYABLE_H
+#define NONCOPYABLE_H
 
 namespace tank{
     class noncopyable{
@@ -16,4 +16,4 @@ namespace tank{
         ~noncopyable()= default;
     };
 }
-#endif //MUDUO_NONCOPYABLE_H
+#endif //NONCOPYABLE_H

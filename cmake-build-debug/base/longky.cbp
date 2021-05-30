@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="longky"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\base\;CMake Files\netLayer\;CMake Files\netLayer\http\;CMake Files\cgiServer\;CMake Files\webServer\;CMake Files\monitor\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/root/longky/longky/cmake-build-debug/base"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="base">
+				<Option output="/root/longky/longky/lib/libbase.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/cmake-build-debug/base"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/base/log"/>
+					<Add directory="/root/longky/longky/base/time"/>
+					<Add directory="/root/longky/longky/base/thread"/>
+					<Add directory="/root/longky/longky/base"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 base"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="base/fast">
+				<Option output="/root/longky/longky/lib/libbase.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/cmake-build-debug/base"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/base/log"/>
+					<Add directory="/root/longky/longky/base/time"/>
+					<Add directory="/root/longky/longky/base/thread"/>
+					<Add directory="/root/longky/longky/base"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 base/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/root/longky/longky/base/Exception.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/Exception.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/AyncLogging.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/AyncLogging.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/FileUtil.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/FileUtil.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/LogFile.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/LogStream.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/LogStream.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/Logging.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/Logging.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/Condition.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/Condition.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/CountDownLatch.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/CountDownLatch.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/CurrentThread.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/CurrentThread.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/ProcessInfo.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/ProcessInfo.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/Thread.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/Thread.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/ThreadPool.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/ThreadPool.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/Date.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/Date.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/TimeZone.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/TimeZone.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/Timestamp.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/Timestamp.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\base\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\netLayer\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/http/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\netLayer\http\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cgiServer\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\webServer\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/monitor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\monitor\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

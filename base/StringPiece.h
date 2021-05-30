@@ -2,8 +2,8 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_STRINGPIECE_H
-#define MUDUO_STRINGPIECE_H
+#ifndef STRINGPIECE_H
+#define STRINGPIECE_H
 #include <string.h>
 #include <iosfwd>    // for ostream forward-declaration
 
@@ -150,4 +150,4 @@ template<> struct __type_traits<tank::StringPiece> {
 // allow StringPiece to be logged
 std::ostream& operator<<(std::ostream& o, const tank::StringPiece& piece);
 
-#endif //MUDUO_STRINGPIECE_H
+#endif //STRINGPIECE_H

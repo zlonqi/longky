@@ -2,8 +2,8 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_WEAKCALLBACK_H
-#define MUDUO_WEAKCALLBACK_H
+#ifndef WEAKCALLBACK_H
+#define WEAKCALLBACK_H
 
 #include <functional>
 #include <memory>
@@ -60,4 +60,4 @@ namespace tank
     }
 
 }  // namespace tank
-#endif //MUDUO_WEAKCALLBACK_H
+#endif //WEAKCALLBACK_H

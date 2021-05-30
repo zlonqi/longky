@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lonky"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\base\;CMake Files\netLayer\;CMake Files\netLayer\http\;CMake Files\cgiServer\;CMake Files\webServer\;CMake Files\monitor\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/root/longky/longky/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/root/longky/longky/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/root/longky/longky/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="base">
+				<Option output="/root/longky/longky/lib/libbase.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/cmake-build-debug/base"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/base/log"/>
+					<Add directory="/root/longky/longky/base/time"/>
+					<Add directory="/root/longky/longky/base/thread"/>
+					<Add directory="/root/longky/longky/base"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 base"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="base/fast">
+				<Option output="/root/longky/longky/lib/libbase.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/cmake-build-debug/base"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/base/log"/>
+					<Add directory="/root/longky/longky/base/time"/>
+					<Add directory="/root/longky/longky/base/thread"/>
+					<Add directory="/root/longky/longky/base"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 base/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/base/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="net">
+				<Option output="/root/longky/longky/lib/libnet.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/cmake-build-debug/netLayer"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/netLayer/event"/>
+					<Add directory="/root/longky/longky/netLayer/http"/>
+					<Add directory="/root/longky/longky/netLayer/poller"/>
+					<Add directory="/root/longky/longky/netLayer/socket"/>
+					<Add directory="/root/longky/longky/netLayer/tcp"/>
+					<Add directory="/root/longky/longky/netLayer/timer"/>
+					<Add directory="/root/longky/longky/netLayer"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/Makefile&quot;  VERBOSE=1 net"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="net/fast">
+				<Option output="/root/longky/longky/lib/libnet.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/cmake-build-debug/netLayer"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/netLayer/event"/>
+					<Add directory="/root/longky/longky/netLayer/http"/>
+					<Add directory="/root/longky/longky/netLayer/poller"/>
+					<Add directory="/root/longky/longky/netLayer/socket"/>
+					<Add directory="/root/longky/longky/netLayer/tcp"/>
+					<Add directory="/root/longky/longky/netLayer/timer"/>
+					<Add directory="/root/longky/longky/netLayer"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/Makefile&quot;  VERBOSE=1 net/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fastcgi">
+				<Option output="/root/longky/longky/bin/fastcgi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/base"/>
+					<Add directory="/root/longky/longky/base/thread"/>
+					<Add directory="/root/longky/longky/netLayer"/>
+					<Add directory="/root/longky/longky/cgiServer"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/cgiServer/Makefile&quot;  VERBOSE=1 fastcgi"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/cgiServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/cgiServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/cgiServer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="fastcgi/fast">
+				<Option output="/root/longky/longky/bin/fastcgi" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/base"/>
+					<Add directory="/root/longky/longky/base/thread"/>
+					<Add directory="/root/longky/longky/netLayer"/>
+					<Add directory="/root/longky/longky/cgiServer"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/cgiServer/Makefile&quot;  VERBOSE=1 fastcgi/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/cgiServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/cgiServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/cgiServer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="webServer">
+				<Option output="/root/longky/longky/bin/webServer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/webServer/../base"/>
+					<Add directory="/root/longky/longky/webServer/../net"/>
+					<Add directory="/root/longky/longky/webServer/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/webServer/Makefile&quot;  VERBOSE=1 webServer"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/webServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/webServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/webServer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="webServer/fast">
+				<Option output="/root/longky/longky/bin/webServer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/webServer/../base"/>
+					<Add directory="/root/longky/longky/webServer/../net"/>
+					<Add directory="/root/longky/longky/webServer/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/webServer/Makefile&quot;  VERBOSE=1 webServer/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/webServer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/webServer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/webServer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="http">
+				<Option output="/root/longky/longky/lib/libhttp.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/cmake-build-debug/netLayer/http"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/base"/>
+					<Add directory="/root/longky/longky/netLayer"/>
+					<Add directory="/root/longky/longky/netLayer/http/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/http/Makefile&quot;  VERBOSE=1 http"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/http/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/http/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/http/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="http/fast">
+				<Option output="/root/longky/longky/lib/libhttp.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/cmake-build-debug/netLayer/http"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/base"/>
+					<Add directory="/root/longky/longky/netLayer"/>
+					<Add directory="/root/longky/longky/netLayer/http/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/http/Makefile&quot;  VERBOSE=1 http/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/http/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/http/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/netLayer/http/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="HeartBeatChecker">
+				<Option output="/root/longky/longky/bin/HeartBeatChecker" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/monitor/../base/log"/>
+					<Add directory="/root/longky/longky/monitor/../base"/>
+					<Add directory="/root/longky/longky/monitor/../tcpSocket"/>
+					<Add directory="/root/longky/longky/monitor/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/monitor/Makefile&quot;  VERBOSE=1 HeartBeatChecker"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/monitor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/monitor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/monitor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="HeartBeatChecker/fast">
+				<Option output="/root/longky/longky/bin/HeartBeatChecker" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/root/longky/longky/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/root/longky/longky"/>
+					<Add directory="/root/longky/longky/monitor/../base/log"/>
+					<Add directory="/root/longky/longky/monitor/../base"/>
+					<Add directory="/root/longky/longky/monitor/../tcpSocket"/>
+					<Add directory="/root/longky/longky/monitor/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/monitor/Makefile&quot;  VERBOSE=1 HeartBeatChecker/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/monitor/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/monitor/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/root/longky/longky/cmake-build-debug/monitor/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/root/longky/longky/base/Exception.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/Exception.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/AyncLogging.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/AyncLogging.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/FileUtil.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/FileUtil.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/LogFile.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/LogStream.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/LogStream.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/Logging.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/log/Logging.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/Condition.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/Condition.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/CountDownLatch.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/CountDownLatch.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/CurrentThread.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/CurrentThread.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/ProcessInfo.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/ProcessInfo.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/Thread.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/Thread.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/ThreadPool.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/thread/ThreadPool.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/Date.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/Date.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/TimeZone.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/TimeZone.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/Timestamp.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/time/Timestamp.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/cgiserver.cpp">
+			<Option target="fastcgi"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/fastcgi.cpp">
+			<Option target="fastcgi"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/fastcgi.h">
+			<Option target="fastcgi"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/parseRequest.cpp">
+			<Option target="fastcgi"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/parseRequest.h">
+			<Option target="fastcgi"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/monitor/heartBeatMonitor.cpp">
+			<Option target="HeartBeatChecker"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/Buffer.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/Buffer.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/event/Channel.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/event/Channel.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/event/eventloop/EventLoop.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/event/eventloop/EventLoop.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/event/eventloop/EventLoopThread.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/event/eventloop/EventLoopThread.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/event/eventloop/EventLoopThreadPool.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/event/eventloop/EventLoopThreadPool.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/http/HttpContext.cpp">
+			<Option target="http"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/http/HttpContext.h">
+			<Option target="http"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/http/HttpResponse.cpp">
+			<Option target="http"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/http/HttpResponse.h">
+			<Option target="http"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/http/HttpServer.cpp">
+			<Option target="http"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/http/HttpServer.h">
+			<Option target="http"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/poller/DefaultPoller.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/poller/EpollPoller.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/poller/PollPoller.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/poller/PollPoller.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/poller/Poller.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/poller/Poller.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/socket/InetAddress.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/socket/InetAddress.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/socket/Socket.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/socket/Socket.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/socket/SocketsOps.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/socket/SocketsOps.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/tcp/TcpConnection.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/tcp/TcpConnection.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/tcp/c/Connector.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/tcp/c/Connector.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/tcp/c/client/TcpClient.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/tcp/c/client/TcpClient.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/tcp/s/Acceptor.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/tcp/s/Acceptor.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/tcp/s/server/TcpServer.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/tcp/s/server/TcpServer.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/timer/Timer.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/timer/Timer.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/timer/TimerQueue.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/timer/TimerQueue.h">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/ZLibString.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/ZLibString.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/configLoad.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/configLoad.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/redis.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/redis.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/requestParser.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/requestParser.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/start_up.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/staticServer.cpp">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/staticServer.h">
+			<Option target="webServer"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/base/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\base\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\netLayer\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/netLayer/http/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\netLayer\http\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cgiServer\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/webServer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\webServer\"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/monitor/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\monitor\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

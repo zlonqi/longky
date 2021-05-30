@@ -2,8 +2,8 @@
 // Created by root on 2019/11/5.
 //
 
-#ifndef MUDUO_EXCEPTION_H
-#define MUDUO_EXCEPTION_H
+#ifndef EXCEPTION_H
+#define EXCEPTION_H
 
 #include "Types.h"
 #include <exception>
@@ -25,4 +25,4 @@ private:
     string stack_;
 };
 }
-#endif //MUDUO_EXCEPTION_H
+#endif //EXCEPTION_H

@@ -2,8 +2,8 @@
 // Created by root on 2019/11/5.
 //
 
-#ifndef MUDUO_TYPES_H
-#define MUDUO_TYPES_H
+#ifndef TYPES_H
+#define TYPES_H
 
 #include <stdint.h>
 #include <string.h>
@@ -38,4 +38,4 @@ namespace tank{
     }
 }
 
-#endif //MUDUO_TYPES_H
+#endif //TYPES_H

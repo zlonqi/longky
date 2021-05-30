@@ -2,8 +2,8 @@
 // Created by root on 2019/11/5.
 //
 
-#ifndef MUDUO_COPYABLE_H
-#define MUDUO_COPYABLE_H
+#ifndef COPYABLE_H
+#define COPYABLE_H
 
 namespace tank{
     class copyable{
@@ -12,4 +12,4 @@ namespace tank{
         ~copyable()= default;
     };
 }
-#endif //MUDUO_COPYABLE_H
+#endif //COPYABLE_H

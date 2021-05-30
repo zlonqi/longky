@@ -2,8 +2,8 @@
 // Created by root on 2019/11/5.
 //
 
-#ifndef MUDUO_ATOMIC_H
-#define MUDUO_ATOMIC_H
+#ifndef ATOMIC_H
+#define ATOMIC_H
 
 #include "noncopyable.h"
 #include <stdint.h>
@@ -52,4 +52,4 @@ namespace tank{
 }//end namespace tank
 
 
-#endif //MUDUO_ATOMIC_H
+#endif //ATOMIC_H
