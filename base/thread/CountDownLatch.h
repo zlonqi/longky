@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/5.
+// Created by root on 2019/11/8.
 //
 
-#ifndef MUDUO_COUNTDOWNLATCH_H
-#define MUDUO_COUNTDOWNLATCH_H
+#ifndef COUNTDOWNLATCH_H
+#define COUNTDOWNLATCH_H
 
 #include "Condition.h"
 
@@ -20,4 +20,4 @@ namespace tank{
         int count_ GUARDED_BY(mutex_);
     };
 }//end namespace tank
-#endif //MUDUO_COUNTDOWNLATCH_H
+#endif //COUNTDOWNLATCH_H

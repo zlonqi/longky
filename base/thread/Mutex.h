@@ -2,12 +2,12 @@
 // Created by root on 2019/11/5.
 //
 
-#ifndef MUDUO_MUTEX_H
-#define MUDUO_MUTEX_H
+#ifndef MUTEX_H
+#define MUTEX_H
 
 #include "CurrentThread.h"
 #include "base/noncopyable.h"
-#include <assert.h>
+#include <cassert>
 #include <pthread.h>
 
 // Thread safety annotations {
@@ -112,30 +112,26 @@ namespace tank{
         ~MutexLock(){
             assert(holder_==0);
             MCHECK(pthread_mutex_destroy(&mutex_));
-        } bool isLockedByThisThread() const
+        }
+        bool isLockedByThisThread() const
         {
             return holder_ == CurrentThread::tid();
         }
-
         void assertLocked() const ASSERT_CAPABILITY(this)
         {
             assert(isLockedByThisThread());
         }
-
         // internal usage
-
         void lock() ACQUIRE()
         {
             MCHECK(pthread_mutex_lock(&mutex_));
             assignHolder();
         }
-
         void unlock() RELEASE()
         {
             unassignHolder();
             MCHECK(pthread_mutex_unlock(&mutex_));
         }
-
         pthread_mutex_t* getPthreadMutex() /* non-const */
         {
             return &mutex_;
@@ -144,24 +140,23 @@ namespace tank{
         friend class Condition;
 
         class UnassignGuard : noncopyable {
-        public:
-            explicit UnassignGuard(MutexLock &owner)
-                    : owner_(owner) {
-                owner_.unassignHolder();
-            }
+            public:
+                explicit UnassignGuard(MutexLock &owner)
+                        : owner_(owner) {
+                    owner_.unassignHolder();
+                }
 
-            ~UnassignGuard() {
-                owner_.assignHolder();
-            }
+                ~UnassignGuard() {
+                    owner_.assignHolder();
+                }
 
-        private:
-            MutexLock& owner_;
+            private:
+                MutexLock& owner_;
         };
         void unassignHolder()
         {
             holder_ = 0;
         }
-
         void assignHolder()
         {
             holder_ = CurrentThread::tid();
@@ -196,4 +191,4 @@ namespace tank{
 // A tempory object doesn't hold the lock for long!
 #define MutexLockGuard(x) error "Missing guard object name"
 
-#endif //MUDUO_MUTEX_H
+#endif //MUTEX_H

@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/5.
+// Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_CONDITION_H
-#define MUDUO_CONDITION_H
+#ifndef CONDITION_H
+#define CONDITION_H
 
 #include "Mutex.h"
 
@@ -34,4 +34,4 @@ namespace tank{
         pthread_cond_t pcond_;
     };//end class Condition
 }//end namespace tank
-#endif //MUDUO_CONDITION_H
+#endif //CONDITION_H
