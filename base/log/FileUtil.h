@@ -2,8 +2,8 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_FILEUTIL_H
-#define MUDUO_FILEUTIL_H
+#ifndef FILEUTIL_H
+#define FILEUTIL_H
 #include "base/noncopyable.h"
 #include "base/StringPiece.h"
 #include <sys/types.h>  // for off_t
@@ -80,4 +80,4 @@ namespace tank
 
     }  // namespace FileUtil
 }  // namespace tank
-#endif //MUDUO_FILEUTIL_H
+#endif //FILEUTIL_H

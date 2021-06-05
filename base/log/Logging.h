@@ -2,8 +2,8 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_LOGGING_H
-#define MUDUO_LOGGING_H
+#ifndef LOGGING_H
+#define LOGGING_H
 
 #include "LogStream.h"
 #include "base/time/Timestamp.h"
@@ -154,4 +154,4 @@ namespace tank
     }
 
 }  // namespace tank
-#endif //MUDUO_LOGGING_H
+#endif //LOGGING_H

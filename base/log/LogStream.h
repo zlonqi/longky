@@ -2,13 +2,14 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_LOGSTREAM_H
-#define MUDUO_LOGSTREAM_H
+#ifndef LOGSTREAM_H
+#define LOGSTREAM_H
 #include "base/noncopyable.h"
 #include "base/StringPiece.h"
 #include "base/Types.h"
-#include <assert.h>
-#include <string.h> // memcpy
+#include <cassert>
+#include <cstring> // memcpy
+
 
 namespace tank
 {
@@ -197,4 +198,4 @@ namespace tank
     string formatIEC(int64_t n);
 
 }  // namespace tank
-#endif //MUDUO_LOGSTREAM_H
+#endif //LOGSTREAM_H

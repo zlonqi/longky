@@ -2,8 +2,8 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_AYNCLOGGING_H
-#define MUDUO_AYNCLOGGING_H
+#ifndef AYNCLOGGING_H
+#define AYNCLOGGING_H
 
 
 //#include "BlockingQueue.h"
@@ -79,4 +79,4 @@ namespace tank
     };
 
 }  // namespace tank
-#endif //MUDUO_AYNCLOGGING_H
+#endif //AYNCLOGGING_H

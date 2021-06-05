@@ -2,8 +2,8 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_LOGFILE_H
-#define MUDUO_LOGFILE_H
+#ifndef LOGFILE_H
+#define LOGFILE_H
 
 
 #include "base/thread/Mutex.h"
@@ -64,4 +64,4 @@ namespace tank
     };
 
 }  // namespace tank
-#endif //MUDUO_LOGFILE_H
+#endif //LOGFILE_H
