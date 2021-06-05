@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/10.
+// Created by root on 2019/11/30.
 //
 
-#ifndef MUDUO_BUFFER_H
-#define MUDUO_BUFFER_H
+#ifndef BUFFER_H
+#define BUFFER_H
 
 #include "base/copyable.h"
 #include "base/StringPiece.h"
@@ -13,8 +13,8 @@
 #include <algorithm>
 #include <vector>
 
-#include <assert.h>
-#include <string.h>
+#include <cassert>
+#include <cstring>
 //#include <unistd.h>  // ssize_t
 
 namespace tank
@@ -412,4 +412,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_BUFFER_H
+#endif //BUFFER_H
