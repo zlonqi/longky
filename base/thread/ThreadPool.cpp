@@ -5,8 +5,8 @@
 #include "ThreadPool.h"
 #include "base/Exception.h"
 #include "base/log/Logging.h"
-#include <assert.h>
-#include <stdio.h>
+#include <cassert>
+#include <cstdio>
 
 using namespace tank;
 

@@ -2,8 +2,8 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_THREADPOOL_H
-#define MUDUO_THREADPOOL_H
+#ifndef THREADPOOL_H
+#define THREADPOOL_H
 
 #include "Condition.h"
 #include "Mutex.h"
@@ -52,4 +52,4 @@ namespace tank{
         bool isFull() const REQUIRES(mutex_);
     };
 }
-#endif //MUDUO_THREADPOOL_H
+#endif //THREADPOOL_H
