@@ -1,10 +1,9 @@
 //
-// Created by root on 2019/11/6.
+// Created by root on 2019/11/8.
 //
 
-#ifndef MUDUO_DATE_H
-#define MUDUO_DATE_H
-
+#ifndef DATE_H
+#define DATE_H
 #include "copyable.h"
 #include "Types.h"
 
@@ -114,4 +113,4 @@ namespace tank
     }
 
 }  // namespace tank
-#endif //MUDUO_DATE_H
+#endif // DATE_H

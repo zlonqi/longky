@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/5.
+// Created by root on 2019/11/8.
 //
 
-#ifndef MUDUO_TIMESTAMP_H
-#define MUDUO_TIMESTAMP_H
+#ifndef TIMESTAMP_H
+#define TIMESTAMP_H
 
 #include "base/copyable.h"
 #include "base/Types.h"
@@ -64,4 +64,4 @@ namespace  tank{
 
     }//end namespace tank
 }
-#endif //MUDUO_TIMESTAMP_H
+#endif //TIMESTAMP_H

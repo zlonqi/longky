@@ -2,11 +2,11 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_TIMEZONE_H
-#define MUDUO_TIMEZONE_H
+#ifndef TIMEZONE_H
+#define TIMEZONE_H
 #include "copyable.h"
 #include <memory>
-#include <time.h>
+#include <ctime>
 
 namespace tank
 {
@@ -46,4 +46,4 @@ namespace tank
     };
 
 }  // namespace tank
-#endif //MUDUO_TIMEZONE_H
+#endif //TIMEZONE_H
