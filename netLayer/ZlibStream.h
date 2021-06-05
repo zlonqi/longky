@@ -2,8 +2,8 @@
 // Created by root on 2019/11/12.
 //
 
-#ifndef MUDUO_ZLIBSTREAM_H
-#define MUDUO_ZLIBSTREAM_H
+#ifndef ZLIBSTREAM_H
+#define ZLIBSTREAM_H
 
 #pragma once
 
@@ -12,7 +12,7 @@
 #pragma GCC diagnostic ignored "-Wold-style-cast"
 #include <zlib.h>
 
-namespace muduo {
+namespace tank {
     namespace net {
 
 // input is zlib compressed data, output uncompressed data
@@ -137,4 +137,4 @@ namespace muduo {
         };
     }
 }
-#endif //MUDUO_ZLIBSTREAM_H
+#endif //ZLIBSTREAM_H
