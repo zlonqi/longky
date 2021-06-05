@@ -1,5 +1,5 @@
 //
-// Created by root on 2019/11/5.
+// Created by root on 2019/11/9.
 //
 #include "../thread/Thread.h"
 #include "../thread/CurrentThread.h"
@@ -51,7 +51,7 @@ namespace tank{
                 latch_->countDown();
                 latch_=nullptr;
 
-                tank::CurrentThread::t_threadName= name_.empty() ? "muduoThread" : name_.c_str();
+                tank::CurrentThread::t_threadName= name_.empty() ? "Thread" : name_.c_str();
                 ::prctl(PR_SET_NAME, tank::CurrentThread::t_threadName);
                 try{
                     func_();

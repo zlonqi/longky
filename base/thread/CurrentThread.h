@@ -2,8 +2,8 @@
 // Created by root on 2019/11/5.
 //
 
-#ifndef MUDUO_CURRENTTHREAD_H
-#define MUDUO_CURRENTTHREAD_H
+#ifndef CURRENTTHREAD_H
+#define CURRENTTHREAD_H
 
 #include "../Types.h"
 namespace tank{
@@ -33,4 +33,4 @@ namespace tank{
         string stackTrace(bool demangle);
     }//end of CurrentThread
 }//end of tank
-#endif //MUDUO_CURRENTTHREAD_H
+#endif //CURRENTTHREAD_H

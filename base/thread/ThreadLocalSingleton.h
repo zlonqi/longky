@@ -2,16 +2,15 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef MUDUO_THREADLOCALSINGLETON_H
-#define MUDUO_THREADLOCALSINGLETON_H
+#ifndef THREADLOCALSINGLETON_H
+#define THREADLOCALSINGLETON_H
 #include "../noncopyable.h"
 
-#include <assert.h>
+#include <cassert>
 #include <pthread.h>
 
 namespace tank
 {
-
     template<typename T>
     class ThreadLocalSingleton : noncopyable
     {
@@ -77,4 +76,4 @@ namespace tank
     typename ThreadLocalSingleton<T>::Deleter ThreadLocalSingleton<T>::deleter_;
 
 }  // namespace tank
-#endif //MUDUO_THREADLOCALSINGLETON_H
+#endif //THREADLOCALSINGLETON_H

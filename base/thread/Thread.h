@@ -2,8 +2,8 @@
 // Created by root on 2019/11/5.
 //
 
-#ifndef MUDUO_THREAD_H
-#define MUDUO_THREAD_H
+#ifndef THREAD_H
+#define THREAD_H
 
 #include "../Atomic.h"
 #include "CountDownLatch.h"
@@ -44,4 +44,4 @@ namespace tank{
         static  AtomicInt32 numCreated_;
     };
 }
-#endif //MUDUO_THREAD_H
+#endif //THREAD_H
