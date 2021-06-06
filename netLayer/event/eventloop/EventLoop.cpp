@@ -1,5 +1,5 @@
 //
-// Created by root on 2019/11/8.
+// Created by root on 2019/12/12.
 //
 
 
@@ -49,7 +49,7 @@ namespace
     };
 #pragma GCC diagnostic error "-Wold-style-cast"
 
-    IgnoreSigPipe initObj;
+    IgnoreSigPipe initObj;//global obj.
 }  // namespace
 
 EventLoop* EventLoop::getEventLoopOfCurrentThread()
