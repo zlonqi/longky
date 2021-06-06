@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/8.
+// Created by root on 2019/11/28.
 //
 
-#ifndef MUDUO_TIMER_H
-#define MUDUO_TIMER_H
+#ifndef TIMER_H
+#define TIMER_H
 
 #include "base/Atomic.h"
 #include "base/time/Timestamp.h"
@@ -54,4 +54,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_TIMER_H
+#endif //TIMER_H
