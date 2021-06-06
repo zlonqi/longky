@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/8.
+// Created by root on 2019/12/10.
 //
 
-#ifndef MUDUO_CHANNEL_H
-#define MUDUO_CHANNEL_H
+#ifndef CHANNEL_H
+#define CHANNEL_H
 
 #include "base/noncopyable.h"
 #include "base/time/Timestamp.h"
@@ -81,4 +81,4 @@ namespace tank{
         };//end class Channel
     }//end namespace tank
 }
-#endif //MUDUO_CHANNEL_H
+#endif //CHANNEL_H
