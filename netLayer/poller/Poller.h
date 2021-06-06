@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/8.
+// Created by root on 2019/12/8.
 //
 
-#ifndef MUDUO_POLLER_H
-#define MUDUO_POLLER_H
+#ifndef POLLER_H
+#define POLLER_H
 
 #include <map>
 #include <vector>
@@ -25,7 +25,7 @@ namespace tank
         public:
             typedef std::vector<Channel*> ChannelList;
 
-            Poller(EventLoop* loop);
+            explicit Poller(EventLoop* loop);
             virtual ~Poller();
 
             /// Polls the I/O events.
@@ -59,4 +59,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_POLLER_H
+#endif //POLLER_H
