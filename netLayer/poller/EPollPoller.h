@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/8.
+// Created by root on 2019/12/9.
 //
 
-#ifndef MUDUO_EPOLLPOLLER_H
-#define MUDUO_EPOLLPOLLER_H
+#ifndef EPOLLPOLLER_H
+#define EPOLLPOLLER_H
 
 #include "Poller.h"
 
@@ -22,7 +22,7 @@ namespace tank
         class EPollPoller : public Poller
         {
         public:
-            EPollPoller(EventLoop* loop);
+            explicit EPollPoller(EventLoop* loop);
             ~EPollPoller() override;
 
             Timestamp poll(int timeoutMs, ChannelList* activeChannels) override;
@@ -47,4 +47,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_EPOLLPOLLER_H
+#endif //EPOLLPOLLER_H
