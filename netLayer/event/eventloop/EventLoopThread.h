@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/9.
+// Created by root on 2019/12/13.
 //
 
-#ifndef MUDUO_EVENTLOOPTHREAD_H
-#define MUDUO_EVENTLOOPTHREAD_H
+#ifndef EVENTLOOPTHREAD_H
+#define EVENTLOOPTHREAD_H
 
 #include "base/thread/Condition.h"
 #include "base/thread/Mutex.h"
@@ -40,4 +40,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_EVENTLOOPTHREAD_H
+#endif //EVENTLOOPTHREAD_H
