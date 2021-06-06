@@ -1,5 +1,5 @@
 //
-// Created by root on 2019/11/8.
+// Created by root on 2019/12/8.
 //
 
 #include "PollPoller.h"
@@ -7,8 +7,8 @@
 #include "base/Types.h"
 #include "netLayer/event/Channel.h"
 
-#include <assert.h>
-#include <errno.h>
+#include <cassert>
+#include <cerrno>
 #include <poll.h>
 
 using namespace tank;
