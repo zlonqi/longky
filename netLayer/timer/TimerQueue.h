@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/8.
+// Created by root on 2019/11/29.
 //
 
-#ifndef MUDUO_TIMERQUEUE_H
-#define MUDUO_TIMERQUEUE_H
+#ifndef TIMERQUEUE_H
+#define TIMERQUEUE_H
 
 #include <set>
 #include <vector>
@@ -60,7 +60,6 @@ namespace tank
             // move out all expired timers
             std::vector<Entry> getExpired(Timestamp now);
             void reset(const std::vector<Entry>& expired, Timestamp now);
-
             bool insert(Timer* timer);
 
             EventLoop* loop_;
@@ -78,4 +77,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_TIMERQUEUE_H
+#endif //TIMERQUEUE_H

@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/8.
+// Created by root on 2019/11/28.
 //
 
-#ifndef MUDUO_TIMERID_H
-#define MUDUO_TIMERID_H
+#ifndef TIMERID_H
+#define TIMERID_H
 
 #include <stdint-gcc.h>
 #include "base/copyable.h"
@@ -45,4 +45,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_TIMERID_H
+#endif //TIMERID_H
