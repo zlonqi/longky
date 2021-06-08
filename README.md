@@ -20,12 +20,11 @@
 
 #### [压测]
 
-
- ***QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)***<a href="https://www.yuque.com/longky/gw0h0i/ulipsg">***【压测报告】*** <a>
+ *QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)* <a href="https://www.yuque.com/longky/gw0h0i/ulipsg">***【压测报告】*** <a>
 
 #### [难点] 
-
-<a href="https://zlonqi.gitee.io/2021/02/22/note/">***项目中遇到的难点***</a>
+<a href="https://www.yuque.com/longky/xx7ivw/bsflrs">***【性能调优】*** <a>
+<a href="https://zlonqi.gitee.io/2021/02/22/note/">***【项目中遇到的难点】***</a>
 
 ### 更多
 
@@ -75,6 +74,7 @@ cd bin
 ###### CPU affinity、平滑更新、接口拨测、弹性线程池、改进请求处理的优先级调度算法
 ###### 探索C10M方案 ：Share-nothing、lock-free、cache affinity、kernel bypass、zero-copy、asynchronous programming
 
-> 感谢每一位开源贡献家的杰出作品，本项目将在校招结束后全量开源和长期维护，欢迎加入
-##### <a href="https://zlonqi.gitee.io">***关于后浪***</a>
+###致谢
+> 每一位开源贡献家的杰出作品，得以让后来者学习优秀的设计原则和工程规范。仓库会在校招结束后全量开源和长期维护，遵守MIT license.
+##### <a href="https://zlonqi.github.io">***关于后浪***</a>
 
