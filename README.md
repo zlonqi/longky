@@ -12,7 +12,7 @@
 
 ![arch](./webServer/pages/images/pic/arch1.png)  
 
-> **PS**:重点在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，就没有考虑主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。<a href="https://www.yuque.com/longky/btxa2q/rus66z">***【系统设计理解】*** <a>
+> **PS**:重点在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，就没有考虑主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。<a href="https://www.yuque.com/longky/btxa2q/rus66z"><font size=1 color=green>***【系统设计理解】***</font></a>
 
 #### [业务]
 
@@ -20,11 +20,12 @@
 
 #### [压测]
 
- *QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)* <a href="https://www.yuque.com/longky/gw0h0i/ulipsg">***【压测报告】*** <a>
+ *QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)* <a href="https://www.yuque.com/longky/gw0h0i/ulipsg"><font size=1 color=green>***【压测报告】***</font></a>
 
 #### [难点] 
-<a href="https://www.yuque.com/longky/xx7ivw/bsflrs">***【性能调优】*** <a>
-<a href="https://zlonqi.gitee.io/2021/02/22/note/">***【项目中遇到的难点】***</a>
+<a href="https://www.yuque.com/longky/xx7ivw/bsflrs"><font size=1 color=green>***【性能调优】*** </font></a>
+<a href="https://www.yuque.com/longky/xx7ivw/uw0ckr"><font size=1 color=green>***【并发提升】*** </font></a>
+<a href="https://zlonqi.gitee.io/2021/02/22/note/"><font size=1 color=green>***【踩的坑】***</font></a>
 
 ### 更多
 
@@ -38,7 +39,7 @@ cd bin
 ```
 
 ##### [配置]
-###### ~/bin/config.yaml <a href="https://www.yuque.com/longky/gw0h0i/xeglug">***配置详解***</a>
+###### ~/bin/config.yaml <a href="https://www.yuque.com/longky/gw0h0i/xeglug"><font size=1 color=green>***配置详解***</font></a>
 ###### ~/cgiServer/config.yaml
 ##### [说明]
 ```
@@ -55,7 +56,7 @@ cd bin
 
 ##### [代码统计]
 
-<a href="https://www.yuque.com/longky/gw0h0i/gzx302">***cloc***</a>
+<a href="https://www.yuque.com/longky/gw0h0i/gzx302"><font size=2 color=green>***cloc***</font></a>
 
 ##### [Related work]
 > github.com/redis  
@@ -75,6 +76,6 @@ cd bin
 ###### 探索C10M方案 ：Share-nothing、lock-free、cache affinity、kernel bypass、zero-copy、asynchronous programming
 
 ### 致谢
-> 每一位开源贡献家的杰出作品，得以让后来者学习优秀的设计原则和工程规范。仓库会在校招结束后全量开源和长期维护，遵守<a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html">MIT license</a>.
-##### <a href="https://zlonqi.github.io">***关于后浪***</a>
+> 每一位开源贡献家的杰出作品，得以让后来者学习优秀的设计原则和工程规范。仓库会在校招结束后全量开源和长期维护，遵守<a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html"><font size=2 color=green>MIT license</font></a>.
+##### <a href="https://zlonqi.github.io"><font size=1 color=red>***关于后浪***</font></a>
 
