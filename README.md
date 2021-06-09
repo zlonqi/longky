@@ -74,7 +74,7 @@ cd bin
 ###### CPU affinity、平滑更新、接口拨测、弹性线程池、改进请求处理的优先级调度算法
 ###### 探索C10M方案 ：Share-nothing、lock-free、cache affinity、kernel bypass、zero-copy、asynchronous programming
 
-###致谢
+### 致谢
 > 每一位开源贡献家的杰出作品，得以让后来者学习优秀的设计原则和工程规范。仓库会在校招结束后全量开源和长期维护，遵守<a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html">MIT license</a>.
 ##### <a href="https://zlonqi.github.io">***关于后浪***</a>
 
