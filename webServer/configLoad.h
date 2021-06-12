@@ -1,10 +1,13 @@
+#ifndef CONFIGLOAD_H
+#define CONFIGLOAD_H
+
 #include <iostream>
 #include <string>
 #include <unordered_map>
 
+#include <vector>
 //#include "Hiredis.h"
 //#include "redisConnector.h"
-#include "netLayer/event/eventloop/EventLoop.h"
 using namespace std;
 
 extern string g_nginx_ip;
@@ -29,19 +32,22 @@ extern int g_heartBeat_port;
 extern int g_heartBeat_frequency;
 
 extern string g_conf_path;
-extern std::unordered_map<string,string> mimeType;
+extern std::unordered_map<string, string> mimeType;
 
 extern string g_redis_ip;
 extern int g_redis_port;
 extern float g_redis_rate;
 extern vector<string> g_redis_vip;
-extern std::unordered_map<string,string> urlTomd5;
-extern std::unordered_map<string,int> g_zlibMap;
+extern std::unordered_map<string, string> urlTomd5;
+extern std::unordered_map<string, int> g_zlibMap;
 extern double g_stop_after;
 extern double g_conn_expire;
 extern int g_maxConnections;
+
 //extern hiredis::Hiredis* g_hiredis;
 //extern EventLoop* g_loop;
 //extern redisConnector* g_redis;
 //extern std::unordered_map<EventLoop*,redisConnector*> g_redisMap;
-bool init(string& conf_path);
+bool init(string &conf_path);
+
+#endif
