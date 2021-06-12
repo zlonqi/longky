@@ -1,5 +1,5 @@
-#ifndef MUDUO_STATICPAGE_STATICSERVER_H
-#define MUDUO_STATICPAGE_STATICSERVER_H
+#ifndef STATICPAGE_STATICSERVER_H
+#define STATICPAGE_STATICSERVER_H
 
 #include "base/Atomic.h"
 #include "base/log/Logging.h"
@@ -14,26 +14,30 @@
 #include <unordered_set>
 #include <boost/circular_buffer.hpp>
 #include <utility>
-// RFC 862
+
 using namespace tank;
 using namespace tank::net;
 
-class StaticServer{
+class StaticServer {
 public:
-    StaticServer(EventLoop * loop,
-                 const InetAddress & listenAddr,
+    StaticServer(EventLoop *loop,
+                 const InetAddress &listenAddr,
                  int poolThreads,
                  int loopThreads = 0,
-                 int maxConnections=1008,//1024-16
+                 int maxConnections = 1008,//1024-16
                  double idleDownLineTime = 600);
+
     ~StaticServer();
+
     void start();
+
     void stop();
-    std::shared_ptr<EventLoopThreadPool> loopThreads(){
+
+    std::shared_ptr<EventLoopThreadPool> loopThreads() {
         return server_.threadPool();
     }
 
-    ThreadPl<Parser>* getThreadPool(){
+    ThreadPl<Parser> *getThreadPool() {
         return &threadPool_;
     }
 
@@ -41,49 +45,51 @@ public:
 
     typedef std::weak_ptr<tank::net::TcpConnection> WeakTcpConnectionPtr;
 
-    struct Entry : public tank::copyable
-    {
-        explicit Entry(const WeakTcpConnectionPtr&  weakConn)
-                : weakConn_(weakConn)
-        {
+    struct Entry : public tank::copyable {
+        explicit Entry(WeakTcpConnectionPtr weakConn)
+                : weakConn_(std::move(weakConn)) {
         }
 
-        ~Entry()
-        {
+        ~Entry() {
             tank::net::TcpConnectionPtr conn = weakConn_.lock();
-            if (conn&&conn->connected())
-            {
+            if (conn && conn->connected()) {
                 conn->forceClose();
-                LOG_DEBUG <<conn->peerAddress().toIpPort() << " -> " << conn->localAddress().toIpPort() << " Idle Connection Down.";
+                LOG_DEBUG << conn->peerAddress().toIpPort() << " -> " << conn->localAddress().toIpPort()
+                          << " Idle Connection Down.";
             }
         }
 
         WeakTcpConnectionPtr weakConn_;
     };
+
     typedef std::shared_ptr<Entry> EntryPtr;
     typedef std::weak_ptr<Entry> WeakEntryPtr;
     typedef std::unordered_set<EntryPtr> Bucket;
     typedef boost::circular_buffer<Bucket> WeakConnectionList;
     typedef std::shared_ptr<WeakConnectionList> BucketPtr;
-    std::unordered_map<EventLoop*,BucketPtr> map_;
+    std::unordered_map<EventLoop *, BucketPtr> map_;
 
     WeakConnectionList connectionBuckets_;
 private:
-    void onConnection(const TcpConnectionPtr& conn);
-    void onMessage(const TcpConnectionPtr& conn, Buffer* buf, Timestamp time);
-    void highWaterMark(const TcpConnectionPtr& conn, size_t tosend);
-    void writeComplete(const TcpConnectionPtr& conn);
-    void onParser(const TcpConnectionPtr& conn, Buffer* buf);
+    void onConnection(const TcpConnectionPtr &conn);
 
-    EventLoop*      loop_;
-    TcpServer       server_;
-    AtomicInt32     numConnected_;
-    int32_t         kmaxConnections_;
-    int 			poolThreads_;
-    int 			loopThreads_;
-    double             idleExpiredTime_;
-    Timestamp		startTime_;
-    ThreadPl<Parser>		threadPool_;
+    void onMessage(const TcpConnectionPtr &conn, Buffer *buf, Timestamp time);
+
+    void highWaterMark(const TcpConnectionPtr &conn, size_t tosend);
+
+    void writeComplete(const TcpConnectionPtr &conn);
+
+    void onParser(const TcpConnectionPtr &conn, Buffer *buf);
+
+    EventLoop *loop_;
+    TcpServer server_;
+    AtomicInt32 numConnected_;
+    int32_t kmaxConnections_;
+    int poolThreads_;
+    int loopThreads_;
+    double idleExpiredTime_;
+    Timestamp startTime_;
+    ThreadPl<Parser> threadPool_;//Thread Singleton Http Parser in ThreadPool
 };
 
 #endif
