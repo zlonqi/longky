@@ -1,5 +1,5 @@
 //
-// Created by root on 2019/11/9.
+// Created by root on 2019/12/22.
 //
 #include <iostream>
 #include "TcpConnection.h"
@@ -10,7 +10,7 @@
 #include "netLayer/socket/Socket.h"
 #include "netLayer/socket/SocketsOps.h"
 
-#include <errno.h>
+#include <cerrno>
 
 using namespace tank;
 using namespace tank::net;

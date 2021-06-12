@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/9.
+// Created by root on 2019/12/22.
 //
 
-#ifndef MUDUO_TCPCONNECTION_H
-#define MUDUO_TCPCONNECTION_H
+#ifndef TCPCONNECTION_H
+#define TCPCONNECTION_H
 
 #include "base/noncopyable.h"
 #include "base/StringPiece.h"
@@ -181,4 +181,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_TCPCONNECTION_H
+#endif //TCPCONNECTION_H
