@@ -2,8 +2,8 @@
 // Created by root on 2019/11/6.
 //
 
-#ifndef THREADPOOL_H
-#define THREADPOOL_H
+#ifndef THREADPOOL_SINGLETON_H
+#define THREADPOOL_SINGLETON_H
 
 #include "Condition.h"
 #include "Mutex.h"
@@ -148,4 +148,4 @@ namespace tank{
         }
     };
 }
-#endif //THREADPOOL_H
+#endif //THREADPOOL_SINGLETON_H
