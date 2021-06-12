@@ -1,5 +1,5 @@
-#ifndef MUDUO_FASTCGI_FASTCGI_H
-#define MUDUO_FASTCGI_FASTCGI_H
+#ifndef FASTCGI_FASTCGI_H
+#define FASTCGI_FASTCGI_H
 
 #include "netLayer/tcp/TcpConnection.h"
 #include "base/thread/Mutex.h"
@@ -69,4 +69,4 @@ class FastCgiCodec : tank::noncopyable
   const static unsigned kRecordHeader;
 };
 
-#endif  // MUDUO_FASTCGI_FASTCGI_H
+#endif  //FASTCGI_FASTCGI_H
