@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/9.
+// Created by root on 2019/12/21.
 //
 
-#ifndef MUDUO_SOCKETSOPS_H
-#define MUDUO_SOCKETSOPS_H
+#ifndef SOCKETSOPS_H
+#define SOCKETSOPS_H
 
 #include <arpa/inet.h>
 
@@ -55,4 +55,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_SOCKETSOPS_H
+#endif //SOCKETSOPS_H

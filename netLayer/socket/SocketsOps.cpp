@@ -1,5 +1,5 @@
 //
-// Created by root on 2019/11/9.
+// Created by root on 2019/12/21.
 //
 
 #include "SocketsOps.h"
@@ -8,9 +8,9 @@
 #include "base/Types.h"
 #include "Endian.h"
 
-#include <errno.h>
+#include <cerrno>
 #include <fcntl.h>
-#include <stdio.h>  // snprintf
+#include <cstdio>  // snprintf
 #include <sys/socket.h>
 #include <sys/uio.h>  // readv
 #include <unistd.h>
