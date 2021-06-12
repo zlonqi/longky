@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/9.
+// Created by root on 2019/12/20.
 //
 
-#ifndef MUDUO_INETADDRESS_H
-#define MUDUO_INETADDRESS_H
+#ifndef INETADDRESS_H
+#define INETADDRESS_H
 
 #include "base/copyable.h"
 #include "base/StringPiece.h"
@@ -77,4 +77,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_INETADDRESS_H
+#endif //INETADDRESS_H
