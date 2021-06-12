@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/11.
+// Created by root on 2019/12/28.
 //
 
-#ifndef MUDUO_TCPCLIENT_H
-#define MUDUO_TCPCLIENT_H
+#ifndef TCPCLIENT_H
+#define TCPCLIENT_H
 
 #include "base/thread/Mutex.h"
 #include "netLayer/tcp/TcpConnection.h"
@@ -82,4 +82,4 @@ namespace tank
 }  // namespace tank
 
 
-#endif //MUDUO_TCPCLIENT_H
+#endif //TCPCLIENT_H
