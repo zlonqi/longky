@@ -454,6 +454,15 @@
 		<Unit filename="/root/longky/longky/cgiServer/cgiserver.cpp">
 			<Option target="fastcgi"/>
 		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/cgiserver.h">
+			<Option target="fastcgi"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/configLoad.cpp">
+			<Option target="fastcgi"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/configLoad.h">
+			<Option target="fastcgi"/>
+		</Unit>
 		<Unit filename="/root/longky/longky/cgiServer/fastcgi.cpp">
 			<Option target="fastcgi"/>
 		</Unit>
@@ -464,6 +473,9 @@
 			<Option target="fastcgi"/>
 		</Unit>
 		<Unit filename="/root/longky/longky/cgiServer/parseRequest.h">
+			<Option target="fastcgi"/>
+		</Unit>
+		<Unit filename="/root/longky/longky/cgiServer/start_up.cpp">
 			<Option target="fastcgi"/>
 		</Unit>
 		<Unit filename="/root/longky/longky/monitor/heartBeatMonitor.cpp">

@@ -2247,7 +2247,7 @@
 20200528 18:59:30.461187Z  9743[TRACE] updateChannel fd = 23 events = 3 index = -1 - EpollPoller.cpp:106
 20200528 18:59:30.461202Z  9743[TRACE] update epoll_ctl op = ADD fd = 23 event = { 23: IN PRI  } - EpollPoller.cpp:174
 20200528 18:59:30.461227Z  9743[INFO]  StaticServer - 127.0.0.1:42690 -> 127.0.0.1:1688 is UP - staticServer.cpp:47
-20200528 18:59:30.461257Z  9743[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
+20200528 18:59:30.461257Z  9743[DEBUG] onConnectionHeartBeat setTcpNoDelay - staticServer.cpp:59
 20200528 18:59:30.461284Z  9743[TRACE] poll fd total count 3 - EpollPoller.cpp:52
 20200528 18:59:30.461293Z  9743[TRACE] poll 1 events happened - EpollPoller.cpp:61
 20200528 18:59:30.461302Z  9743[TRACE] printActiveChannels {23: IN }  - EventLoop.cpp:272

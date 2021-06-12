@@ -152,6 +152,33 @@ cgiserver.cpp.s:
 	cd /root/longky/longky/cmake-build-debug && $(MAKE) -f cgiServer/CMakeFiles/fastcgi.dir/build.make cgiServer/CMakeFiles/fastcgi.dir/cgiserver.cpp.s
 .PHONY : cgiserver.cpp.s
 
+configLoad.o: configLoad.cpp.o
+
+.PHONY : configLoad.o
+
+# target to build an object file
+configLoad.cpp.o:
+	cd /root/longky/longky/cmake-build-debug && $(MAKE) -f cgiServer/CMakeFiles/fastcgi.dir/build.make cgiServer/CMakeFiles/fastcgi.dir/configLoad.cpp.o
+.PHONY : configLoad.cpp.o
+
+configLoad.i: configLoad.cpp.i
+
+.PHONY : configLoad.i
+
+# target to preprocess a source file
+configLoad.cpp.i:
+	cd /root/longky/longky/cmake-build-debug && $(MAKE) -f cgiServer/CMakeFiles/fastcgi.dir/build.make cgiServer/CMakeFiles/fastcgi.dir/configLoad.cpp.i
+.PHONY : configLoad.cpp.i
+
+configLoad.s: configLoad.cpp.s
+
+.PHONY : configLoad.s
+
+# target to generate assembly for a file
+configLoad.cpp.s:
+	cd /root/longky/longky/cmake-build-debug && $(MAKE) -f cgiServer/CMakeFiles/fastcgi.dir/build.make cgiServer/CMakeFiles/fastcgi.dir/configLoad.cpp.s
+.PHONY : configLoad.cpp.s
+
 fastcgi.o: fastcgi.cpp.o
 
 .PHONY : fastcgi.o
@@ -206,6 +233,33 @@ parseRequest.cpp.s:
 	cd /root/longky/longky/cmake-build-debug && $(MAKE) -f cgiServer/CMakeFiles/fastcgi.dir/build.make cgiServer/CMakeFiles/fastcgi.dir/parseRequest.cpp.s
 .PHONY : parseRequest.cpp.s
 
+start_up.o: start_up.cpp.o
+
+.PHONY : start_up.o
+
+# target to build an object file
+start_up.cpp.o:
+	cd /root/longky/longky/cmake-build-debug && $(MAKE) -f cgiServer/CMakeFiles/fastcgi.dir/build.make cgiServer/CMakeFiles/fastcgi.dir/start_up.cpp.o
+.PHONY : start_up.cpp.o
+
+start_up.i: start_up.cpp.i
+
+.PHONY : start_up.i
+
+# target to preprocess a source file
+start_up.cpp.i:
+	cd /root/longky/longky/cmake-build-debug && $(MAKE) -f cgiServer/CMakeFiles/fastcgi.dir/build.make cgiServer/CMakeFiles/fastcgi.dir/start_up.cpp.i
+.PHONY : start_up.cpp.i
+
+start_up.s: start_up.cpp.s
+
+.PHONY : start_up.s
+
+# target to generate assembly for a file
+start_up.cpp.s:
+	cd /root/longky/longky/cmake-build-debug && $(MAKE) -f cgiServer/CMakeFiles/fastcgi.dir/build.make cgiServer/CMakeFiles/fastcgi.dir/start_up.cpp.s
+.PHONY : start_up.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -218,12 +272,18 @@ help:
 	@echo "... cgiserver.o"
 	@echo "... cgiserver.i"
 	@echo "... cgiserver.s"
+	@echo "... configLoad.o"
+	@echo "... configLoad.i"
+	@echo "... configLoad.s"
 	@echo "... fastcgi.o"
 	@echo "... fastcgi.i"
 	@echo "... fastcgi.s"
 	@echo "... parseRequest.o"
 	@echo "... parseRequest.i"
 	@echo "... parseRequest.s"
+	@echo "... start_up.o"
+	@echo "... start_up.i"
+	@echo "... start_up.s"
 .PHONY : help
 
 

@@ -216,7 +216,7 @@
 20200601 23:28:55.943323Z  5909[DEBUG] newConnection  - new connection [StaticServer-0.0.0.0:1688#8] from 127.0.0.1:54088 - TcpServer.cpp:75
 20200601 23:28:55.943400Z  5909[DEBUG] TcpConnection TcpConnection::creator[StaticServer-0.0.0.0:1688#8] at 0x61500000B480 fd=21 - TcpConnection.cpp:60
 20200601 23:28:55.943500Z  5909[INFO]  StaticServer - 127.0.0.1:54088 -> 127.0.0.1:1688 is UP - staticServer.cpp:47
-20200601 23:28:55.943552Z  5909[DEBUG] onConnection setTcpNoDelay - staticServer.cpp:59
+20200601 23:28:55.943552Z  5909[DEBUG] onConnectionHeartBeat setTcpNoDelay - staticServer.cpp:59
 20200601 23:28:55.943992Z  5912[DEBUG] ~TcpConnection TcpConnection::destructor[StaticServer-0.0.0.0:1688#7] at 0x61500000B980 fd=19 state=kDisconnected - TcpConnection.cpp:67
 20200601 23:28:55.944376Z  5912[INFO]  {127.0.0.1:54088'1591025335'5909}request: /root/web/CLionProject/tank/staticPage/pages/login.html - requestParser.cpp:93
 20200601 23:28:55.944459Z  5912[INFO]  redis connect [Fail] - requestParser.cpp:226
