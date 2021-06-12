@@ -4,31 +4,30 @@
 #include "fastcgi.h"
 #include "configLoad.h"
 
-#include <stdio.h>
+#include <cstdio>
 #include <unistd.h>
-#include <string.h>
+#include <cstring>
 #include <sys/stat.h>
 #include <pthread.h>
 #include <sys/wait.h>
-#include <stdlib.h>
+#include <cstdlib>
 
-Parser:: Parser(const TcpConnectionPtr& conn,
-                SSMap& params,
-                string& postData):
-                conn_(conn),
-                params_(params),
-                postData_(postData){
-        LOG_INFO<<"Parsing cgi::requestion";
+Parser::Parser(const TcpConnectionPtr &conn,
+               SSMap &params,
+               string &postData) :
+        conn_(conn),
+        params_(params),
+        postData_(postData) {
+    LOG_INFO << "Parsing cgi::requestion";
 }
 
-void* Parser::accept_request() {
-    string method=params_["REQUEST_METHOD"];
+void *Parser::accept_request() {
+    string method = params_["REQUEST_METHOD"];
     string path = params_["DOCUMENT_URI"];
     path = g_resource_base_path + path;
     //path = "/root/web/CLionProject/tank/fastcgi" + path;
-    LOG_INFO << "path:"<<path;
-    if (method != "GET" && method != "POST")
-    {
+    LOG_INFO << "path:" << path;
+    if (method != "GET" && method != "POST") {
         //tinyhttp仅仅实现了GET和POST
         string res = unimplemented();
         FastCgiCodec::respond(res, &response_);
@@ -47,7 +46,7 @@ void* Parser::accept_request() {
 
     if (!(st.st_mode & S_IXUSR) &&
         !(st.st_mode & S_IXGRP) &&
-        !(st.st_mode & S_IXOTH)    ){
+        !(st.st_mode & S_IXOTH)) {
         //have no authorization to access re.
         string res = not_autho();
         FastCgiCodec::respond(res, &response_);
@@ -59,9 +58,9 @@ void* Parser::accept_request() {
     return nullptr;
 }
 
-void Parser::execute_cgi(const char* path) {
+void Parser::execute_cgi(const char *path) {
     char buf[1024];
-    int cgi_output[2];//声明的读写管道，切莫被名称给忽悠，会给出图进行说明
+    int cgi_output[2];//声明的读写管道
     int cgi_input[2];//
     pid_t pid;
     int content_length = -1;
@@ -70,17 +69,17 @@ void Parser::execute_cgi(const char* path) {
     int status;
 
     string method = params_["REQUEST_METHOD"];
-    if(method == "POST"){
+    if (method == "POST") {
         content_length = atoi(params_["CONTENT_LENGTH"].c_str());
-        if(content_length == -1){
+        if (content_length == -1) {
             string res = bad_request();
             FastCgiCodec::respond(res, &response_);
             conn_->send(&response_);
-            return ;
+            return;
         }
     }
-    if(method == "GET"){
-       query_string = params_["QUERY_STRING"] ;
+    if (method == "GET") {
+        query_string = params_["QUERY_STRING"];
     }
     if (pipe(cgi_output) < 0) {
         cannot_execute();
@@ -91,7 +90,7 @@ void Parser::execute_cgi(const char* path) {
         return;
     }
 
-    if ( (pid = fork()) < 0 ) {
+    if ((pid = fork()) < 0) {
         cannot_execute();
         return;
     }
@@ -123,13 +122,13 @@ void Parser::execute_cgi(const char* path) {
 
         execl(path, path, nullptr);
         exit(0);
-    }else{
+    } else {
         close(cgi_output[1]);//关闭了cgi_output中的写通道，注意这是父进程中cgi_output变量和子进程要区分开
         close(cgi_input[0]);//关闭了cgi_input中的读通道
         if (strcasecmp(method.c_str(), "POST") == 0)
-            write(cgi_input[1],postData_.c_str(),postData_.length());
-        string res ="";
-        while(read(cgi_output[0],&c,1))
+            write(cgi_input[1], postData_.c_str(), postData_.length());
+        string res = "";
+        while (read(cgi_output[0], &c, 1))
             res += c;
         //
         //printf("%s",res.c_str());
@@ -171,7 +170,7 @@ string Parser::not_autho() {
     res += "the resource you accessed you have no permission for it \r\n";
     res += "</BODY></HTML>\r\n";
 
-   return res;
+    return res;
 }
 
 void Parser::cannot_execute() {
@@ -192,5 +191,5 @@ string Parser::unimplemented() {
     res += "<BODY><P>HTTP request method not supported.\r\n";
     res += "</BODY></HTML>\r\n";
 
-   return res;
+    return res;
 }

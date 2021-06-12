@@ -1,5 +1,5 @@
-#ifndef MUDUO_FASTCGI_PARSEREQUEST_H
-#define MUDUO_FASTCGI_PARSEREQUEST_H
+#ifndef FASTCGI_PARSEREQUEST_H
+#define FASTCGI_PARSEREQUEST_H
 
 #include "netLayer/tcp/TcpConnection.h"
 #include "type.h"
@@ -20,12 +20,15 @@ using namespace tank::net;
 
 //string g_resource_base_path;
 
-class Parser{
+class Parser {
 public:
-    Parser(const TcpConnectionPtr& conn, ParamMap& params, string& postData);
+    Parser(const TcpConnectionPtr &conn, ParamMap &params, string &postData);
+
     void *accept_request();
+
 private:
-    void execute_cgi(const char* path);
+    void execute_cgi(const char *path);
+
     void cannot_execute();//500
     string bad_request();//无效请求,400
     string not_found();//404
@@ -37,4 +40,5 @@ private:
     string postData_;
     tank::net::Buffer response_;
 };
+
 #endif
