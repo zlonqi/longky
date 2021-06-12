@@ -221,7 +221,7 @@ void TcpConnection::shutdownInLoop()
 //   if (state_ == kConnected)
 //   {
 //     setState(kDisconnecting);
-//     loop_->runInLoop(std::bind(&TcpConnection::shutdownAndForceCloseInLoop, this, seconds));
+//     loop_->retryInLoop(std::bind(&TcpConnection::shutdownAndForceCloseInLoop, this, seconds));
 //   }
 // }
 
