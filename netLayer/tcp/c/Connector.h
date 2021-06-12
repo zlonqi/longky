@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/11.
+// Created by root on 2019/12/26.
 //
 
-#ifndef MUDUO_CONNECTOR_H
-#define MUDUO_CONNECTOR_H
+#ifndef CONNECTOR_H
+#define CONNECTOR_H
 
 #include "base/noncopyable.h"
 #include "netLayer/socket/InetAddress.h"
@@ -66,4 +66,4 @@ namespace tank
 }  // namespace tank
 
 
-#endif //MUDUO_CONNECTOR_H
+#endif //CONNECTOR_H
