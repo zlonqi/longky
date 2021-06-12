@@ -1,5 +1,9 @@
+#ifndef CONFIGLOAD_H
+#define CONFIGLOAD_H
+
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 extern string g_nginx_ip;
@@ -29,3 +33,6 @@ extern string g_db_user;
 extern string g_db_pswd;
 extern string g_db_dbName;
 
+bool init(string &conf_path);
+
+#endif
