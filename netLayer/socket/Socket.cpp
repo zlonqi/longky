@@ -1,5 +1,5 @@
 //
-// Created by root on 2019/11/9.
+// Created by root on 2019/12/21.
 //
 
 #include "Socket.h"
@@ -19,7 +19,6 @@ Socket::~Socket()
     if(!setSolinger_)
         sockets::close(sockfd_);
 }
-
 void Socket::close(){
     sockets::close(sockfd_);
 }
@@ -29,7 +28,6 @@ bool Socket::getTcpInfo(struct tcp_info* tcpi) const
     memZero(tcpi, len);
     return ::getsockopt(sockfd_, SOL_TCP, TCP_INFO, tcpi, &len) == 0;
 }
-
 bool Socket::getTcpInfoString(char* buf, int len) const
 {
     struct tcp_info tcpi;

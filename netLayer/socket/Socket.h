@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/9.
+// Created by root on 2019/12/21.
 //
 
-#ifndef MUDUO_SOCKET_H
-#define MUDUO_SOCKET_H
+#ifndef SOCKET_H
+#define SOCKET_H
 
 #include "base/noncopyable.h"
 
@@ -84,4 +84,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_SOCKET_H
+#endif //SOCKET_H
