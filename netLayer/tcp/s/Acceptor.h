@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/9.
+// Created by root on 2019/12/23.
 //
 
-#ifndef MUDUO_ACCEPTOR_H
-#define MUDUO_ACCEPTOR_H
+#ifndef ACCEPTOR_H
+#define ACCEPTOR_H
 
 #include <functional>
 
@@ -49,4 +49,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_ACCEPTOR_H
+#endif //ACCEPTOR_H
