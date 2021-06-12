@@ -1,11 +1,11 @@
 //
-// Created by root on 2019/11/9.
+// Created by root on 2019/12/19.
 //
 
-#ifndef MUDUO_ENDIAN_H
-#define MUDUO_ENDIAN_H
+#ifndef ENDIAN_H
+#define ENDIAN_H
 
-#include <stdint.h>
+#include <cstdint>
 #include <endian.h>
 
 namespace tank
@@ -56,4 +56,4 @@ namespace tank
     }  // namespace net
 }  // namespace tank
 
-#endif //MUDUO_ENDIAN_H
+#endif //ENDIAN_H
