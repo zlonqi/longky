@@ -1,9 +1,9 @@
 //
-// Created by root on 2019/11/14.
+// Created by root on 2020/1/13.
 //
 
-#ifndef MUDUO_HTTPRESPONSE_H
-#define MUDUO_HTTPRESPONSE_H
+#ifndef HTTPRESPONSE_H
+#define HTTPRESPONSE_H
 
 #include "base/copyable.h"
 #include "base/Types.h"
@@ -71,4 +71,4 @@ namespace tank
 }  // namespace tank
 
 
-#endif //MUDUO_HTTPRESPONSE_H
+#endif //HTTPRESPONSE_H
