@@ -33,7 +33,7 @@ void displayStatus() {
     for (auto conn:vec) {
         time_t last_time = timeMap[identityMap[conn]];
         int diff = now - last_time;
-        if (diff >= 10 + 2)
+        if (diff >= 10 + 2)//The time value should be readen from configuraton.
             map[identityMap[conn]] = "OFF";
     }
     system("clear");
