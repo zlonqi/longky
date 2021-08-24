@@ -12,9 +12,9 @@
 
 ![arch](./webServer/pages/images/pic/arch1.png)  
 
-> **PS**:重点在上游的web静态和FastCGI服务器集群 -- 它们是无状态的服务，就没有考虑主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的高可用保障的设计。<a href="https://www.yuque.com/longky/btxa2q/rus66z"><font size=1 color=green>***【系统设计理解】***</font></a>
+> **PS**:1、<a href="https://www.yuque.com/longky/gw0h0i/msv5op">设计线程池</a> 2、web静态和FastCGI服务器集群 -- 它们是无状态的服务，就暂未考虑主从复制、存储分片、网络分区、容错、故障恢复和共识选主等有状态服务的可靠性的设计。<a href="https://www.yuque.com/longky/btxa2q/rus66z"><font size=1 color=green>***【设计目标】***</font></a>
 
-#### [业务]
+#### [Demon]
 
 > 流程: 主页->空间->登陆->注册(各种checker)->登陆->登陆成功(y/n)
 
@@ -22,10 +22,10 @@
 
  *QPS > 36K req/s，吞吐量 >40MB/s, 响应时长 3.6ms(99%)* <a href="https://www.yuque.com/longky/gw0h0i/ulipsg"><font size=1 color=green>***【压测报告】***</font></a>
 
-#### [难点] 
+#### [提升] 
 <a href="https://www.yuque.com/longky/xx7ivw/bsflrs"><font size=1 color=green>***【性能调优】*** </font></a>
 <a href="https://www.yuque.com/longky/xx7ivw/uw0ckr"><font size=1 color=green>***【并发提升】*** </font></a>
-<a href="https://zlonqi.gitee.io/2021/02/22/note/"><font size=1 color=green>***【踩的坑】***</font></a>
+<a href="https://zlonqi.gitee.io/2021/02/22/note/"><font size=1 color=green>***【bug records】***</font></a>
 
 ### 更多
 
@@ -71,11 +71,11 @@ cd bin
 > http://seastar.io  
 
 
-### 接下来
+### 改进
 ###### CPU affinity、平滑更新、接口拨测、弹性线程池、改进请求处理的优先级调度算法
 ###### 探索C10M方案 ：Share-nothing、lock-free、cache affinity、kernel bypass、zero-copy、asynchronous programming
 
-### 致谢
-> 每一位开源贡献家的杰出作品，得以让后来者学习优秀的设计原则和工程规范。仓库会在校招结束后全量开源和长期维护，遵守<a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html"><font size=2 color=green>MIT license</font></a>.
-##### <a href="https://zlonqi.github.io"> <font size="1" color="red">***关于后浪***</font> </a>
+### 鸣谢
+> 遵守<a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html"><font size=2 color=green>MIT license</font></a>.
+##### <a href="https://zlonqi.github.io"> <font size="1" color="red">***more about owner***</font> </a>
 
